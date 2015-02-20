@@ -36,10 +36,14 @@
 <script type="text/javascript">
 //Min kod
 
-//Should check instead of hardcode
+//(Should check instead of hardcode)
+// The size of the canvas
 var canvasWidth = 800; canvasHeight = 1000;
+
+//The geocoords. for the upper left corner and lower right corner, to be used when converting from geocoords to x and y
 var origin = [59.42, 17.8325]; map_downRight = [59.243889,18.133333];
 
+//Coordinates for stations on the blue line
 var stationCoords = [
 	[59.413889,17.917778],
 	[59.409444,17.926944],
@@ -64,19 +68,21 @@ var stationCoords = [
 	
 	];
 
+//Converts latitude to X
 function convertX(latitude){
 	var xScale = canvasWidth/(map_downRight[1]-origin[1]);
 	var newX = Math.round( (latitude-origin[1] )*xScale );
 	return newX
 }
 
+//Converts longitude to Y
 function convertY(longitude){
 	var yScale = canvasHeight/(origin[0]-map_downRight[0]);
 	var newY = canvasHeight-Math.round( (longitude-origin[0] )*yScale );
 return newY
 }
 	
-	
+//Old function
 function test(upLeft, downRight, cWidth, cHeight, sCoords){
 //console.log(upLeft[0]-downRight[0]);
  var xScale = cWidth/(downRight[1]-upLeft[1]);
@@ -92,10 +98,8 @@ function test(upLeft, downRight, cWidth, cHeight, sCoords){
  return newCoords;
 }
 
-//Min kod slut
-	 var points = 
-	 test(origin,map_downRight, canvasWidth, canvasHeight, stationCoords);
-	 //[[0,0],[960,500]];
+	//Saves the converted positions in points. (This is the old way)
+	 var points = test(origin,map_downRight, canvasWidth, canvasHeight, stationCoords);
 
 
   var svg = d3.select("#visual").append("svg")

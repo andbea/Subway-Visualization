@@ -1,0 +1,33 @@
+h1, h2, h3, p {
+	font-family: "Calibri";
+}
+
+#information {
+    background-color: #f6f6f6;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    border: solid;
+    border-width: 1px;
+    border-color: #a8a8a8;
+    padding: 10px;
+
+    height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#visual {
+    background-color: #f6f6f6;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:6px;
+    border: solid;
+    border-width: 1px;
+    border-color: #a8a8a8;
+    padding: 10px;
+}
+
+#container {
+    padding: 2% 5%;
+}

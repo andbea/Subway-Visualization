@@ -17,13 +17,12 @@
 </head>
 <body align="middle" style="padding: 2% 5%">
     <div id="visual"></div>
-    <div data-role="fieldcontain" style="padding: 2% 5%">
+    <div id="slider" data-role="fieldcontain" style="padding: 2% 5%">
         <input type="range" name="slider-1" id="slider-1" value="1933" min="1933" max="2015" data-highlight="true"/>
     </div>
     <style>
-        path {
+        line {
             fill: none;
-            stroke: blue;
             stroke-width: 7px;
         }
 
@@ -34,26 +33,94 @@
         }
     </style>
     <script>
-        var points = [
-            [480, 200],
-            [580, 400],
+        var year_shown = 1933;
+        var year_entered = 1933;
+
+        $("#slider").change(function() {
+            year_entered = $("#slider-1").val();
+            changeStations();
+        });
+
+        /* The array contains longitude and latitude instead of simple x and y.
+        This is done in order for the window size to be dynamic and a conversion can
+        be done to get the correct x and y.*/
+        var stations = [
+            {'id':"T-Centralen", 'x':580, 'y':400, 'year':1933, 'before':"", 'line-color':""},
+            {'id':"Karlaplan", 'x':300, 'y':360, 'year':1937, 'before':"T-Centralen", 'line-color':"red"},
+            {'id':"Östermalmstorg", 'x':480, 'y':200, 'year':2000, 'before':"Östermalmstorg", 'line-color':"red"}
         ];
 
         var svg = d3.select("#visual").append("svg")
             .attr("width", 960)
             .attr("height", 500);
 
-        var path = svg.append("path")
-            .data([points])
-            .attr("d", d3.svg.line()
-                .tension(0) // Catmull–Rom
-                .interpolate("cardinal-closed")
-            );
+        
+        var line = svg.selectAll("line")
+            .data([stations]);
 
-        svg.selectAll(".point")
-            .data(points)
+        var subway = svg.selectAll("circle")
+            .data([stations]);
+
+
+        var initialStation = subway
           .enter().append("circle")
             .attr("r", 8)
-            .attr("transform", function(d) { return "translate(" + d + ")"; });
+            .attr("id", function(d){return d[0]['id']})
+            .attr("cx", function(d){return d[0]['x']})
+            .attr("cy", function(d){return d[0]['y']});
+
+        function changeStations() {
+            // This part adds stations that should be visible after the slider has been changed
+            if(year_shown != year_entered && year_shown < year_entered) {
+                for(var i = 0; i < stations.length; i++) {
+                    if(stations[i]["year"] > year_shown && stations[i]["year"] <= year_entered) {
+                        addStation(i);
+                        year_shown = year_entered;
+                    }
+                }
+            }
+            // This part removes stations that should be visible after the slider has been changed
+            else if(year_shown != year_entered && year_shown > year_entered) {
+                for(var i = 0; i < stations.length; i++) {
+                    if(stations[i]["year"] <= year_shown && stations[i]["year"] > year_entered) {
+                        removeStation(i);
+                        year_shown = year_entered;
+                    }
+                }
+            }
+        }
+
+        function addStation(index) {
+            var stationBefore = findStation(stations[index]["before"]);
+            var addedLine = line.enter().append("line")
+                .attr("id", stations[index]["id"] + "-line")
+                .attr("x1", stations[index]["x"])
+                .attr("y1", stations[index]["y"])
+                .attr("x2", stations[stationBefore]["x"])
+                .attr("y2", stations[stationBefore]["y"])
+                .attr("stroke", stations[index]["line-color"]);
+
+            var addedStation = subway.enter().append("circle") 
+                .attr("r", 8)
+                .attr("id", stations[index]["id"] + "-circle")
+                .attr("cx", stations[index]["x"])
+                .attr("cy", stations[index]["y"]);
+        }
+
+        function removeStation(index) {
+            var id = "#" + stations[index]["id"] + "-line";
+            var removedLine = d3.select(id).remove();
+
+            id = "#" + stations[index]["id"] + "-circle";
+            var removedStation = d3.select(id).remove();
+        }
+
+        function findStation(id) {
+            for(var i = 0; i < stations.length; i++) {
+                if(id == stations[i]["id"]) {
+                    return i;
+                }
+            }
+        }
     </script>
 </body>

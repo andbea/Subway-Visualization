@@ -64,13 +64,13 @@ var stationCoords = [
 	[59.375833,17.939722],
 	[59.360833,17.970556],
 	[59.393889,17.901944],
-	[59.354167,17.973889],
-	
+	[59.354167,17.973889]
 	];
 
 //Converts latitude to X
 function convertX(latitude){
 	var xScale = canvasWidth/(map_downRight[1]-origin[1]);
+	console.log(xScale);
 	var newX = Math.round( (latitude-origin[1] )*xScale );
 	return newX
 }

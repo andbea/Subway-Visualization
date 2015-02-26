@@ -23,7 +23,7 @@
             <div class="col-sm-12 col-md-8">
                 <div id="visual"></div>
                 <div id="slider" data-role="fieldcontain" style="padding: 2% 5%">
-                    <input type="range" name="slider-1" id="slider-1" value="1933" min="1933" max="2015" data-highlight="true"/>
+                    <input type="range" name="slider-1" id="slider-1" value="1952" min="1952" max="2015" data-highlight="true"/>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4" id="information">
@@ -44,10 +44,42 @@
             }
         </style>
         <script>
-            var year_shown = 1933,
-                year_entered = 1933,
-                width = window.innerWidth;
+            var year_shown = 1952,
+                year_entered = 1952,
+                <!-- width = window.innerWidth; -->
+				width = document.getElementById('visual').clientWidth;
                 height = (window.innerHeight - $("#slider").height()) * 0.76;
+			
+			//Putting my variables here *Dan*
+			var canvasWidth = document.getElementById('visual').clientWidth;
+			var canvasHeight = height;
+			<!-- console.log(canvasWidth); -->
+			<!-- console.log(canvasHeight); -->
+			//Coordinates for the map's lower right corner
+			var map_eastSouth = [18.06,59.33];
+			//Coordinates for the maps upper left corner
+			var map_westNorth = [17.899,59.41];
+			var xScale = canvasWidth/(map_eastSouth[0]-map_westNorth[0]);
+			var yScale = canvasHeight/(map_westNorth[1]-map_eastSouth[1]);
+			//console.log(Math.round(yScale) + " = " + canvasHeight + " / " + "(" + map_westNorth[1] + " - "+map_eastSouth[1] + ")");
+			
+			//Converts latitude to X
+			function convertX(latitude){
+				var left = map_westNorth[0];
+				var newX = Math.round( (latitude-left )*xScale );
+				console.log(Math.round(newX) +" = " + latitude + "-" + left + ")*" + Math.round(xScale));
+				return newX
+			}
+
+			//Converts longitude to Y
+			function convertY(longitude){
+				var up = map_westNorth[1];
+				var newY = Math.round( (up - longitude )*yScale );
+				//console.log(Math.round(newY) +" = " + canvasHeight + " - (" + up + "-" + longitude + ")*" + Math.round(yScale));
+				return newY
+			}
+			
+			
 
             /* This creates a observer for the slider and calls the changeStations() function
             to change the visualization accordingly. */
@@ -60,10 +92,14 @@
             This is done in order for the window size to be dynamic and a conversion can
             be done to get the correct x and y.*/
             var stations = [
-                {'id':"T-Centralen", 'x':430, 'y':250, 'year':1933, 'before':"", 'line-color':""},
-                {'id':"Östermalmstorg", 'x':600, 'y':300, 'year':1937, 'before':"T-Centralen", 'line-color':"#E64A45"},
-                {'id':"Karlaplan", 'x':710, 'y':360, 'year':1950, 'before':"Östermalmstorg", 'line-color':"#E64A45"},
-                {'id':"GamlaStan", 'x':360, 'y':190, 'year':1940, 'before':"T-Centralen", 'line-color':"#5EA032"}
+			 {'id':"Fridhemsplan", 'x':18.030556, 'y':59.332500, 'year':1952, 'before':"", 'line-color':"blue"},
+                {'id':"T-Centralen", 'x':18.060833, 'y':59.331667, 'year':1957, 'before':"Fridhemsplan", 'line-color':"blue"},
+               {'id':"Hallonbergen", 'x':17.969306, 'y':59.375417, 'year':1975, 'before':"Näckrosen", 'line-color':"blue"},
+               {'id':"Hjulsta", 'x':17.899722, 'y':59.396667, 'year':1976, 'before':"Hallonbergen", 'line-color':"blue"},
+               {'id':"Näckrosen", 'x':17.983194, 'y':59.366667, 'year':1974, 'before':"Västra skogen", 'line-color':"blue"},
+               {'id':"Västra skogen", 'x':18.003889, 'y':59.347500, 'year':1973, 'before':"Fridhemsplan", 'line-color':"blue"},
+               {'id':"Akalla", 'x':17.917778, 'y':59.413889, 'year':1977, 'before':"Husby", 'line-color':"blue"},
+               {'id':"Husby", 'x':17.926944, 'y':59.409444, 'year':1978, 'before':"Hallonbergen", 'line-color':"blue"}
 
             ];
 
@@ -85,8 +121,10 @@
               .enter().append("circle")
                 .attr("r", 0)
                 .attr("id", function(d){return d[0]['id']})
-                .attr("cx", function(d){return d[0]['x']})
-                .attr("cy", function(d){return d[0]['y']});
+                <!-- .attr("cx", function(d){return d[0]['x']}) -->
+                <!-- .attr("cy", function(d){return d[0]['y']}); -->
+				.attr("cx", function(d){return convertX(d[0]['x'])})
+                .attr("cy", function(d){return convertY(d[0]['y'])});
 
             initialStation.transition().duration(1000)
                 .attr("r", 8);
@@ -116,11 +154,18 @@
 
             function addStation(index) {
                 var stationBefore = findStation(stations[index]["before"]);
+				console.log(stationBefore);
 
-                var shiftedCoords = shiftLine(stations[index]["x"],
-                    stations[index]["y"],
-                    stations[stationBefore]["x"],
-                    stations[stationBefore]["y"]);
+                var shiftedCoords = shiftLine(
+					<!-- stations[index]["x"], -->
+					<!-- stations[index]["y"], -->
+					convertX(stations[index]["x"]),
+                    convertY(stations[index]["y"]),
+                   <!-- stations[stationBefore]["x"], -->
+                   <!-- stations[stationBefore]["y"]); -->
+                   convertX(stations[stationBefore]["x"]),
+					convertY(stations[stationBefore]["y"]));
+				  
 
                 var addedLine = line.enter().append("line")
                     .attr("id", stations[index]["id"] + "-line")
@@ -137,8 +182,11 @@
                 var addedStation = subway.enter().append("circle")
                     .attr("r", 0)
                     .attr("id", stations[index]["id"] + "-circle")
-                    .attr("cx", stations[index]["x"])
-                    .attr("cy", stations[index]["y"]);
+                    <!-- .attr("cx", stations[index]["x"]) -->
+					<!-- .attr("cy", stations[index]["y"]); -->
+                    .attr("cx", convertX(stations[index]["x"]))
+                    .attr("cy", convertY(stations[index]["y"]));
+                    
 
                 addedStation.transition().duration(1000)
                     .attr("r", 8);
@@ -193,6 +241,11 @@
                 
                 return [a, b, c, d]; 
             }
+			
+			
+			
+			
+			
         </script>
     </body>
 </html>

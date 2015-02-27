@@ -16,6 +16,13 @@
 
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+		<script type="text/javascript" src = "stationInformation.js"></script>
+		<script type="text/javascript" src = "geoToXY.js"></script>
+		<script type="text/javascript" src = "addStation.js"></script>
+		<script type="text/javascript" src = "removeStation.js"></script>
+		<script type="text/javascript" src = "findStation.js"></script>
+		<script type="text/javascript" src = "shiftLine.js"></script>
+		<script type="text/javascript" src = "changeStations.js"></script>
         
     </head>
     <body align="middle">
@@ -27,7 +34,7 @@
 				</div>
 				<!-- <div id="map"></div> -->
                 <div id="slider" data-role="fieldcontain" style="padding: 2% 5%">
-                    <input type="range" name="slider-1" id="slider-1" value="1950" min="1950" max="2015" data-highlight="true"/>
+                    <input type="range" name="slider-1" id="slider-1" value="1949" min="1949" max="2015" data-highlight="true"/>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4" id="information">
@@ -48,9 +55,9 @@
             }
         </style>
         <script>
-		
-            var year_shown = 1950,
-                year_entered = 1950,
+			console.log(stationInformation);
+            var year_shown = 1949,
+                year_entered = 1949,
                 <!-- width = window.innerWidth; -->
 				width = document.getElementById('visual').clientWidth;
                 height = Math.round((window.innerHeight - $("#slider").height()) * 0.76);
@@ -64,22 +71,7 @@
 			var map_westNorth = [17.66,59.42];
 			var xScale = canvasWidth/(map_eastSouth[0]-map_westNorth[0]);
 			var yScale = canvasHeight/(map_westNorth[1]-map_eastSouth[1]);
-			
-			//Converts latitude to X
-			function convertX(latitude){
-				var left = map_westNorth[0];
-				var newX = Math.round( (latitude-left )*xScale );
-				return newX
-			}
-
-			//Converts longitude to Y
-			function convertY(longitude){
-				var up = map_westNorth[1];
-				var newY = Math.round( (up - longitude )*yScale );
-				return newY
-			}
-			
-			
+					
 
             /* This creates a observer for the slider and calls the changeStations() function
             to change the visualization accordingly. */
@@ -91,95 +83,12 @@
             /* The array contains longitude and latitude instead of simple x and y.
             This is done in order for the window size to be dynamic and a conversion can
             be done to get the correct x and y.*/
-            var stations = [
-				//Blue line
-				{'id':"Fridhemsplan", 'x':18.030556, 'y':59.332500, 'year':1950, 'before':"", 'line-color':"blue"},
-				{'id':"Rådhuset", 'x':18.041944, 'y':59.330278, 'year':1951, 'before':"Fridhemsplan", 'line-color':"blue"},
-				{'id':"T-Centralen", 'x':18.060833, 'y':59.331667, 'year':1951, 'before':"Rådhuset", 'line-color':"blue"},
-				{'id':"Stadshagen", 'x':18.017778, 'y':59.337222, 'year':1962, 'before':"Fridhemsplan", 'line-color':"blue"},
-				{'id':"VästraSkogen", 'x':18.003889, 'y':59.347500, 'year':1963, 'before':"Stadshagen", 'line-color':"blue"},
-				{'id':"SolnaCentrum", 'x':17.998889, 'y':59.358750, 'year':1964, 'before':"VästraSkogen", 'line-color':"blue"},
-				{'id':"Näckrosen", 'x':17.983194, 'y':59.366667, 'year':1965, 'before':"SolnaCentrum", 'line-color':"blue"},
-				{'id':"Hallonbergen", 'x':17.969306, 'y':59.375417, 'year':1966, 'before':"Näckrosen", 'line-color':"blue"},
-				{'id':"Huvudsta", 'x':17.985556, 'y':59.349444, 'year':1978, 'before':"VästraSkogen", 'line-color':"blue"},
-				{'id':"SolnaStrand", 'x':17.973889, 'y':59.354167, 'year':1980, 'before':"Huvudsta", 'line-color':"blue"},
-				{'id':"SundbybergsCentrum", 'x':17.970556, 'y':59.360833, 'year':1981, 'before':"SolnaStrand", 'line-color':"blue"},
-				{'id':"Duvbo", 'x':17.964444, 'y':59.367778, 'year':1982, 'before':"SundbybergsCentrum", 'line-color':"blue"},
-				{'id':"Rissne", 'x':17.939722, 'y':59.375833, 'year':1983, 'before':"Duvbo", 'line-color':"blue"},
-				{'id':"Rinkeby", 'x':17.928611, 'y':59.388056, 'year':1984, 'before':"Rissne", 'line-color':"blue"},
-				{'id':"Tensta", 'x':17.901944, 'y':59.393889, 'year':1985, 'before':"Rinkeby", 'line-color':"blue"},
-				{'id':"Hjulsta", 'x':17.899722, 'y':59.396667, 'year':1986, 'before':"Tensta", 'line-color':"blue"},
-				{'id':"Kista", 'x':17.941472, 'y':59.403667, 'year':1987, 'before':"Hallonbergen", 'line-color':"blue"},
-				{'id':"Husby", 'x':17.926944, 'y':59.409444, 'year':1988, 'before':"Kista", 'line-color':"blue"},
-				{'id':"Akalla", 'x':17.917778, 'y':59.413889, 'year':1989, 'before':"Husby", 'line-color':"blue"},
-				{'id':"Kungsträdgården", 'x':18.073333, 'y':59.330778, 'year':1990, 'before':"T-Centralen", 'line-color':"blue"},
-				
-				//Green Line
-				{'id':"Hässelbystrand", 'x':17.8325, 'y':59.361389, 'year':1980, 'before':"Råcksta", 'line-color':"green"},
-				{'id':"Råcksta", 'x':17.881861, 'y':59.354722, 'year':1975, 'before':"Åkeshov", 'line-color':"green"},
-				{'id':"Åkeshov", 'x':17.923889, 'y':59.342083, 'year':1970, 'before':"Alvik", 'line-color':"green"},
-				{'id':"Alvik", 'x':17.9825, 'y':59.333333, 'year':1965, 'before':"Fridhemsplan", 'line-color':"green"},
-				{'id':"Slussen", 'x':18.072222, 'y':59.319444, 'year':1952, 'before':"T-Centralen", 'line-color':"green"},
-				{'id':"Medborgarplatsen", 'x':18.073611, 'y':59.314306, 'year':1953, 'before':"Slussen", 'line-color':"green"},
-				{'id':"Skanstull", 'x':18.076111, 'y':59.307833, 'year':1954, 'before':"Medborgarplatsen", 'line-color':"green"},
-				{'id':"Gullmarsplan", 'x':18.081111, 'y':59.298889, 'year':1955, 'before':"Skanstull", 'line-color':"green"},
-				{'id':"Skärmarbrink", 'x':18.089806, 'y':59.295639, 'year':1956, 'before':"Gullmarsplan", 'line-color':"green"},
-				{'id':"Sandsborg", 'x':18.092278, 'y':59.284806, 'year':1958, 'before':"Skärmarbrink", 'line-color':"green"},
-				{'id':"Skogskyrkogården", 'x':18.095278, 'y':59.278056, 'year':1961, 'before':"Sandsborg", 'line-color':"green"},
-				{'id':"Tallkrogen", 'x':18.086389, 'y':59.271667, 'year':1965, 'before':"Skogskyrkogården", 'line-color':"green"},
-				{'id':"Gubbängen", 'x':18.082222, 'y':59.262889, 'year':1968, 'before':"Tallkrogen", 'line-color':"green"},
-				//{'id':"Hökarängen", 'x':18.082361, 'y':59.257778, 'year':1959, 'before':"Gubbängen", 'line-color':"green"},
-				{'id':"FarstaStrand", 'x':18.101111, 'y':59.235, 'year':1971, 'before':"Gubbängen", 'line-color':"green"},
-				{'id':"Sockenplan", 'x':18.070417, 'y':59.283333, 'year':1972, 'before':"Gullmarsplan", 'line-color':"green"},
-				{'id':"Bandhagen", 'x':18.049722, 'y':59.270556, 'year':1977, 'before':"Sockenplan", 'line-color':"green"},
-				{'id':"Hagsätra", 'x':18.01325, 'y':59.262639, 'year':1982, 'before':"Bandhagen", 'line-color':"green"},
-				{'id':"Kärrtorp", 'x':18.114444, 'y':59.2845, 'year':1987, 'before':"Skärmarbrink", 'line-color':"green"},
-				{'id':"Skarpnäck", 'x':18.133333, 'y':59.266806, 'year':1993, 'before':"Kärrtorp", 'line-color':"green"},
-				
-				
-
-				//Red Line
-				{'id':"Mariatorget", 'x':18.063333, 'y':59.316944, 'year':1962, 'before':"Slussen", 'line-color':"red"},
-				{'id':"Zinkensdamm", 'x':18.05, 'y':59.317778, 'year':1963, 'before':"Mariatorget", 'line-color':"red"},
-				{'id':"Hornstull", 'x':18.034167, 'y':59.315833, 'year':1964, 'before':"Zinkensdamm", 'line-color':"red"},
-				{'id':"Liljeholmen", 'x':18.023056, 'y':59.310806, 'year':1965, 'before':"Hornstull", 'line-color':"red"},
-				{'id':"Aspudden", 'x':18.001389	, 'y':59.306444, 'year':1966, 'before':"Liljeholmen", 'line-color':"red"},	
-				{'id':"Örnsberg", 'x':17.989028, 'y':59.3055, 'year':1967, 'before':"Aspudden", 'line-color':"red"},
-				{'id':"Axelsberg", 'x':17.974722, 'y':59.304333, 'year':1967, 'before':"Örnsberg", 'line-color':"red"},
-				{'id':"Mälarhöjden", 'x':17.957361, 'y':59.301056, 'year':1968, 'before':"Axelsberg", 'line-color':"red"},
-				{'id':"Bredäng", 'x':17.934028, 'y':59.294778, 'year':1969, 'before':"Mälarhöjden", 'line-color':"red"},
-				{'id':"Sätra", 'x':17.921306, 'y':59.284944, 'year':1970, 'before':"Bredäng", 'line-color':"red"},
-				{'id':"Skärholmen", 'x':17.906944, 'y':59.277139, 'year':1972, 'before':"Sätra", 'line-color':"red"},
-				{'id':"Vårberg", 'x':17.889583, 'y':59.275833, 'year':1974, 'before':"Skärholmen", 'line-color':"red"},
-				{'id':"Vårbygård", 'x':17.884306, 'y':59.264583, 'year':1976, 'before':"Vårberg", 'line-color':"red"},
-				{'id':"Masmo", 'x':17.880278, 'y':59.249667, 'year':1978, 'before':"Vårbygård", 'line-color':"red"},
-				{'id':"Fittja", 'x':17.860972, 'y':59.247472, 'year':1980, 'before':"Masmo", 'line-color':"red"},
-				{'id':"Alby", 'x':17.844861, 'y':59.239028, 'year':1982, 'before':"Fittja", 'line-color':"red"},
-				{'id':"Hallunda", 'x':17.825278, 'y':59.243333, 'year':1984, 'before':"Alby", 'line-color':"red"},
-				{'id':"Norsborg", 'x':17.813056, 'y':59.243889, 'year':1986, 'before':"Hallunda", 'line-color':"red"},
-				{'id':"Midsommarkransen", 'x':18.012361, 'y':59.301667, 'year':1967, 'before':"Aspudden", 'line-color':"red"},
-				{'id':"Telefonplan", 'x':17.997222, 'y':59.298333, 'year':1968, 'before':"Midsommarkransen", 'line-color':"red"},
-				{'id':"Hägerstensåsen", 'x':17.979028, 'y':59.295417, 'year':1969, 'before':"Telefonplan", 'line-color':"red"},
-				{'id':"Västertorp", 'x':17.966667, 'y':59.291111, 'year':1970, 'before':"Hägerstensåsen", 'line-color':"red"},
-				{'id':"Fruängen", 'x':17.965, 'y':59.286111, 'year':1971, 'before':"Västertorp", 'line-color':"red"},
-				{'id':"Östermalmstorg", 'x':18.074028, 'y':59.335, 'year':1971, 'before':"T-Centralen", 'line-color':"red"},
-				{'id':"Karlaplan", 'x':18.090833, 'y':59.338889, 'year':1972, 'before':"Östermalmstorg", 'line-color':"red"},
-				{'id':"Gärdet", 'x':18.098611, 'y':59.347222, 'year':1973, 'before':"Karlaplan", 'line-color':"red"},
-				{'id':"Ropsten", 'x':18.102222, 'y':59.357333, 'year':1974, 'before':"Gärdet", 'line-color':"red"},
-				{'id':"Stadion", 'x':18.081667, 'y':59.342917, 'year':1975, 'before':"Östermalmstorg", 'line-color':"red"},
-				{'id':"Tekniskahögskolan", 'x':18.071667, 'y':59.345694, 'year':1977, 'before':"Stadion", 'line-color':"red"},
-				{'id':"Universitetet", 'x':18.054722, 'y':59.365694, 'year':1979, 'before':"Tekniskahögskolan", 'line-color':"red"},
-				{'id':"Bergshamra", 'x':18.036528, 'y':59.3815, 'year':1981, 'before':"Universitetet", 'line-color':"red"},
-				{'id':"Danderydssjukhus", 'x':18.041667, 'y':59.392222, 'year':1983, 'before':"Bergshamra", 'line-color':"red"},
-				{'id':"MörbyCentrum", 'x':18.036667, 'y':59.398333, 'year':1985, 'before':"Danderydssjukhus", 'line-color':"red"},
-				
-
-            ];
+			
+			var stationInformation = returnStations();
 			
 			/*var map = d3.select("#img9")
 			.attr("height",height)
 			.attr("width",width);*/
-		
 			
             var svg = d3.select("#visual").append("svg")
 				.attr("id", "map")
@@ -207,111 +116,7 @@
             initialStation.transition().duration(1000)
                 .attr("r", 6);
 
-            /* This function looks for stations that need to be removed or added depending on the
-            interaction with the slider. */
-            function changeStations() {
-                // This part adds stations that should be visible after the slider has been changed
-                if(year_shown != year_entered && year_shown < year_entered) {
-                    for(var i = 0; i < stations.length; i++) {
-                        if(stations[i]["year"] > year_shown && stations[i]["year"] <= year_entered) {
-                            addStation(i);
-                        }
-                    }
-                    year_shown = year_entered;
-                }
-                // This part removes stations that should be visible after the slider has been changed
-                else if(year_shown != year_entered && year_shown > year_entered) {
-                    for(var i = 0; i < stations.length; i++) {
-                        if(stations[i]["year"] <= year_shown && stations[i]["year"] > year_entered) {
-                            removeStation(i);
-                        }
-                    }
-                    year_shown = year_entered;
-                }
-            }
-
-            function addStation(index) {
-                var stationBefore = findStation(stations[index]["before"]);
-
-                var shiftedCoords = shiftLine(
-					convertX(stations[index]["x"]),
-                    convertY(stations[index]["y"]),
-                   convertX(stations[stationBefore]["x"]),
-					convertY(stations[stationBefore]["y"]));
-				  
-
-                var addedLine = line.enter().append("line")
-                    .attr("id", stations[index]["id"] + "-line")
-                    .attr("x1", shiftedCoords[2])
-                    .attr("y1", shiftedCoords[3])
-                    .attr("x2", shiftedCoords[2])
-                    .attr("y2", shiftedCoords[3])
-                    .attr("stroke", stations[index]["line-color"]);
-
-                addedLine.transition().duration(1000)
-                    .attr("x2", shiftedCoords[0])
-                    .attr("y2", shiftedCoords[1]);
-
-                var addedStation = subway.enter().append("circle")
-                    .attr("r", 0)
-                    .attr("id", stations[index]["id"] + "-circle")
-                    .attr("cx", convertX(stations[index]["x"]))
-                    .attr("cy", convertY(stations[index]["y"]));
-                    
-
-                addedStation.transition().duration(1000)
-                    .attr("r", 6);
-            }
-
-            function removeStation(index) {
-                var id = "#" + stations[index]["id"] + "-line";
-                var removedLine = d3.select(id);
-                removedLine.transition().duration(1000)
-                    .attr("x2", removedLine.attr("x1"))
-                    .attr("y2", removedLine.attr("y1"));
-
-                removedLine.transition().delay(1000).remove();
-
-                id = "#" + stations[index]["id"] + "-circle";
-                var removedStation = d3.select(id);
-                removedStation.transition().duration(1000).
-                    attr("r", 0);
-                removedStation.transition().delay(1000).remove();
-            }
-
-            /* This function returns the index of the station with
-            the given id. */
-            function findStation(id) {
-                for(var i = 0; i < stations.length; i++) {
-                    if(id == stations[i]["id"]) {
-                        return i;
-                    }
-                }
-            }
-
-            /* This function shifts the line coordinates in order to avoid 
-            the line being placed upon the station circle. */
-            function shiftLine(x1, y1, x2, y2) {
-                var a, b, c, d, m = (y2 - y1)/(x2 - x1);
-                if(x1 < x2) {
-                    a = x1 + 8 / Math.sqrt(1 + m*m); 
-                }
-                else {
-                    a = x1 - 8 / Math.sqrt(1 + m * m); 
-                }
-                b = m * (a - x1) + y1;
-
-                m = (y1 - y2) / (x1 - x2);
-                if(x2 < x1) {
-                    c = x2 + 8 / Math.sqrt(1 + m*m); 
-                }
-                else {
-                    c = x2 - 8 / Math.sqrt(1 + m * m); 
-                }
-                d = m * (c - x2) + y2;
-                
-                return [a, b, c, d]; 
-            }
+           
 
         </script>
     </body>

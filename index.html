@@ -59,9 +59,9 @@
 			var canvasWidth = document.getElementById('visual').clientWidth;
 			var canvasHeight = height;
 			//Coordinates for the map's lower right corner
-			var map_eastSouth = [18.15,59.22];
+			var map_eastSouth = [18.34,59.227];
 			//Coordinates for the maps upper left corner
-			var map_westNorth = [17.80,59.42];
+			var map_westNorth = [17.66,59.42];
 			var xScale = canvasWidth/(map_eastSouth[0]-map_westNorth[0]);
 			var yScale = canvasHeight/(map_westNorth[1]-map_eastSouth[1]);
 			
@@ -205,7 +205,7 @@
                 .attr("cy", function(d){return convertY(d[0]['y'])});
 
             initialStation.transition().duration(1000)
-                .attr("r", 8);
+                .attr("r", 6);
 
             /* This function looks for stations that need to be removed or added depending on the
             interaction with the slider. */
@@ -260,7 +260,7 @@
                     
 
                 addedStation.transition().duration(1000)
-                    .attr("r", 8);
+                    .attr("r", 6);
             }
 
             function removeStation(index) {

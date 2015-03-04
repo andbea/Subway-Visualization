@@ -31,3 +31,10 @@ h1, h2, h3, p {
 #container {
     padding: 2% 5%;
 }
+
+body {
+    width: 2000px;
+    height:2000px;
+    background-color: #000000;
+
+}

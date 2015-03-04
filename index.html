@@ -23,7 +23,8 @@
 		<script type="text/javascript" src = "js/findStation.js"></script>
 		<script type="text/javascript" src = "js/shiftLine.js"></script>
 		<script type="text/javascript" src = "js/changeStations.js"></script>
-        
+        <!--script type="text/javascript" src = "js/updateColors.js"></script>-->
+		
     </head>
     <body align="middle">
         <div class="row" id="container">
@@ -31,7 +32,7 @@
 				      
                 <div id="visual">
 					<!-- <image id="img9" x="0" y="0" src='Stockholm.svg'></image> -->
-					<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1994 2375" enable-background="new 0 0 1994 2375" xml:space="preserve">
+					<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="400 500 1000 1000" enable-background="new 0 0 1994 2375" xml:space="preserve">
 						
 						<g class="wireframeMap">
 						
@@ -135,7 +136,7 @@
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1256.917,1203.666 1261.333,1197.75 1259.125,1196.084 
 		1267.889,1173.719 1281.651,1180.334 1268.584,1217 1261.583,1211.333 	"/>
 </g>
-<g id="Engelbrekt_xA8_">
+<g id="Engelbrekt">
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1304.248,1080.667 1311.54,1104.584 1319.021,1113.125 
 		1321.511,1120.479 1336.005,1141.156 1349.17,1156.994 1335.502,1166.164 1327.002,1169.166 1326.334,1164.666 1313.001,1156.833 
 		1299,1150.5 1294,1150.5 1266.823,1167.5 1264.313,1172 1267.889,1173.719 1259.125,1196.084 1261.333,1197.75 1256.917,1203.666 
@@ -143,7 +144,7 @@
 		1209.5,1126 1207,1117.5 1201.5,1103.666 1200,1098.5 1188.5,1085.666 1186.834,1079.334 1196,1076.166 1199,1072.666 
 		1197.334,1068.5 1206.167,1062.5 1227,1062.5 1232.5,1059.834 1248.334,1061.834 1258,1071.166 1269.284,1077.334 	"/>
 </g>
-<g id="Johannes">
+<g id="St-Johannes">
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1203.5,1145 1203.5,1138 1209.5,1130.834 1217.167,1136.334 
 		1218.334,1139.666 1226,1148.834 1236.5,1167 1236.5,1176 1245.583,1189.666 1253.194,1199.068 1241.625,1200.25 
 		1239.875,1196.125 1231.875,1179 1227,1170.5 1223.25,1172.125 1211.5,1150.5 1208,1150.5 	"/>
@@ -157,7 +158,7 @@
 		1214.875,1196.75 1211.125,1190.625 1231.875,1179 1227,1170.5 1223.25,1172.125 1219.083,1164.455 1199,1175.5 1203.5,1182.5 
 		1190.75,1190.625 	"/>
 </g>
-<g id="Matteus">
+<g id="St-Matteus">
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1169.562,1190.5 1170.875,1185.5 1174,1185.5 1169.062,1179 
 		1179.5,1168.75 1179.5,1161 1184.375,1155.125 1198,1149 1200.125,1151.875 1202.125,1150.5 1203.5,1145 1208,1150.5 1211,1150.5 
 		1219.083,1164.455 1199,1175.5 1203.5,1182.5 1190.75,1190.625 1187.875,1197.625 1178.25,1193.875 	"/>
@@ -173,7 +174,7 @@
 		1189,1210.5 1191.807,1199.373 1206,1202.875 1210.625,1206.25 1214.375,1210.875 1218.5,1220 1227.25,1227.5 1229.375,1231.5 
 		1229.25,1241.5 1172.261,1244.338 	"/>
 </g>
-<g id="S:t_Göran">
+<g id="St-Göran">
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1133.833,1183.915 1157.916,1190.25 1169.521,1190.562 
 		1187.854,1197.656 1191.796,1199.389 1189,1210.5 1187,1210.5 1184.5,1219.594 1180.75,1219.062 1172.261,1244.338 
 		1152.75,1246.75 1146.25,1240.375 1132.25,1234.5 1119,1234.5 1111.25,1225.75 1118.375,1212.625 1115,1201.25 1122.375,1187.375 	
@@ -234,7 +235,7 @@
 		971.5,1119.875 977,1120.25 984.625,1106.75 990.75,1091.75 1002,1095.625 1006.875,1089.25 1023.25,1095.875 1021,1089.25 
 		1009,1082.667 1004.333,1082 993.333,1074.334 994.333,1065 1005.667,1053.667 1007.333,1044.667 1012.667,1036 	"/>
 </g>
-<g id="Huddinge_Kommun">
+<g id="Huddinge_kommun">
 	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="873,1452.25 887.75,1467.375 906.5,1473.5 906.5,1509 
 		910.5,1516 910.5,1536 923.5,1531.5 954,1544 965.059,1586.5 994,1586.5 1007.5,1601 1007.5,1667 1026,1707.5 1077.5,1721.5 
 		1090,1753.5 1094.5,1784 1117.5,1827.5 1133.5,1830.5 1192.5,1877 1268,1846 1305,1848 1328,1833.5 1312.5,1820 1339.5,1784 
@@ -296,7 +297,7 @@
 		1269.284,1077.334 1258,1071.166 1248.334,1061.834 1232.5,1059.834 1227,1062.5 1224,1062.5 1221.322,1057.104 1179.646,1030.541 
 		1166,1013.667 1155.333,1012.333 1143.333,991.333 1124.667,980 	"/>
 </g>
-<g id="Järfälla">
+<g id="Järfälla_kommun">
 	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M919.708,902.5l-21.208-9.167V873l-10-7v-43l-12.667-18.5H838
 		c0,0,2.333-24.25,0-26.917S822.333,766.5,822.333,766.5H811.5v-10H796l15.667-27.167l8-31.333L827,688l-2.667-13.333L815,678
 		l-36-47.917L768.333,617.5H748l-9,57.833l-2.667,74L749.667,760l-58,93.333l-6,40.667L639,927.333l23.333,28L691,1026.666L730,1000
@@ -365,10 +366,6 @@
 
             /* This creates a observer for the slider and calls the changeStations() function
             to change the visualization accordingly. */
-            $("#slider").change(function() {
-                year_entered = $("#slider-1").val();
-                changeStations();
-            });
 
             /* The array contains longitude and latitude instead of simple x and y.
             This is done in order for the window size to be dynamic and a conversion can
@@ -408,6 +405,43 @@
 
             initialStation.transition().duration(1000)
                 .attr("r", 6);
+				
+			d3.tsv("data/rawdata.tsv", function(error, data) {
+			
+				var colorscale = d3.scale.linear()
+					.domain([0, 70000])
+					.range(["white", "green"]);
+			
+				$("#slider").change(function() {
+					year_entered = $("#slider-1").val();
+					changeStations();
+					//updateColors(year_entered);
+					
+					var n = (parseInt(year_entered)-1949);				
+					
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Maria_Magdalena").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Maria_Magdalena);});
+					$("#Vantör").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Vantör);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
+					
+					
+				});
+			
+			});
+				
         </script>
     </body>
 </html>

@@ -31,8 +31,9 @@
 				      
                 <div id="visual">
 					<!-- <image id="img9" x="0" y="0" src='Stockholm.svg'></image> -->
-					<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1994 2375" enable-background="new 0 0 1994 2375" xml:space="preserve">
+					<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
 						
+		<g id="outer">
 						<g class="wireframeMap">
 						
 						<g id="Farsta">
@@ -169,7 +170,7 @@
 		1227.25,1227.5 	"/>
 </g>
 <g id="Kungsholm">
-	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1180.75,1219.062 1184.5,1219.594 1186.834,1210.5 
+	<polygon fill="#000000" stroke="#000000" stroke-miterlimit="10" points="1180.75,1219.062 1184.5,1219.594 1186.834,1210.5 
 		1189,1210.5 1191.807,1199.373 1206,1202.875 1210.625,1206.25 1214.375,1210.875 1218.5,1220 1227.25,1227.5 1229.375,1231.5 
 		1229.25,1241.5 1172.261,1244.338 	"/>
 </g>
@@ -305,6 +306,7 @@
 </g>
 
 </g>
+</g>
 						
 					</svg>
 					
@@ -361,6 +363,9 @@
 			var map_westNorth = [17.66,59.42];
 			var xScale = canvasWidth/(map_eastSouth[0]-map_westNorth[0]);
 			var yScale = canvasHeight/(map_westNorth[1]-map_eastSouth[1]);
+
+
+
 					
 
             /* This creates a observer for the slider and calls the changeStations() function
@@ -384,10 +389,11 @@
 				svg.attr("id", "map");
                 svg.attr("width", width);
                 svg.attr("height", height);
+                svg.call(d3.behavior.zoom().scaleExtent([0.01, 8]).on("zoom", zoom));
 				svg.style("fill", "#image;");
 				
-			var subwayGroup = d3.select("#map").append("g").attr("class", "subwayGroup")
-			.attr("transform", "translate(" + 700 + "," + 700 + ")");
+			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
+			.attr("transform", "translate(" + 750 + "," + 1000 + ")");
 			
             // This initiates the lines that can be added.
             var line = subwayGroup.selectAll("line")
@@ -408,6 +414,26 @@
 
             initialStation.transition().duration(1000)
                 .attr("r", 6);
+
+
+         var count = 100;
+        /*function zoom() {
+        count = count + 100;
+        console.log(d3.event.translate);
+  		svg.attr("viewBox", d3.event.scale*100 + " " + d3.event.scale*100 + " " + d3.event.scale*100 + " " + d3.event.scale*100);
+			}
+	*/
+	
+	
+
+	function zoom() {
+		console.log(d3.event.scale)
+  		svg.select("#outer").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+	}
+
+
+
+
         </script>
     </body>
 </html>

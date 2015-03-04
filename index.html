@@ -381,12 +381,18 @@
 			/*var map = d3.select("#img9")
 			.attr("height",height)
 			.attr("width",width);*/
+
+			// This sets the starting position for the map so that it is centered in the canvas
+			var mapPositionX = -700;
+			var mapPositionY = -1000;
+			var mapScale = 1;
+			d3.select("#outer").attr("transform", "translate(" + mapPositionX+ "," + mapPositionY  + ")scale(" + mapScale+ ")");
 			
             var svg = d3.select("#map");
 				svg.attr("id", "map");
                 svg.attr("width", width);
                 svg.attr("height", height);
-                svg.call(d3.behavior.zoom().scaleExtent([0.01, 8]).on("zoom", zoom));
+                svg.call(d3.behavior.zoom().translate([mapPositionX,mapPositionY]).scaleExtent([0.3, 10]).on("zoom", zoom));
 				svg.style("fill", "#image;");
 				
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
@@ -467,19 +473,14 @@
 			});
 
 
-         var count = 100;
-        /*function zoom() {
-        count = count + 100;
-        console.log(d3.event.translate);
-  		svg.attr("viewBox", d3.event.scale*100 + " " + d3.event.scale*100 + " " + d3.event.scale*100 + " " + d3.event.scale*100);
-			}
-	*/
-	
+
 	
 
+
+	
+	//This is the zoom and panning functionality
 	function zoom() {
-		console.log(d3.event.scale)
-  		svg.select("#outer").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+  		svg.select("#outer").attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1]  + ")scale(" + d3.event.scale + ")");
 	}
         </script>
     </body>

@@ -386,7 +386,8 @@
                 svg.attr("height", height);
 				svg.style("fill", "#image;");
 				
-			var subwayGroup = d3.select("#map").append("g").attr("class", "subwayGroup");
+			var subwayGroup = d3.select("#map").append("g").attr("class", "subwayGroup")
+			.attr("transform", "translate(" + 700 + "," + 700 + ")");
 			
             // This initiates the lines that can be added.
             var line = subwayGroup.selectAll("line")

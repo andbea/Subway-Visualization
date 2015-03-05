@@ -41,12 +41,12 @@ var connections = [
 	{'year':1954, 'line-color':"green", 'from':"Bandhagen", 		'to':"Högdalen"},
 
 	// 1957
-	{'year':1957, 'line-color':"green", 'from':"Slussen", 			'to':"T-Centralen"},
 	{'year':1957, 'line-color':"green", 'from':"Slussen", 			'to':"GamlaStan"},
+	{'year':1957, 'line-color':"green", 'from':"GamlaStan", 		'to':"T-Centralen"},
 
 	// 1958
-	{'year':1958, 'line-color':"green", 'from':"Högdalen", 		'to':"Rågsved"},
-	{'year':1958, 'line-color':"green", 'from':"Rågsved", 		'to':"Hagsätra"},
+	{'year':1958, 'line-color':"green", 'from':"Högdalen", 			'to':"Rågsved"},
+	{'year':1958, 'line-color':"green", 'from':"Rågsved", 			'to':"Hagsätra"},
 	{'year':1958, 'line-color':"green", 'from':"Skärmarbrink", 		'to':"HammarbyHöjden"},
 	{'year':1958, 'line-color':"green", 'from':"HammarbyHöjden", 	'to':"Björkhagen"},
 	{'year':1958, 'line-color':"green", 'from':"Björkhagen", 		'to':"Kärrtorp"},
@@ -101,13 +101,13 @@ var connections = [
 	{'year':1975, 'line-color':"red", 	'from':"Tekniskahögskolan", 'to':"Universitetet"},
 
 	{'year':1975, 'line-color':"blue", 	'from':"Fridhemsplan", 		'to':"Rådhuset"},
+	{'year':1975, 'line-color':"blue", 	'from':"Rådhuset", 			'to':"T-Centralen"},
 	{'year':1975, 'line-color':"blue", 	'from':"Fridhemsplan", 		'to':"Stadshagen"},
 	{'year':1975, 'line-color':"blue", 	'from':"Stadshagen", 		'to':"VästraSkogen"},
 	{'year':1975, 'line-color':"blue", 	'from':"VästraSkogen", 		'to':"SolnaCentrum"},
 	{'year':1975, 'line-color':"blue", 	'from':"SolnaCentrum", 		'to':"Näckrosen"},
 	{'year':1975, 'line-color':"blue", 	'from':"Näckrosen", 		'to':"Hallonbergen"},
 
-	{'year':1975, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"},
 	{'year':1975, 'line-color':"blue", 	'from':"Rinkeby", 			'to':"Tensta"},
 	{'year':1975, 'line-color':"blue", 	'from':"Tensta", 			'to':"Hjulsta"},
 
@@ -127,7 +127,8 @@ var connections = [
 	{'year':1985, 'line-color':"blue", 	'from':"Huvudsta",			'to':"SolnaStrand"},
 	{'year':1985, 'line-color':"blue", 	'from':"SolnaStrand",		'to':"SundbybergsCentrum"},
 	{'year':1985, 'line-color':"blue", 	'from':"SundbybergsCentrum",'to':"Duvbo"},
-	{'year':1985, 'line-color':"blue", 	'from':"Duvbo",				'to':"Rissne"}
+	{'year':1985, 'line-color':"blue", 	'from':"Duvbo",				'to':"Rissne"},
+	{'year':1985, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"}
 ];
 			
 function returnConnections(){

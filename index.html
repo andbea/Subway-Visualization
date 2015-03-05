@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+
+		<meta charset="ISO-8859-1">
+
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Information Visualization - Project 4 - Subway History</title>
@@ -20,7 +22,15 @@
 		<script type="text/javascript" src = "js/findStation.js"></script>
 		<script type="text/javascript" src = "js/shiftLine.js"></script>
 		<script type="text/javascript" src = "js/changeStations.js"></script>
+
 		<script type="text/javascript" src = "js/populationDensity.js"></script>
+
+		<script type="text/javascript" src = "js/zoom.js"></script>
+		<script type="text/javascript" src = "js/zoomlayerInfo.js"></script>
+		<script type="text/javascript" src = "js/addText.js"></script>
+		
+		<!--script type="text/javascript" src = "js/updateColors.js"></script>-->
+
 	</head>
 	<body align="middle">
 		<div class="row" id="container">
@@ -29,7 +39,8 @@
 		<!-- <image id="img9" x="0" y="0" src='Stockholm.svg'></image> -->
 		<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
 		<g id="outer">
-		<g class="wireframeMap">
+		<g id="wireframeMap">
+
 		<g id="Farsta" name="Farsta" hektar="1538">
 		<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M1247.125,1531.5c2.625-2.5-17.438-19.375-17.438-19.375
 		l-14.469-20.438l22.641-18.594l1.891,2.406h8.25l0.125-9.5l7.125-6.75l-7.75-8.5l-0.5-15l3-1.75l0.5-6.5l-4.5-4.5l-0.25-16
@@ -366,6 +377,9 @@
 		var mapPositionX = -700;
 		var mapPositionY = -1000;
 		var mapScale = 1;
+		
+		var parishLayer = false;
+
 		d3.select("#outer").attr("transform", "translate(" + mapPositionX+ "," + mapPositionY + ")scale(" + mapScale+ ")");
 		var svg = d3.select("#map");
 		svg.attr("id", "map");
@@ -502,9 +516,9 @@
 		});
 		
 		//This is the zoom and panning functionality
-		function zoom() {
-			svg.select("#outer").attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1] + ")scale(" + d3.event.scale + ")");
-		}
+		//function zoom() {
+		//	svg.select("#outer").attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1] + ")scale(" + d3.event.scale + ")");
+		//}
 		</script>
 </body>
 </html>

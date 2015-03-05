@@ -407,7 +407,7 @@
 				</div>
 				<!-- <div id="map"></div> -->
                 <div id="slider" data-role="fieldcontain" style="padding: 2% 5%">
-                    <input type="range" name="slider-1" id="slider-1" value="1949" min="1949" max="2015" data-highlight="true"/>
+                    <input type="range" name="slider-1" id="slider-1" value="1950" min="1950" max="2014" data-highlight="true"/>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4" id="information">
@@ -442,8 +442,8 @@
             }
         </style>
         <script>
-            var year_shown = 1949,
-                year_entered = 1949,
+            var year_shown = 1950,
+                year_entered = 1950,
                 <!-- width = window.innerWidth; -->
 				width = document.getElementById('visual').clientWidth;
                 height = Math.round((window.innerHeight - $("#slider").height()) * 0.76);
@@ -511,24 +511,26 @@
             initialStation.transition().duration(1000)
                 .attr("r", 6);
 				
+			// Code for loading data, adding slider event handler and adding colors 
+				
 			d3.tsv("data/rawdata.tsv", function(error, data) {
 			
 				var colorscale = d3.scale.linear()
-					.domain([0, 70000])
-					.range(["white", "green"]);
+					.domain([0, 20000, 40000, 60000, 80000])
+					.range(["white", "#EDE574", "#F9D423", "#FC913A", "#FA6900"]);
 			
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();
 					changeStations();
 					//updateColors(year_entered);
 					
-					var n = (parseInt(year_entered)-1948);				
-					
+					var n = (parseInt(year_entered)-1950);
+
 					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
 					$("#Maria_Magdalena").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Maria_Magdalena);});
 					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Vantor);});
 					$("#St_Goran").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].St_Goran);});
-					$("#Farsta").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Farsta);});
+					$("#Farsta").children("path").attr("fill", function(d,i){ return colorscale(++data[n].Farsta);});
 					$("#Bromma").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Bromma);});
 					$("#Essinge").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Essinge);});
 					$("#Hagersten").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Hagersten);});
@@ -546,7 +548,7 @@
 					$("#Katarina").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Katarina);});
 					$("#Vasterled").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Vasterled);});
 					$("#Vallingby").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Vallingby);});
-					$("#Spanga_Kista").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Spanga_Kista);});
+					$("#Spanga_Kista").children("polyline").attr("fill", function(d,i){ return colorscale(++data[n].Spanga_Kista);});
 					$("#Oscar").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Oscar);});
 					$("#Maria_Magdalena").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Maria_Magdalena);});
 					$("#Enskede_Arsta").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Enskede_Arsta);});
@@ -557,8 +559,8 @@
 					$("#Botkyrka_kommun").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Botkyrka_kommun);});
 					$("#Huddinge_kommun").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Huddinge_kommun);});
 					$("#Sundbyberg_kommun").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Sundbyberg_kommun);});
-					$("#Jarfalla_kommun").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Jarfalla_kommun);});
-					$("#Nacka_kommun").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Nacka_kommun);});
+					$("#Jarfalla_kommun").children("path").attr("fill", function(d,i){ return colorscale(++data[n].Jarfalla_kommun);});
+					$("#Nacka_kommun").children("path").attr("fill", function(d,i){ return colorscale(++data[n].Nacka_kommun);});
 					
 					
 				});

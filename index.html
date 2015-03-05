@@ -171,7 +171,7 @@
 		1227.25,1227.5 	"/>
 </g>
 <g id="Kungsholm">
-	<polygon fill="#000000" stroke="#000000" stroke-miterlimit="10" points="1180.75,1219.062 1184.5,1219.594 1186.834,1210.5 
+	<polygon fill="none" stroke="#000000" stroke-miterlimit="10" points="1180.75,1219.062 1184.5,1219.594 1186.834,1210.5 
 		1189,1210.5 1191.807,1199.373 1206,1202.875 1210.625,1206.25 1214.375,1210.875 1218.5,1220 1227.25,1227.5 1229.375,1231.5 
 		1229.25,1241.5 1172.261,1244.338 	"/>
 </g>
@@ -314,7 +314,7 @@
 				</div>
 				<!-- <div id="map"></div> -->
                 <div id="slider" data-role="fieldcontain" style="padding: 2% 5%">
-                    <input type="range" name="slider-1" id="slider-1" value="1949" min="1949" max="2015" data-highlight="true"/>
+                    <input type="range" name="slider-1" id="slider-1" value="1950" min="1950" max="2014" data-highlight="true"/>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4" id="information">
@@ -349,8 +349,8 @@
             }
         </style>
         <script>
-            var year_shown = 1949,
-                year_entered = 1949,
+            var year_shown = 1950,
+                year_entered = 1950,
                 <!-- width = window.innerWidth; -->
 				width = document.getElementById('visual').clientWidth;
                 height = Math.round((window.innerHeight - $("#slider").height()) * 0.76);
@@ -431,8 +431,7 @@
 					changeStations();
 					//updateColors(year_entered);
 					
-					var n = (parseInt(year_entered)-1949);
-					console.log(n);
+					var n = (parseInt(year_entered)-1950);
 
 					$("#Kungsholm").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Kungsholm);});
 					$("#Maria_Magdalena").children("polygon").attr("fill", function(d,i){ return colorscale(++data[n].Maria_Magdalena);});

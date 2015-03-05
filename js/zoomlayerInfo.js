@@ -10,7 +10,7 @@ function zoomlayerInfo(scale){
 				for(j = 0; j < nodes.length ; j++){
 					if(nodes[j].tagName == 'polygon'|| nodes[j].tagName == 'path' || nodes[j].tagName == 'polyline'){
 						//console.log(elements[i].getAttribute("name"));
-						addText(nodes[j], elements[i].getAttribute("name"));
+						addText(nodes[j], elements[i].getAttribute("name"), elements[i].getAttribute("hektar"));
 						break;
 					}
 				}

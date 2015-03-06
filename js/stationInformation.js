@@ -1,6 +1,6 @@
 var stations = [
 				//Green Line
-				{'id':"Slussen", 			'x':18.072222, 'y':59.319444, 'year':1949}, //Green and Red
+				{'id':"Slussen", 			'x':18.072222, 'y':59.319444, 'year':1950}, //Green and Red
 				{'id':"Medborgarplatsen", 	'x':18.073611, 'y':59.314306, 'year':1950},
 				{'id':"Skanstull", 			'x':18.076111, 'y':59.307833, 'year':1950},
 				{'id':"Gullmarsplan", 		'x':18.081111, 'y':59.298889, 'year':1950},

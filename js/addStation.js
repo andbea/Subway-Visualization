@@ -13,8 +13,8 @@
       		var coordinates = d3.mouse(this);
       		return tooltip
 	          	.text(stations[index]["id"])
-	          	.attr("top", d3.select(this).attr("cy") + "px")
-	          	.attr("left", d3.select(this).attr("cx") + "px");
+	          	.style("top", (event.pageY-20) + "px")
+	          	.style("left", (event.pageX+20) + "px");
       	})
       	.on("mouseout", function() { 
       		return tooltip

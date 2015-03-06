@@ -7,5 +7,5 @@
         
 
     addedStation.transition().duration(1000)
-        .attr("r", 6);
+        .attr("r", stationCircleRadius);
 }

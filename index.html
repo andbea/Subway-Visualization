@@ -357,12 +357,12 @@
 		
 	        line {
 	            fill: none;
-	            stroke-width: 7px;
+	            stroke-width: 4px;
 	        }
 
 	        circle {
 	            stroke: gray;
-	            stroke-width: 2px;
+	            stroke-width: 1px;
 	            fill: white;
 	        }
 	    </style>
@@ -371,7 +371,8 @@
 	            year_entered = 1949,
 	            <!-- width = window.innerWidth; -->
 				width = document.getElementById('visual').clientWidth;
-	            height = Math.round((window.innerHeight - $("#slider").height()) * 0.76);
+	            height = Math.round((window.innerHeight - $("#slider").height()) * 0.76),
+	            stationCircleRadius = 4;
 			
 			//Putting my variables here *Dan*
 			var canvasWidth = document.getElementById('visual').clientWidth;
@@ -404,11 +405,15 @@
 			.attr("transform", "translate(" + 750 + "," + 1000 + ")");
 			
 	        // This initiates the lines that can be added.
-	        var line = subwayGroup.selectAll("line")
+	        var line = subwayGroup.append("g")
+	        	.attr("render-order", -1)
+	        	.selectAll("line")
 	            .data([stations]);
 
 	        // This initiates the circles that can be added.
-	        var subway = subwayGroup.selectAll("circle")
+	        var subway = subwayGroup.append("g")
+	        	.attr("render-order", 1)
+	        	.selectAll("circle")
 	            .data([stations]);
 
 	        /* This variable initiates the visualization and places out the 
@@ -421,7 +426,7 @@
 	            .attr("cy", function(d){return convertY(d[0]['y'])});
 
 	        initialStation.transition().duration(1000)
-	            .attr("r", 6);
+	            .attr("r", stationCircleRadius);
 				
 			d3.tsv("data/rawdata.tsv", function(error, data) {
 			

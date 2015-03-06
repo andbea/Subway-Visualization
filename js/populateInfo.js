@@ -5,8 +5,8 @@ function populateInfo(id){
 
 	$('#title').html(stationInfoHolder[index]["Station"]);
 	$('#inaug').html("<strong>Invigdes: </strong>" + stationInfoHolder[index]["Year"]);
-	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]);
-	$('#history').html("<strong>Historiska fakta: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]);
+	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
+	$('#history').html("<strong>Historiska fakta: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
 
 
 }

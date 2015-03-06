@@ -745,52 +745,77 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"25 800",
     "Year":"26 oktober 1952",
     "Öst":"18,048889",
-    "Nord":"59,342778"
+    "Nord":"59,342778",
+    "Image": [
+    "Odenplan_1.jpg",
+    "Odenplan_2.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"Universitetet",
     "Station":"Universitetet",
     "Art":"Stationen har sedan 1997 konstnärlig utsmyckning med temat FN:s deklaration om de mänskliga rättigheterna på keramiska plattor, samt Linnés resor, av konstnärenFrançoise Schein.",
     "Påstigande/vardagsdygn 2012":"13 000",
     "Year":"1975-01-12",
     "Öst":"18,054722",
-    "Nord":"59,365694"
+    "Nord":"59,365694",
+    "Image": [
+    "Universitetet_1.jpg",
+    "Universitetet_2.jpg",
+    "Universitetet_3.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"Gärdet",
     "Station":"Gärdet",
     "Art":"Plattformen är konstnärligt utsmyckad med fantasiskalbaggar av konstnären Karl Axel Pehrson, som också skapat den skalbaggsskulptur som delas ut på Guldbaggegalan.[2] Utsmyckningen skapades 1967.",
     "Påstigande/vardagsdygn 2012":"12 500",
     "Year":"1967-09-02",
     "Öst":"18,098611",
-    "Nord":"59,347222"
+    "Nord":"59,347222",
+    "Image": [
+    "Gärdet_1.jpg",
+    "Gärdet_2.jpg"
+    ] 
   },
   {
-    "id":"",
-    "Station":"Sundbybergs centrum",
+    "id":"SundbybergsCentrum",
+    "Station":"Sundbybergs Centrum",
     "Art":"Den konstnärliga utsmyckningen utgörs av skulpturer med husfasader och människans sinnen av Lars Kleen,Michael Söderlundh och Peter Tillberg, 1985.",
     "Påstigande/vardagsdygn 2012":"11 400",
     "Year":"1985-08-19",
     "Öst":"17,970556",
-    "Nord":"59,360833"
+    "Nord":"59,360833",
+    "Image": [
+    "SundbybergsCentrum_1.jpg",
+    "SundbybergsCentrum_2.jpg",
+    "SundbybergsCentrum_3.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"SolnaCentrum",
     "Station":"Solna Centrum",
     "Art":"Konstnärlig utsmyckning av Karl-Olov Björk (1975) och Anders Åberg (1975, 1992), bland annat olika Sverigemotiv som visar Sveriges problem på 1970-talet samt olika tittskåp. Stationens tak och väggar är målade i grönt och rött.",
     "Påstigande/vardagsdygn 2012":"10 800",
     "Year":"1975-08-31",
     "Öst":"17,998889",
-    "Nord":"59,358750"
+    "Nord":"59,358750",
+    "Image": [
+    "SolnaCentrum_1.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"Stadshagen",
     "Station":"Stadshagen",
     "Art":"Den konstnärliga utsmyckningen är gjord av Lasse Lindqvist; sex tavlor med idrottsbilder målade på veckadplåt.",
     "Påstigande/vardagsdygn 2012":"10 700",
     "Year":"1975-08-31",
     "Öst":"18,017778",
-    "Nord":"59,337222"
+    "Nord":"59,337222",
+    "Image": [
+    "Stadshagen_1.jpg",
+    "Stadshagen_2.jpg"
+    ] 
   },
   {
     "id":"Råcksta",
@@ -799,7 +824,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"3 500",
     "Year":"26 oktober 1952",
     "Öst":"17,881861",
-    "Nord":"59,354722"
+    "Nord":"59,354722",
+    "Image": [
+    "Råcksta_1.jpg"
+    ] 
   },
   {
     "id":"Rådmansgatan",
@@ -808,25 +836,36 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"26 600",
     "Year":"26 oktober 1952",
     "Öst":"18,058611",
-    "Nord":"59,340278"
+    "Nord":"59,340278",
+    "Image": [
+    "Rådmansgatan_1.jpg",
+    "Rådmansgatan_2.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"Tensta",
     "Station":"Tensta",
     "Art":"Helga Henschen med temat En ros till invandrarna",
     "Påstigande/vardagsdygn 2012":"7 900",
     "Year":"1975-08-31",
     "Öst":"17,901944",
-    "Nord":"59,393889"
+    "Nord":"59,393889",
+    "Image": [
+    "Tensta_1.jpg",
+    "Tensta_2.jpg"
+    ] 
   },
   {
-    "id":"",
+    "id":"Rådhuset",
     "Station":"Rådhuset",
     "Art":"Konstnärlig utsmyckning av Sigvard Olsson med skämtsamma detaljer från Kungsholmens historia. På plattformen finnsparmar (ett gammalt hömått), ett skorstensfundament, en vedstapel, korgar samt en 1600-talsliknande portal.",
     "Påstigande/vardagsdygn 2012":"7 700",
     "Year":"1975-08-31",
     "Öst":"18,041944",
-    "Nord":"59,330278"
+    "Nord":"59,330278",
+    "Image": [
+    "Rådhuset_1.jpg"
+    ] 
   },
   {
     "id":"Rågsved",
@@ -835,88 +874,131 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"4 500",
     "Year":"14 november 1959",
     "Öst":"18,031389",
-    "Nord":"59,256389"
+    "Nord":"59,256389",
+    "Image": [
+    "Rågsved_1.jpg",
+    "Rågsved_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Rinkeby",
     "Station":"Rinkeby",
     "Art":"Nisse Zetterbergs konst består av tegelröda väggar med guldinlägg och runinskrifter. Nisse Zetterberg har utgått från de \"fornfynd\" från vikingatiden, som gjorts vid utgrävningar i området,",
     "Påstigande/vardagsdygn 2012":"7 500",
     "Year":"1975-08-31",
     "Öst":"17,928611",
-    "Nord":"59,388056"
+    "Nord":"59,388056",
+    "Image": [
+    "Rinkeby_1.jpg",
+    "Rinkeby_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Stadion",
     "Station":"Stadion",
     "Art":"Konstnärlig utsmyckning av Åke Pallarp och Enno Hallek med tematStockholms Stadion, bland annat med olympiaaffischen från 1912.",
     "Påstigande/vardagsdygn 2012":"7 400",
     "Year":"1973-09-30",
     "Öst":"18,081667",
-    "Nord":"59,342917"
+    "Nord":"59,342917",
+    "Image": [
+    "Stadion_1.jpg",
+    "Stadion_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"VästraSkogen",
     "Station":"Västra skogen",
     "Art":"Konsten på stationen är skapad av konstnären Sivert Lindblom och invigdes samtidigt som stationen. Den kompletterades 1985. Lindblom anknöt till och inspirerades av mystiken i namnet \"Ingentingskogen",
     "Påstigande/vardagsdygn 2012":"7 300",
     "Year":"1975-08-31",
     "Öst":"18,003889",
-    "Nord":"59,347500"
+    "Nord":"59,347500",
+    "Image": [
+    "VästraSkogen_1.jpg",
+    "VästraSkogen_2.jpg",
+    "VästraSkogen_3.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"MörbyCentrum",
     "Station":"Mörby Centrum",
     "Art":"Konstnärlig utsmyckning av Karin Ek och Gösta Wessel; skuggmålningar som tycks skifta färg beroende på vinkeln.",
     "Påstigande/vardagsdygn 2012":"7 000",
     "Year":"1978-01-29",
     "Öst":"18,036667",
-    "Nord":"59,398333"
+    "Nord":"59,398333",
+    "Image": [
+    "MörbyCentrum_1.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Husby",
     "Station":"Husby",
     "Art":"Den har gula väggar och med motiv av björkstammar ochVaxholmsbåtar av konstnären Birgit Broms.",
     "Påstigande/vardagsdygn 2012":"6 500",
     "Year":"1977-07-05",
     "Öst":"17,926944",
-    "Nord":"59,409444"
+    "Nord":"59,409444",
+    "Image": [
+    "Husby_1.jpg",
+    "Husby_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Bergshamra",
     "Station":"Bergshamra",
     "Art":"Konstnärlig utsmyckning : Röster från det förflutna, fossil, och runinskrifter av Göran Dahl, Carl Johan De Geer och Kristina Anshelm, 1978. Bland runinskrifterna märks en fullständig återgivning av den berömda Rökstenens utseende.",
     "Påstigande/vardagsdygn 2012":"6 000",
     "Year":"1978-01-29",
     "Öst":"18,036528",
-    "Nord":"59,3815"
+    "Nord":"59,3815",
+    "Image": [
+    "Bergshamra_1.jpg",
+    "Bergshamra_2.jpg"
+    ]
   },
   {
-    "id":"",
-    "Station":"Hallonberg",
+    "id":"Hallonbergen",
+    "Station":"Hallonbergen",
     "Art":"Konstnärlig utsmyckning med barnteckningar och plåtskulpturer av Elis Eriksson (1975) och Gösta Wallmark (1982). ",
     "Påstigande/vardagsdygn 2012":"5 600",
     "Year":"1975-08-31",
     "Öst":"17,969306",
-    "Nord":"59,375417"
+    "Nord":"59,375417",
+    "Image": [
+    "Hallonbergen_1.jpg",
+    "Hallonbergen_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Kungsträdgården",
     "Station":"Kungsträdgården",
     "Art":"Konstnären Ulrik Samuelson har utformat stationen med inspiration från de palats, nuvarande och tidigare, som har funnits vid Kungsträdgården.",
     "Påstigande/vardagsdygn 2012":"5 600",
     "Year":"1977-10-30",
     "Öst":"18,073333",
-    "Nord":"59,330778"
+    "Nord":"59,330778",
+    "Image": [
+    "Kungsträdgården_1.jpg",
+    "Kungsträdgården_2.jpg",
+    "Kungsträdgården_3.jpg",
+    "Kungsträdgården_4.jpg",
+    "Kungsträdgården_5.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Akalla",
     "Station":"Akalla",
     "Art":"Väggarna på stationen är målade i gulockra kulör och är prydda med sex keramikmålningar med män och kvinnor gjorda av konstnärenBirgit Ståhl-Nyberg 1975–1977.",
     "Påstigande/vardagsdygn 2012":"5 500",
     "Year":"1977-07-05",
     "Öst":"17,917778",
-    "Nord":"59,413889"
+    "Nord":"59,413889",
+    "Image": [
+    "Akalla_1.jpg",
+    "Akalla_2.jpg"
+    ]    
   },
   {
     "id":"StEriksplan",
@@ -925,7 +1007,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"20 500",
     "Year":"26 oktober 1952",
     "Öst":"18,036944",
-    "Nord":"59,339722"
+    "Nord":"59,339722",
+    "Image": [
+    "StEriksplan_1.jpg"
+    ]
   },
   {
     "id":"Sandsborg",
@@ -934,16 +1019,23 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"4 800",
     "Year":"1 oktober 1950",
     "Öst":"18,092278",
-    "Nord":"59,284806"
+    "Nord":"59,284806",
+    "Image": [
+    "Sandsborg_1.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Rissne",
     "Station":"Rissne",
     "Art":"Konstnärlig utsmyckning är en textad tidsaxel med historiska händelser med mera från 3000 f.Kr. till 1985 av Madeleine Dranger och Rolf H Reimers, 1985.",
     "Påstigande/vardagsdygn 2012":"5 300",
     "Year":"1985-08-19",
     "Öst":"17,939722",
-    "Nord":"59,375833"
+    "Nord":"59,375833",
+    "Image": [
+    "Rissne_1.jpg",
+    "Rissne_2.jpg"
+    ]
   },
   {
     "id":"Skanstull",
@@ -952,7 +1044,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"28 100",
     "Year":"1 oktober 1950",
     "Öst":"18,076111",
-    "Nord":"59,307833"
+    "Nord":"59,307833",
+    "Image": [
+    "Skanstull_1.jpg"
+    ]
   },
   {
     "id":"Skärmarbrink",
@@ -961,7 +1056,11 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"5 800",
     "Year":"1 oktober 1950",
     "Öst":"18,089806",
-    "Nord":"59,295639"
+    "Nord":"59,295639",
+    "Image": [
+    "Skärmarbrink_1.jpg",
+    "Skärmarbrink_2.jpg"
+    ]
   },
   {
     "id":"Skarpnäck",
@@ -970,7 +1069,12 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"5 000",
     "Year":"15 oktober 1994",
     "Öst":"18,133333",
-    "Nord":"59,266806"
+    "Nord":"59,266806",
+    "Image": [
+    "Skarpnäck_1.jpg",
+    "Skarpnäck_2.jpg",
+    "Skarpnäck_2.jpg"
+    ]
   },
   {
     "id":"Skogskyrkogården",
@@ -979,7 +1083,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"1 900",
     "Year":"1 oktober 1950",
     "Öst":"18,095278",
-    "Nord":"59,278056"
+    "Nord":"59,278056",
+    "Image": [
+    "Skogskyrkogården_1.jpg"
+    ]
   },
   {
     "id":"Slussen",
@@ -988,7 +1095,11 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"83 100",
     "Year":"1 oktober 1950",
     "Öst":"18,072222",
-    "Nord":"59,319444"
+    "Nord":"59,319444",
+    "Image": [
+    "Slussen_1.jpg",
+    "Slussen_2.jpg"
+    ]
   },
   {
     "id":"Sockenplan",
@@ -997,25 +1108,40 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"2 300",
     "Year":"9 september 1951",
     "Öst":"18,070417",
-    "Nord":"59,283333"
+    "Nord":"59,283333",
+    "Image": [
+    "Sockenplan_1.jpg",
+    "Sockenplan_2.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Näckrosen",
     "Station":"Näckrosen",
     "Art":"Stationens konst är utförd som ett stort collage av texter, stenar, kakelugnsbitar, glaserat tegel från det rivna Strindbergshuset vid Karlaplan och olika montrar med bland annat filmrekvisita och foton från Filmstaden.",
     "Påstigande/vardagsdygn 2012":"3 900",
     "Year":"1975-08-31",
     "Öst":"17,983194",
-    "Nord":"59,366667"
+    "Nord":"59,366667",
+    "Image": [
+    "Näckrosen_1.jpg",
+    "Näckrosen_2.jpg",
+    "Näckrosen_3.jpg",
+    "Näckrosen_4.jpg",
+    "Näckrosen_5.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Huvudsta",
     "Station":"Huvudsta",
     "Art":"Konstnärlig utsmyckning:Hängande trädgårdar av Per Holmberg, 1985",
     "Påstigande/vardagsdygn 2012":"3 500",
     "Year":"1985-08-19",
     "Öst":"17,985556",
-    "Nord":"59,349444"
+    "Nord":"59,349444",
+    "Image": [
+    "Huvudsta_1.jpg",
+    "Huvudsta_2.jpg"
+    ]
   },
   {
     "id":"StoraMossen",
@@ -1024,7 +1150,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"3 000",
     "Year":"26 oktober 1952",
     "Öst":"17,965",
-    "Nord":"59,334722"
+    "Nord":"59,334722",
+    "Image": [
+    "StoraMossen_1.jpg"
+    ]
   },
   {
     "id":"Stureby",
@@ -1033,7 +1162,11 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"1 800",
     "Year":"9 september 1951",
     "Öst":"18,056944",
-    "Nord":"59,274722"
+    "Nord":"59,274722",
+    "Image": [
+    "Stureby_1.jpg",
+    "Stureby_2.jpg"
+    ]
   },
   {
     "id":"Svedmyra",
@@ -1042,16 +1175,25 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"2 700",
     "Year":"9 september 1951",
     "Öst":"18,067083",
-    "Nord":"59,2775"
+    "Nord":"59,2775",
+    "Image": [
+    "Svedmyra_1.jpg",
+    "Svedmyra_2.jpg",
+    "Svedmyra_3.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"SolnaStrand",
     "Station":"Solna Strand",
     "Art":"Stationen är konstnärligt utsmyckad av Takashi Naraha: Himmelen av kub (1985)",
     "Påstigande/vardagsdygn 2012":"2 900",
     "Year":"1985-08-19",
     "Öst":"17,973889",
-    "Nord":"59,354167"
+    "Nord":"59,354167",
+    "Image": [
+    "SolnaStrand_1.jpg",
+    "SolnaStrand_2.jpg"
+    ]
   },
   {
     "id":"T-Centralen",
@@ -1060,34 +1202,51 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"168 400",
     "Year":"24 november 1957",
     "Öst":"18,060833",
-    "Nord":"59,331667"
+    "Nord":"59,331667",
+    "Image": [
+    "T-Centralen_1.jpg",
+    "T-Centralen_2.jpg",
+    "T-Centralen_3.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Hjulsta",
     "Station":"Hjulsta",
     "Art":"Christina Rundqvist Andersson, Olle Magnusson och Ruth Rydfeldt med flera http://sv.wikipedia.org/wiki/Hjulsta_(tunnelbanestation)",
     "Påstigande/vardagsdygn 2012":"2 600",
     "Year":"1975-08-31",
     "Öst":"17,899722",
-    "Nord":"59,396667"
+    "Nord":"59,396667",
+    "Image": [
+    "Hjulsta_1.jpg",
+    "Hjulsta_2.jpg",
+    "Hjulsta_3.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Norsborg",
     "Station":"Norsborg",
     "Art":"I biljetthallens lanternin hänger konstnärsparet Eva och Peter Moritz skulptur av aluminiumstänger som bultats och svetsats samman. Skulpturen bär namnet Min vän och invigdes 2006.",
     "Påstigande/vardagsdygn 2012":"2 500",
     "Year":"1975-01-12",
     "Öst":"17,813056",
-    "Nord":"59,243889"
+    "Nord":"59,243889",
+    "Image": [
+    "Norsborg_1.jpg"
+    ]
   },
   {
-    "id":"",
+    "id":"Duvbo",
     "Station":"Duvbo",
     "Art":"Konstnärlig utsmyckning; fossilliknande reliefer av Gösta Sillén, 1985",
     "Påstigande/vardagsdygn 2012":"2 400",
     "Year":"1985-08-19",
     "Öst":"17,964444",
-    "Nord":"59,367778"
+    "Nord":"59,367778",
+    "Image": [
+    "Duvbo_1.jpg",
+    "Duvbo_2.jpg"
+    ]
   },
   {
     "id":"Tallkrogen",
@@ -1096,7 +1255,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"2 100",
     "Year":"1 oktober 1950",
     "Öst":"18,086389",
-    "Nord":"59,271667"
+    "Nord":"59,271667",
+    "Image": [
+    "Tallkrogen_1.jpg"
+    ]
   },
   {
     "id":"Thorildsplan",
@@ -1105,7 +1267,12 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"7 600",
     "Year":"26 oktober 1952",
     "Öst":"18,015361",
-    "Nord":"59,331528"
+    "Nord":"59,331528",
+    "Image": [
+    "Thorildsplan_1.jpg",
+    "Thorildsplan_2.jpg",
+    "Thorildsplan_3.jpg"
+    ]
   },
   {
     "id":"Vällingby",
@@ -1114,7 +1281,10 @@ var stationInfo = [
     "Påstigande/vardagsdygn 2012":"10 600",
     "Year":"26 oktober 1952",
     "Öst":"17,872063",
-    "Nord":"59,363249"
+    "Nord":"59,363249",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
   }
 ]
 

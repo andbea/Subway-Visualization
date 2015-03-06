@@ -420,6 +420,15 @@
 	        var subway = subwayGroup.append("g")
 	        	.selectAll("circle")
 	            .data([stations]);
+
+           var tooltip = d3.select("#container")
+			    .append("div")
+			    .style("position", "absolute")
+			    .style("visibility", "hidden")
+			    .style("background", "white")
+			    .style("padding", "5px")
+			    .style("border", "1px solid LightGray")
+			    .style("border-radius", "5px");
 		
 			// Code for loading data, adding slider event handler and adding colors
 		

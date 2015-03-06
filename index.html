@@ -326,7 +326,7 @@
 					</svg>
 				</div>
 				<!-- <div id="map"></div> -->
-				<div class="row" style="padding: 1% 0%">
+				<div class="row">
 		            <div class="col-sm-10 col-md-10">
 			            <div id="slider" data-role="fieldcontain">
 			                <input type="range" name="slider-1" id="slider-1" value="1950" min="1950" max="2015" data-highlight="true"/>
@@ -376,8 +376,8 @@
 		<script>
 			var year_shown = 1950,
 				year_entered = 1950,
-				height = Math.round((window.innerHeight - $("#slider").height()) * 0.76),
-				width = height*1.6,
+				height =  document.getElementById('visual').clientHeight,
+				width = document.getElementById('visual').clientWidth,
 	            stationCircleRadius = 4;
 			
 			//Putting my variables here *Dan*

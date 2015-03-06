@@ -32,7 +32,9 @@ body {
     border: solid;
     border-width: 1px;
     border-color: #a8a8a8;
-    padding: 10px;
+    display: flex;
+
+    height: 79vh;
 }
 
 #container {

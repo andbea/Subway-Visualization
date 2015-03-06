@@ -16,16 +16,19 @@
 
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-		<script type="text/javascript" src = "js/stationInformation.js"></script>
-		<script type="text/javascript" src = "js/connectionInformation.js"></script>
+
+		<script type="text/javascript" src = "js/playAndPause.js"></script>
+
 		<script type="text/javascript" src = "js/geoToXY.js"></script>
 		<script type="text/javascript" src = "js/shiftLine.js"></script>
 
+		<script type="text/javascript" src = "js/stationInformation.js"></script>
 		<script type="text/javascript" src = "js/changeStations.js"></script>
 		<script type="text/javascript" src = "js/addStation.js"></script>
 		<script type="text/javascript" src = "js/removeStation.js"></script>
 		<script type="text/javascript" src = "js/findStation.js"></script>
 
+		<script type="text/javascript" src = "js/connectionInformation.js"></script>
 		<script type="text/javascript" src = "js/changeConnections.js"></script>
 		<script type="text/javascript" src = "js/addConnection.js"></script>
 		<script type="text/javascript" src = "js/removeConnection.js"></script>
@@ -322,10 +325,10 @@
 			        </div>
 			        <div class="col-sm-2 col-md-2" style="padding-top: 12px; padding-bottom: 12px;">
 			        	<div class="btn-group" role="group" style="display: flex; white-space: nowrap">
-			        		<button type="button" class="btn btn-default" style="padding: 5px 2px" aria-label="Left Align">
+			        		<button type="button" class="btn btn-default" onclick="play()" style="padding: 5px 2px" aria-label="Left Align">
   								<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
   							</button>
-			        		<button type="button" class="btn btn-default" style="padding: 5px 2px"  aria-label="Right Align">
+			        		<button type="button" class="btn btn-default" onclick="pause()" style="padding: 5px 2px"  aria-label="Right Align">
   								<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
   							</button>
 			        	</div>
@@ -474,6 +477,7 @@
 				});
 			
 			});
+
 			//This is the zoom and panning functionality
 			function zoom() {
 		  		svg.select("#outer").attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1]  + ")scale(" + d3.event.scale + ")");

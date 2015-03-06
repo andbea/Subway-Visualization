@@ -2,6 +2,13 @@ h1, h2, h3, p {
 	font-family: "Calibri";
 }
 
+body {
+    width: 2000px;
+    height:2000px;
+    background-color: #000000;
+
+}
+
 #information {
     background-color: #f6f6f6;
      -moz-border-radius: 5px;
@@ -30,11 +37,4 @@ h1, h2, h3, p {
 
 #container {
     padding: 2% 5%;
-}
-
-body {
-    width: 2000px;
-    height:2000px;
-    background-color: #000000;
-
 }

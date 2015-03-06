@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="css/info-holder.css" media="screen" type="text/css" />
+        
 
         <script src="http://d3js.org/d3.v3.min.js"></script>
 
@@ -42,6 +44,8 @@
 		<script type="text/javascript" src = "js/zoom.js"></script>
 		<script type="text/javascript" src = "js/zoomlayerInfo.js"></script>
 		<script type="text/javascript" src = "js/addText.js"></script>
+		<script type="text/javascript" src = "js/stationInfoHolder.js"></script>
+		<script type="text/javascript" src = "js/populateInfo.js"></script>
 
 	</head>
 	<body align="middle">
@@ -344,9 +348,27 @@
 		        </div>
 		    </div>
 			<div class="col-sm-12 col-md-4" id="information">
-				<h1>Information holder</h1>
-				<p>Here information about the most current subway station is presented for the user</p>
-			</div>
+				
+				
+				<div id='img-holder'>
+					<ul>
+						<li><a href="#"><img src="img/stations/Alvik.jpg" height="220" alt="" /></a></li>
+						<li><a href="#"><img src="img/stations/Brommaplan.jpg"  height="220" alt="" /></a></li>
+						<li><a href="#"><img src="img/stations/KTH.jpg"  height="220" alt="" /></a></li>
+						<li><a href="#"><img src="img/stations/Midsommarkransen_skulptur_midsommarkrans.jpeg" height="220" alt="" /></a></li>
+			
+					</ul>
+
+				</div> <!-- ends image holder -->
+
+				
+				<div id="info-text-wrap">
+				<h1 id='title'>T-Centralen</h1>
+					<p id='inaug'><strong>Invigning:</strong> 18 november 1958</p>
+					<p id='art'><strong>Stationens konstverk:</strong> Den konstnärliga utsmyckningen består av abstrakta muraler av glaserade kakelplattor. Konstverken är gjorda av Rigmor Roxner 1999 och inspirerade av spårvagnstrafikens kakelklädda stationer</p>
+					<p id='history'><strong>Historiska fakta:</strong> Den konstnärliga utsmyckningen på stationen anknyter till Brommas och flygets historia och närheten till Bromma flygplats. Den är framställd av Peter Svedberg år 1996 och utförd i plåt, glas, aluminium och fotografiska bilder.</p>
+				</div><!--  ends info-text-wrap -->
+			</div> <!-- ends information -->
 		</div>
 		<style>
 			/*.wireframeMap {
@@ -394,6 +416,7 @@
 			var callbacks = $.Callbacks();
 			var stations = returnStations();
 			var connections = returnConnections();
+			var stationInfoHolder= returnStationInfo();
 			/*var map = d3.select("#img9")
 			.attr("height",height)
 			.attr("width",width);*/

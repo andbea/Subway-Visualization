@@ -2,7 +2,7 @@
 
 function populateInfo(id){
 	var index = getStationInfo(id);
-
+    var images = stationInfoHolder[index]['Images'];
 	$('#title').html(stationInfoHolder[index]["Station"]);
 	$('#inaug').html("<strong>Invigdes: </strong>" + stationInfoHolder[index]["Year"]);
 	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));

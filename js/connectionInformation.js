@@ -1,6 +1,6 @@
 var connections = [
 	// 1950
-	{'year':1950, 'line-color':"green", 'from':"Slussen", 			'to':"Medborgarplatsen"}, // Green and Red
+	{'year':1950, 'line-color':"green", 'from':"Slussen", 			'to':"Medborgarplatsen"},
 	{'year':1950, 'line-color':"green", 'from':"Medborgarplatsen", 	'to':"Skanstull"},
 	{'year':1950, 'line-color':"green", 'from':"Skanstull", 		'to':"Gullmarsplan"},
 	{'year':1950, 'line-color':"green", 'from':"Gullmarsplan", 		'to':"Skärmarbrink"},
@@ -41,6 +41,7 @@ var connections = [
 	{'year':1954, 'line-color':"green", 'from':"Bandhagen", 		'to':"Högdalen"},
 
 	// 1957
+	{'year':1957, 'line-color':"green", 'from':"T-Centralen", 		'to':"Hötorget"},
 	{'year':1957, 'line-color':"green", 'from':"Slussen", 			'to':"GamlaStan"},
 	{'year':1957, 'line-color':"green", 'from':"GamlaStan", 		'to':"T-Centralen"},
 

@@ -1,0 +1,30 @@
+#information{
+	padding:0;
+	text-align: left;
+}
+
+#information h1 {
+	margin-top: 0px;
+	
+}
+
+#img-holder {
+	
+	margin-bottom: 0px;
+
+}
+
+#img-holder ul{
+    list-style-type:none;
+    white-space:nowrap;
+    overflow-x:auto;
+    padding: 0;
+}
+
+#img-holder li{
+    display:inline;
+}
+
+#info-text-wrap{
+	padding: 10px;
+}

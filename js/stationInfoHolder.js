@@ -24,7 +24,7 @@ var stationInfo = [
     ]
   },
   {
-    "id":"",
+    "id":"Fruängen",
     "Station":"Fruängen",
     "Art":"Den ligger 46,8 meter över havet och är den högst belägna i tunnelbanenätet. På invigningsdagen tog kung Gustaf VI Adolf den nya tunnelbanelinjen till ändhållplatsen, där han togs emot av scouternas Vargungar och Blåvingar samt av en kör bestående av elever från Adolf Fredriks musikklasser.",
     "Påstigande/vardagsdygn 2012":"8 100",
@@ -37,7 +37,7 @@ var stationInfo = [
     ]
   },
   {
-    "id":"",
+    "id":"Telefonplan",
     "Station":"Telefonplan",
     "Art":"Namnet Telefonplan kommer från telefontillverkaren LM Ericsson dåvarande huvudkontor och fabrik. Den konstnärliga utsmyckningen består av en keramisk väggdekor av Bo Samuelsson från 1997. Dekoren består bland annat av ordet \"Telefonplan\" i morsekod, något som inspirerats av områdets anknytning till telekommunikation. Längs perrongens sidor finns personer i naturlig storlek avbildade i helfigur.",
     "Påstigande/vardagsdygn 2012":"8 100",
@@ -49,7 +49,7 @@ var stationInfo = [
     ]
   },
   {
-    "id":"",
+    "id":"Zinkensdamm",
     "Station":"Zinkensdamm",
     "Art":"På Zinkensdamms tunnelbanestation pågår det sedan 1998 tillfälliga konstutställningar av färgbilder insprängda bland reklamaffischerna. Bilderna byts ut en gång per år.",
     "Påstigande/vardagsdygn 2012":"7 100",

@@ -1,7 +1,16 @@
 //This is the zoom and panning functionality
 function zoom() {
-zoomlayerInfo(d3.event.scale);
+	if(d3.event.scale>3){
 
-svg.select("#outer")
-.attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1] + ")scale(" + d3.event.scale + ")");
+	$(".parishLabel").show();
+
+	}
+
+	else{
+		$(".parishLabel").hide();
+		parishLayer = false;
+	}
+
+	svg.select("#outer")
+	.attr("transform", "translate(" + d3.event.translate[0] + "," + d3.event.translate[1] + ")scale(" + d3.event.scale + ")");
 }

@@ -1,6 +1,5 @@
-function zoomlayerInfo(scale){
+function addZoomLayer(){
 
-	if(scale>3 && parishLayer==false){
 		var elements = document.getElementById("wireframeMap").childNodes;
 
 		for(i = 0; i < elements.length ; i++){
@@ -17,11 +16,4 @@ function zoomlayerInfo(scale){
 			}
 			
 		}
-	parishLayer = true;
-
-	}
-	
-
-
-
 };

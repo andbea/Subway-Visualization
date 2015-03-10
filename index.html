@@ -44,7 +44,7 @@
 		<script type="text/javascript" src = "js/populationDensity.js"></script>
 
 		<script type="text/javascript" src = "js/zoom.js"></script>
-		<script type="text/javascript" src = "js/zoomlayerInfo.js"></script>
+		<script type="text/javascript" src = "js/addZoomLayer.js"></script>
 		<script type="text/javascript" src = "js/addText.js"></script>
 		<script type="text/javascript" src = "js/stationInfoHolder.js"></script>
 		<script type="text/javascript" src = "js/populateInfo.js"></script>
@@ -471,6 +471,9 @@
 	            .call(d3.behavior.zoom().translate([mapPositionX,mapPositionY]).scaleExtent([0.3, 10]).on("zoom", zoom))
 				.style("fill", "#image;");
 
+
+			
+
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
 				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
 			
@@ -494,7 +497,7 @@
 			    .style("border-radius", "5px");
 		
 			// Code for loading data, adding slider event handler and adding colors
-		
+			
 			d3.tsv("data/rawdata.tsv", function(error, data) {
 			
 				var li = [];
@@ -596,6 +599,10 @@
 					$("#Nacka_kommun").children("path").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Nacka_kommun, $("#Nacka_kommun").attr("hektar")) );});
 				});
 			});
+
+
+			addZoomLayer();
+			$(".parishLabel").hide();
 			
 			//This is the zoom and panning functionality
 			//function zoom() {

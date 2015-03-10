@@ -1,6 +1,12 @@
-p, a, h1,h2,h3,h4,h5,h6{
-	font-family: 'Helvetica Neue', sans-serif;
-	/*font-family: 'Muli', sans-serif;*/
+h1{
+
+	font-family: 'Cinzel Decorative', sans-serif;
+}
+
+p, a, ,h2,h3,h4,h5,h6{
+	/*font-family: 'Helvetica Neue', sans-serif;*/
+	font-family: 'Muli', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 #information{
 	padding:0;

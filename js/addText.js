@@ -1,3 +1,4 @@
+//add text element to each parish on the map. Add parish name label to each. Size of label depends on size of parish
 function addText(p,name,hektar){
 
 		//console.log(hektar);
@@ -8,38 +9,26 @@ function addText(p,name,hektar){
 		t.textContent = name;
 
 		if (hektar <= 100){
-			console.log("below 250");
 			t.setAttribute("font-size", "3");
 
 		}
 		 else if(hektar > 100 && hektar <= 250){
-		 	console.log("below 250");
-		 	console.log(name);
+
 			t.setAttribute("font-size", "4");
 
 		} else if(hektar > 250 && hektar <=400){
-
-			console.log("below 400");
-		 	console.log(name);
 			t.setAttribute("font-size", "5");
 
 		}
 		 else if(hektar > 400 && hektar <= 950){
-		 	console.log("below 900");
-		 	console.log(name);
 		 	t.setAttribute("font-size", "10");
 
 		}
 		else if(hektar > 950 && hektar <= 1100){
-			console.log("below 1100");
-		 	console.log(name);
 			t.setAttribute("font-size", "13");
 		}
 		else{
-
-		console.log("else");
-		console.log(name);
-		t.setAttribute("font-size", "15");
+			t.setAttribute("font-size", "15");
 		}
 		
 		t.setAttribute("fill", "black");

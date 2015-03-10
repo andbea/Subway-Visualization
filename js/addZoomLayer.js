@@ -1,5 +1,5 @@
 function addZoomLayer(){
-
+		//get each parish polygon/path/poly-line in the svg and send it to addText
 		var elements = document.getElementById("wireframeMap").childNodes;
 
 		for(i = 0; i < elements.length ; i++){

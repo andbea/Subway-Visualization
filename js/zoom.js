@@ -1,8 +1,11 @@
 //This is the zoom and panning functionality
 function zoom() {
+
+
+	//Show or hide parish name labels depending on how zoomed in the map is
 	if(d3.event.scale>3){
 
-	$(".parishLabel").show();
+		$(".parishLabel").show();
 
 	}
 

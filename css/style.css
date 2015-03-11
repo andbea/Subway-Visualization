@@ -19,8 +19,8 @@ body {
     padding: 10px;
 
     height: 90vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-x: none;
+    overflow-y: hidden;
 }
 
 #visual {
@@ -31,7 +31,7 @@ body {
     border: solid;
     border-width: 1px;
     border-color: #a8a8a8;
-    display: flex;
+    overflow: none;
 
     height: 79vh;
 }

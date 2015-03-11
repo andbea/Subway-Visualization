@@ -1,18 +1,18 @@
- function addStation(index) {
+ function addStation(index, title) {
     var addedStation = subway.enter().append("circle")
         .attr("r", 0)
         .attr("id", stations[index]["id"] + "-circle")
         .attr("cx", convertX(stations[index]["x"]))
         .attr("cy", convertY(stations[index]["y"]))
-      	.on("mouseover", function() { 
+      	.on("mouseover", function(title) { 
       		return tooltip
-          		.text(stations[index]["id"])
+          		.text(title)
           		.style("visibility", "visible");
       	})
-      	.on("mousemove", function() { 
+      	.on("mousemove", function(title) { 
       		var coordinates = d3.mouse(this);
       		return tooltip
-	          	.text(stations[index]["id"])
+	          	.text(title)
 	          	.style("top", (event.pageY-20) + "px")
 	          	.style("left", (event.pageX+20) + "px");
       	})

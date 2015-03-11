@@ -129,7 +129,26 @@ var connections = [
 	{'year':1985, 'line-color':"blue", 	'from':"SolnaStrand",		'to':"SundbybergsCentrum"},
 	{'year':1985, 'line-color':"blue", 	'from':"SundbybergsCentrum",'to':"Duvbo"},
 	{'year':1985, 'line-color':"blue", 	'from':"Duvbo",				'to':"Rissne"},
-	{'year':1985, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"}
+	{'year':1985, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"},
+
+	// 2020
+	{'year':2020, 'line-color':"yellow",'from':"Odenplan", 			'to':"Hagastaden"},
+
+	// 2021
+	{'year':2021, 'line-color':"blue", 	'from':"Akalla", 			'to':"Barkarbystaden"},
+	{'year':2021, 'line-color':"blue", 	'from':"Barkarbystaden", 	'to':"BarkarbyStation"},
+
+	// 2022
+	{'year':2022, 'line-color':"yellow",'from':"Hagastaden", 		'to':"Arenastaden"},
+
+	// 2025
+	{'year':2025, 'line-color':"blue", 	'from':"Kungsträdgården", 	'to':"Sofia"},
+	{'year':2025, 'line-color':"blue", 	'from':"Sofia", 			'to':"HammarbyKanal"},
+	{'year':2025, 'line-color':"blue", 	'from':"HammarbyKanal", 	'to':"Sickla"},
+	{'year':2025, 'line-color':"blue", 	'from':"Sickla", 			'to':"Järla"},
+	{'year':2025, 'line-color':"blue", 	'from':"Järla", 			'to':"NackaC"},
+	{'year':2025, 'line-color':"blue", 	'from':"Sofia", 			'to':"Gullmarsplan"}
+
 ];
 			
 function returnConnections(){

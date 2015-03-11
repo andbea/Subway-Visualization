@@ -317,7 +317,6 @@
 						</g>
 					</svg>
 				</div>
-				<!-- <div id="map"></div> -->
 				<div class="row">
 		            <div class="col-sm-11 col-md-11">
 			            <div id="slider" data-role="fieldcontain">
@@ -355,10 +354,7 @@
 					    <span class="sr-only">Next</span>
 					  </a>
 					</div>
-
-
-
-				
+		
 				<div id="info-text-wrap">
 				<h1 id='title'>Välkommen till Tidebanan</h1>
 					<p id='inaug'>Dra slidern till höger för att se Stockholms tunnelbanas utbyggnad mellan åren 1950 och 2025. <br><br> Klicka på en station om du vill se bilder på dess konstnärlig utmyckning.</p>
@@ -419,10 +415,6 @@
 			var stations = returnStations();
 			var connections = returnConnections();
 			var stationInfoHolder= returnStationInfo();
-			/*var map = d3.select("#img9")
-			.attr("height",height)
-			.attr("width",width);*/
-			
 
 			// This sets the starting position for the map so that it is centered in the canvas
 			
@@ -440,9 +432,6 @@
 	            .attr("height", height)
 	            .call(d3.behavior.zoom().translate([mapPositionX,mapPositionY]).scaleExtent([0.3, 10]).on("zoom", zoom))
 				.style("fill", "#image;");
-
-
-			
 
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
 				.attr("transform", "translate(" + 530 + "," + 610 + ")");
@@ -575,7 +564,6 @@
 			addZoomLayer();
 			$(".parishLabel").hide();
 			
-
 		</script>
     </body>
 </html>

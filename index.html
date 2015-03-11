@@ -453,11 +453,6 @@
 	            .call(d3.behavior.zoom().translate([mapPositionX,mapPositionY]).scaleExtent([0.3, 10]).on("zoom", zoom))
 				.style("fill", "#image;");
 
-
-			
-	
-			
-
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
 				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
 			
@@ -525,23 +520,22 @@
 					i++;
 				});
 				
+				
 				var minValue = Math.min.apply(null, li),
-					maxValue = Math.max.apply(null, li);
+					maxValue = Math.max.apply(null, li);			
+				
 					
 				var gradientArray = [];
 					
 				for(var i = 0; i < 9; i++){
 					gradientArray.push(Math.round(((maxValue-minValue)*i/9)+minValue));
 				}
-
-
 					
 				var colorscale = d3.scale.linear()
 					.domain([gradientArray[0]/6, gradientArray[1]/5, gradientArray[2]/4, gradientArray[3], gradientArray[4], gradientArray[5], gradientArray[6], gradientArray[7], gradientArray[8]])
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
-
-
-
+					
+				legendSVG(gradientArray);
 				
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();

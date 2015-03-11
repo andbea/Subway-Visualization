@@ -1,13 +1,18 @@
+function legendSVG(gradientArray){
+	
+	
+	console.log(gradientArray);
+	
 var dataset = [
-	{ label: 9, color: "#800026" },
-	{ label: 8, color: "#bd0026" },
-	{ label: 7, color: "#e31a1c" },
-	{ label: 6, color: "#fc4e2a" },
-	{ label: 5, color: "#fd8d3c" },
-	{ label: 4, color: "#feb24c" },
-	{ label: 3, color: "#fed976" },
-	{ label: 2, color: "#ffeda0" },
-	{ label: 1, color: "#ffffcc" }
+	{ label: gradientArray[8] + " personer/ha", color: "#bd0026" },
+	{ label: gradientArray[7] + " personer/ha", color: "#800026" },
+	{ label: gradientArray[6] + " personer/ha", color: "#e31a1c" },
+	{ label: gradientArray[5] + " personer/ha", color: "#fc4e2a" },
+	{ label: gradientArray[4] + " personer/ha", color: "#fd8d3c" },
+	{ label: gradientArray[3] + " personer/ha", color: "#feb24c" },
+	{ label: gradientArray[2] + " personer/ha", color: "#fed976" },
+	{ label: gradientArray[1] + " personer/ha", color: "#ffeda0" },
+	{ label: gradientArray[0] + " personer/ha", color: "#ffffcc" }
 ];
 
 var legendRectSize = 18;                                  
@@ -49,4 +54,6 @@ legend.append('rect')
   legend.append('text')                                     
   .attr('x', legendRectSize + legendSpacing)              
   .attr('y', legendRectSize - legendSpacing)         
-  .text(function(d) { return d.label; });  
+  .text(function(d) { return d.label; });    
+  
+}

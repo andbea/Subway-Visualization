@@ -1285,7 +1285,116 @@ var stationInfo = [
     "Image": [
     "Vällingby_1.jpg"
     ]
+  },
+    {
+    "id":"Hagastaden",
+    "Station":"Hagastaden",
+    "Art":"Planeras till 2020",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2020",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },    {
+    "id":"Arenastaden",
+    "Station":"Arenastaden",
+    "Art":"Planeras till 2022",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2022",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+      {
+    "id":"Barkarbystaden",
+    "Station":"Barkarbystaden",
+    "Art":"Planeras till 2021",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2021",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+      {
+    "id":"BarkarbyStation",
+    "Station":"Barkarby Station",
+    "Art":"Planeras till 2021",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2021",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+  {
+    "id":"Sofia",
+    "Station":"Sofia",
+    "Art":"Planeras till 2025",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2025",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+  {
+    "id":"HammarbyKanal",
+    "Station":"Hammarby Kanal",
+    "Art":"Planeras till 2025",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2025",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+  {
+    "id":"Sickla",
+    "Station":"Sickla",
+    "Art":"Planeras till 2025",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2025",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+  { 
+    "id":"Järla",
+    "Station":"Järla",
+    "Art":"Planeras till 2025",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2025",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
+  },
+    { 
+    "id":"NackaC",
+    "Station":"Nacka C",
+    "Art":"Planeras till 2025",
+    "Påstigande/vardagsdygn 2012":"-",
+    "Year":"2025",
+    "Öst":"-",
+    "Nord":"-",
+    "Image": [
+    "Vällingby_1.jpg"
+    ]
   }
+
+
 ]
 
 function returnStationInfo(){

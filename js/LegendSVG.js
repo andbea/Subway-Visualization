@@ -22,16 +22,19 @@ var legendSvg = d3.select("#visual").append("svg")
 	.attr("id","legendSvg")
 	.attr("width", 130)
 	.attr("height", 210)
-	var legendGroup = legendSvg.append("g").attr("class", "legendGroup")
-	.attr("transform", "translate(" + 50 + "," + 60 + ")");
+
 
 	document.getElementById("legendSvg").style.pointerEvents = "none";
 
-svg.append("rect")
+
+legendSvg.append("rect")
     .attr("width", 130)
     .attr("height", 210)
     .attr("fill", "white")
     .attr( "fill-opacity", 0.8 );
+
+var legendGroup = legendSvg.append("g").attr("class", "legendGroup")
+.attr("transform", "translate(" + 50 + "," + 60 + ")");
 
 var legend = legendGroup.selectAll(".legendRect")                     
   .data(dataset)                                   

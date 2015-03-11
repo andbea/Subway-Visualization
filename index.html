@@ -531,14 +531,16 @@
 				
 				var minValue = Math.min.apply(null, li),
 					maxValue = Math.max.apply(null, li);
-			
-				/*var colorscale = d3.scale.linear()
-					.domain([0, maxValue/4, maxValue/2, 3*maxValue/2, maxValue])
-					.range(["white", "#EDE574", "#F9D423", "#FC913A", "#FA6900"]);*/
+					
+				var gradientArray = [];
+					
+				for(var i = 0; i < 9; i++){
+					gradientArray.push(Math.round(((maxValue-minValue)*i/9)+minValue));
+				}
 					
 				var colorscale = d3.scale.linear()
-					.domain([minValue, maxValue])
-					.range(["#FAF6F2", "#D66000"]);
+					.domain([gradientArray[0], gradientArray[1], gradientArray[2], gradientArray[3], gradientArray[4], gradientArray[5], gradientArray[6], gradientArray[7], gradientArray[8]])
+					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
 				
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();

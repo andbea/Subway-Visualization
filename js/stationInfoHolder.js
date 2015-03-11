@@ -274,9 +274,8 @@ var stationInfo = [
     "Öst":"18,070556",
     "Nord":"59,288889",
     "Image": [
-    "Enskedegard_1.jpg",
-    "Enskedegard_2.jpg",
-    "Enskedegard_3.jpg"
+    "EnskedeGard_1.jpg",
+    "EnskedeGard_2.jpg"
     ]
   },
   {
@@ -366,7 +365,8 @@ var stationInfo = [
     "Nord":"59,310806",
     "Image": [
     "Liljeholmen_1.jpg",
-    "Liljeholmen_2.jpg"
+    "Liljeholmen_2.jpg",
+    "Liljeholmen_3.jpg"
     ]
   },
   {
@@ -550,7 +550,8 @@ var stationInfo = [
     "Öst":"17,844167",
     "Nord":"59,367028",
     "Image": [
-    "HasselbyGard_1.jpg"    
+    "HasselbyGard_1.jpg",    
+    "HasselbyGard_2.jpg"    
     ]
   },
   {
@@ -576,7 +577,8 @@ var stationInfo = [
     "Nord":"59,263333",
     "Image": [
     "Hogdalen_1.jpg",
-    "Hogdalen_2.jpg"      
+    "Hogdalen_2.jpg",      
+    "Hogdalen_3.jpg"      
     ]
   },
   {
@@ -627,7 +629,8 @@ var stationInfo = [
     "Öst":"17,894306",
     "Nord":"59,345833",
     "Image": [
-    "Islandstorget_1.jpg"     
+    "Islandstorget_1.jpg",     
+    "Islandstorget_2.jpg"     
     ]  
   },
   {
@@ -639,7 +642,9 @@ var stationInfo = [
     "Öst":"17,857778",
     "Nord":"59,367778",
     "Image": [
-    "Johannelund_1.jpg"     
+    "Johannelund_1.jpg",     
+    "Johannelund_2.jpg",     
+    "Johannelund_3.jpg"     
     ]  
   },
   {
@@ -779,7 +784,8 @@ var stationInfo = [
     "Nord":"59,347222",
     "Image": [
     "Gardet_1.jpg",
-    "Gardet_2.jpg"
+    "Gardet_2.jpg",
+    "Gardet_3.jpg"
     ] 
   },
   {
@@ -1245,7 +1251,11 @@ var stationInfo = [
     "Image": [
     "Hjulsta_1.jpg",
     "Hjulsta_2.jpg",
-    "Hjulsta_3.jpg"
+    "Hjulsta_3.jpg",
+    "Hjulsta_4.jpg",
+    "Hjulsta_5.jpg",
+    "Hjulsta_6.jpg",
+    "Hjulsta_7.jpg"
     ]
   },
   {

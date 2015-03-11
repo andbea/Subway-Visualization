@@ -1,18 +1,13 @@
 function populateInfo(id){
 	var index = getStationInfo(id);
 
-	
-
-
-	//console.log(index);
-
-	//clear carousel indicators
+	//reset carousel indicators
+	$('.carousel-indicators').show();
 	$('.carousel-indicators').html('');
 	//reset arrows
 	$('a.left.carousel-control.ui-link, a.right.carousel-control.ui-link').show();
 
     var images = stationInfoHolder[index]['Image'];
-    console.log(images.length);
 	$('#title').html(convertSymbols(stationInfoHolder[index]["Station"]));
 	$('#inaug').html("<strong>Invigdes: </strong>" + stationInfoHolder[index]["Year"]);
 	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
@@ -42,8 +37,8 @@ function populateInfo(id){
 
 	// hide carousel arrows if only one image
 	if(images.length===1){
-		console.log("one image");
 		$('a.left.carousel-control.ui-link, a.right.carousel-control.ui-link').hide();
+		$('.carousel-indicators').hide();
 	}
 	
 	

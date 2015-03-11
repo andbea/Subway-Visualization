@@ -1,6 +1,7 @@
 
 
 function populateInfo(id){
+	console.log("hello");
 	var index = getStationInfo(id);
 	//console.log(index);
     var images = stationInfoHolder[index]['Image'];

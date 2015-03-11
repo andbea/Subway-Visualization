@@ -549,7 +549,7 @@
 					
 					var n = (parseInt(year_entered)-1950);
 					
-					if(n >= 0){
+					if(n >= 0 && year_entered < 2024 ){
 					
 					$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
 					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vantor, $("#Vantor").attr("hektar")) );});

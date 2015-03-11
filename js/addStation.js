@@ -1,16 +1,22 @@
- function addStation(index, title) {
+ function addStation(index) {
     var addedStation = subway.enter().append("circle")
         .attr("r", 0)
         .attr("id", stations[index]["id"] + "-circle")
         .attr("cx", convertX(stations[index]["x"]))
         .attr("cy", convertY(stations[index]["y"]))
-      	.on("mouseover", function(title) { 
+      	.on("mouseover", function() { 
+          var id = this.id.replace("-circle", "");
+          var stationInfo = stationInfoHolder[getStationInfo(id)];
+          var title = stationInfo["Station"];
           this.setAttribute("r", stationCircleRadius_Highlighted);
       		return tooltip
           		.text(title)
           		.style("visibility", "visible");
       	})
-      	.on("mousemove", function(title) { 
+      	.on("mousemove", function() { 
+          var id = this.id.replace("-circle", "");
+          var stationInfo = stationInfoHolder[getStationInfo(id)];
+          var title = stationInfo["Station"];
       		var coordinates = d3.mouse(this);
       		return tooltip
 	          	.text(title)
@@ -22,8 +28,9 @@
       		return tooltip
           		.style("visibility", "hidden");
         })
-        .on("onclick", function() {
-          return populateInfo(stations[index]["id"]);
+        .on("click", function() {
+          console.log("Hello, Sir");
+          return populateInfo(this.id.replace("-circle", ""));
         });
 
     addedStation.transition().duration(1000)

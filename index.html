@@ -357,11 +357,11 @@
 					  </div>
 
 					  <!-- Controls -->
-					  <a class="left carousel-control" href="#img-carousel" role="button" data-slide="prev">
+					  <a class="left carousel-control" href="#img-carousel" role="button" data-slide="prev" style='display:none'>
 					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 					    <span class="sr-only">Previous</span>
 					  </a>
-					  <a class="right carousel-control" href="#img-carousel" role="button" data-slide="next">
+					  <a class="right carousel-control" href="#img-carousel" role="button" data-slide="next" style='display:none'>
 					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 					    <span class="sr-only">Next</span>
 					  </a>
@@ -403,6 +403,10 @@
 	        }
 		</style>
 		<script>
+
+			//fionas for displaying arrows on carousel
+			var showArrows;
+
 			var startYear = 1949;
 			var year_shown = startYear,
 				year_entered = startYear,

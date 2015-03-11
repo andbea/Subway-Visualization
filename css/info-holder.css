@@ -13,6 +13,10 @@ p,a,h2,h3,h4,h5,h6{
 	font-family: 'Muli', sans-serif;
 	font-family: 'Helvetica Neue', sans-serif;
 }
+
+#container{
+	background-image: url('../img/fabric_of_squares_gray.png');
+}
 #information{
 	padding:0;
 	text-align: left;

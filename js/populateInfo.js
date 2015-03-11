@@ -1,5 +1,9 @@
 function populateInfo(id){
 	var index = getStationInfo(id);
+
+	
+
+
 	//console.log(index);
 
 	//clear carousel indicators

@@ -615,7 +615,7 @@ var stationInfo = [
     "Ostermalmstorg_1.jpg",
     "Ostermalmstorg_2.jpg",
     "Ostermalmstorg_3.jpg"      
-    ]O 
+    ] 
   },
   {
     "id":"Islandstorget",
@@ -1138,7 +1138,7 @@ var stationInfo = [
     "Nackrosen_5.jpg"
     ]
   },
-  {x
+  {
     "id":"Huvudsta",
     "Station":"Huvudsta",
     "Art":"Hängande trädgårdar av Per Holmberg, 1985",

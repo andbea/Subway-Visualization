@@ -3,8 +3,8 @@ function legendSVG(gradientArray){
 	
 	
 var dataset = [
-	{ label: gradientArray[8] + " personer/ha", color: "#bd0026" },
-	{ label: gradientArray[7] + " personer/ha", color: "#800026" },
+	{ label: gradientArray[8] + " personer/ha", color: "#800026" },
+	{ label: gradientArray[7] + " personer/ha", color: "#bd0026" },
 	{ label: gradientArray[6] + " personer/ha", color: "#e31a1c" },
 	{ label: gradientArray[5] + " personer/ha", color: "#fc4e2a" },
 	{ label: gradientArray[4] + " personer/ha", color: "#fd8d3c" },

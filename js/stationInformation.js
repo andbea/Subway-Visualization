@@ -135,8 +135,8 @@ var stations = [
 
 
 				// 2021
-				{'id':"Barkabystaden", 		'x':17.884121, 'y':59.415628, 'year':2021},
-				{'id':"BarkabyStation", 	'x':17.868672, 'y':59.403747, 'year':2021},
+				{'id':"Barkarbystaden", 		'x':17.884121, 'y':59.415628, 'year':2021},
+				{'id':"BarkarbyStation", 	'x':17.868672, 'y':59.403747, 'year':2021},
 
 
 				// 2022

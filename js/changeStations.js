@@ -5,9 +5,7 @@ function changeStations() {
     if(year_shown != year_entered && year_shown < year_entered) {
         for(var i = 0; i < stations.length; i++) {
             if(stations[i]["year"] > year_shown && stations[i]["year"] <= year_entered) {
-                var ident = stations[i]["id"];
-                //var stationInfo = getStationInfo(ident);
-                callbacks.add(addStation(i, "Hello"/*convertSymbols(stationInfo["Station"])*/));
+                callbacks.add(addStation(i));
             }
         }
     }

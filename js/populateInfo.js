@@ -12,10 +12,9 @@ function populateInfo(id){
 	$('#title').html(convertSymbols(stationInfoHolder[index]["Station"]));
 	$('#inaug').html("<strong>Invigdes: </strong>" + stationInfoHolder[index]["Year"]);
 	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
-	$('#history').html("<strong>Historiska fakta: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
 
 	// add dots on carousel
-	$('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>');
+	$('.carousel-indicators').append('<li data-target="#img-carousel" data-slide-to="0" class="active"></li>');
 
 	//adds first active image in carousel
 	$('#img-holder').html('<div class="item active"><img src="img/stations/' + images[0] + '"></div>');
@@ -33,7 +32,7 @@ function populateInfo(id){
 	if(images.length>1){
 		for (var j=1; j<images.length; j++){
 			counter = 1+j;
-			$('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="' + counter + '"></li>');
+			$('.carousel-indicators').append('<li data-target="#img-carousel" data-slide-to="' + counter + '"></li>');
 		}
 	}
 

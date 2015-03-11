@@ -20,7 +20,7 @@ var stationInfo = [
     "Öst":"17,923889",
     "Nord":"17,923889",
     "Image": [
-    "Åkeshov_1.jpg"
+    "Akeshov_1.jpg"
     ]
   },
   {
@@ -32,8 +32,8 @@ var stationInfo = [
     "Öst":"17,965",
     "Nord":"59,286111",
     "Image": [
-    "Fruängen_1.jpg",
-    "Fruängen_2.jpg"
+    "Fruangen_1.jpg",
+    "Fruangen_2.jpg"
     ]
   },
   {
@@ -82,7 +82,7 @@ var stationInfo = [
     "Öst":"17,889583",
     "Nord":"59,275833",
     "Image": [
-    "Vårberg_1.jpg"
+    "Varberg_1.jpg"
     ]
   },
   {
@@ -94,7 +94,8 @@ var stationInfo = [
     "Öst":"17,907048",
     "Nord":"59,341885",
     "Image": [
-    "Ängbyplan_1.jpg"
+    "Angbyplan_1.jpg",
+    "Angbyplan_2.jpg"
     ]
   },
   {
@@ -106,8 +107,8 @@ var stationInfo = [
     "Öst":"17,934028",
     "Nord":"59,294778",
     "Image": [
-    "Bredäng_1.jpg",
-    "Bredäng_2.jpg"
+    "Bredang_1.jpg",
+    "Bredang_2.jpg"
     ]
   },
   {
@@ -158,7 +159,7 @@ var stationInfo = [
     "Öst":"17,979028",
     "Nord":"59,295417",
     "Image": [
-    "Hägerstensåsen_1.jpg"
+    "Hagerstensasen_1.jpg"
     ]
   },
   {
@@ -184,8 +185,8 @@ var stationInfo = [
     "Öst":"18,115556",
     "Nord":"59,290556",
     "Image": [
-    "Björkhagen_1.jpg",
-    "Björkhagen_2.jpg"
+    "Bjorkhagen_1.jpg",
+    "Bjorkhagen_2.jpg"
     ]
   },
   {
@@ -224,7 +225,8 @@ var stationInfo = [
     "Nord":"59,348353",
     "Image": [
     "Blackeberg_1.jpg",
-    "Blackeberg_2.jpg"
+    "Blackeberg_2.jpg",
+    "Blackeberg_3.jpg"
     ]
   },
   {
@@ -236,7 +238,7 @@ var stationInfo = [
     "Öst":"18,091111",
     "Nord":"59,290417",
     "Image": [
-    "Blåsut_1.jpg"
+    "Blasut_1.jpg"
     ]
   },
   {
@@ -248,7 +250,7 @@ var stationInfo = [
     "Öst":"17,921306",
     "Nord":"59,284944",
     "Image": [
-    "Sätra_1.jpg"
+    "Satra_1.jpg"
     ]
   },
   {
@@ -272,9 +274,9 @@ var stationInfo = [
     "Öst":"18,070556",
     "Nord":"59,288889",
     "Image": [
-    "Enskedegård_1.jpg",
-    "Enskedegård_2.jpg",
-    "Enskedegård_3.jpg"
+    "Enskedegard_1.jpg",
+    "Enskedegard_2.jpg",
+    "Enskedegard_3.jpg"
     ]
   },
   {
@@ -286,8 +288,8 @@ var stationInfo = [
     "Öst":"17,884306",
     "Nord":"59,264583",
     "Image": [
-    "VårbyGård_1.jpg",
-    "VårbyGård_2.jpg"
+    "VarbyGard_1.jpg",
+    "VarbyGard_2.jpg"
     ]
   },
   {
@@ -312,8 +314,8 @@ var stationInfo = [
     "Öst":"17,989028",
     "Nord":"59,3055",
     "Image": [
-    "Örnsberg_1.jpg",
-    "Örnsberg_2.jpg"
+    "Ornsberg_1.jpg",
+    "Ornsberg_2.jpg"
     ]
   },
   {
@@ -325,7 +327,7 @@ var stationInfo = [
     "Öst":"17,966667",
     "Nord":"59,291111",
     "Image": [
-    "Västertorp_1.jpg"
+    "Vastertorp_1.jpg"
     ]
   },
   {
@@ -376,13 +378,14 @@ var stationInfo = [
     "Öst":"18,030556",
     "Nord":"59,332500",
     "Image": [
-    "Fridhemsplan_1.jpg"
+    "Fridhemsplan_1.jpg",
+    "Fridhemsplan_2.jpg"
     ]
   },
   {
     "id":"GamlaStan",
     "Station":"Gamla stan",
-    "Art":"Stationen ritades av Gunnar Lené. Konstnärlig utsmyckning utgörs av medeltida vävmönster, Vädersolsmotiv och cementmosaikmönstrade golv av Göran Dahl, 1998, samt stängsel med vävmönster mellan spåren av Britta Carlström, 1998.[2]",
+    "Art":"Stationen ritades av Gunnar Lené. Konstnärlig utsmyckning utgörs av medeltida vävmönster, Vädersolsmotiv och cementmosaikmönstrade golv av Göran Dahl, 1998, samt stängsel med vävmönster mellan spåren av Britta Carlström, 1998.",
     "Påstigande/vardagsdygn 2012":"21 600",
     "Year":"24 november 1957",
     "Öst":"18,0675",
@@ -415,8 +418,8 @@ var stationInfo = [
     "Öst":"18,082222",
     "Nord":"59,262889",
     "Image": [
-    "Gubbängen_1.jpg",
-    "Gubbängen_2.jpg"
+    "Gubbangen_1.jpg",
+    "Gubbangen_2.jpg"
     ]
   },
   {
@@ -440,8 +443,8 @@ var stationInfo = [
     "Öst":"17,957361",
     "Nord":"59,301056",
     "Image": [
-    "Mälarhöjden_1.jpg",
-    "Mälarhöjden_2.jpg"
+    "Malarhojden_1.jpg",
+    "Malarhojden_2.jpg"
     ]
   },
   {
@@ -469,7 +472,7 @@ var stationInfo = [
     "Öst":"18,013261",
     "Nord":"59,262633",
     "Image": [
-    "Hagsätra_1.jpg"
+    "Hagsatra_1.jpg"
     ]
   },
   {
@@ -481,8 +484,8 @@ var stationInfo = [
     "Öst":"18,103333",
     "Nord":"59,294778",
     "Image": [
-    "Hammarbyhöjden_1.jpg",
-    "Hammarbyhöjden_2.jpg"
+    "Hammarbyhojden_1.jpg",
+    "Hammarbyhojden_2.jpg"
     ]
   },
   {
@@ -521,8 +524,8 @@ var stationInfo = [
     "Öst":"17,906944",
     "Nord":"59,277139",
     "Image": [
-    "Skärholmen_1.jpg",
-    "Skärholmen_2.jpg"
+    "Skarholmen_1.jpg",
+    "Skarholmen_2.jpg"
     ]
   },
   {
@@ -547,7 +550,7 @@ var stationInfo = [
     "Öst":"17,844167",
     "Nord":"59,367028",
     "Image": [
-    "HässelbyGård_1.jpg"    
+    "HasselbyGard_1.jpg"    
     ]
   },
   {
@@ -559,8 +562,8 @@ var stationInfo = [
     "Öst":"17,8325",
     "Nord":"59,361389",
     "Image": [
-    "Hässelbystrand_1.jpg",
-    "Hässelbystrand_2.jpg"      
+    "Hasselbystrand_1.jpg",
+    "Hasselbystrand_2.jpg"      
     ]
   },
   {
@@ -572,8 +575,8 @@ var stationInfo = [
     "Öst":"18,0425",
     "Nord":"59,263333",
     "Image": [
-    "Högdalen_1.jpg",
-    "Högdalen_2.jpg"      
+    "Hogdalen_1.jpg",
+    "Hogdalen_2.jpg"      
     ]
   },
   {
@@ -585,7 +588,7 @@ var stationInfo = [
     "Öst":"18,082361",
     "Nord":"59,257778",
     "Image": [
-    "Hökarängen_1.jpg"    
+    "Hokarangen_1.jpg"    
     ]    
   },
   {
@@ -597,7 +600,7 @@ var stationInfo = [
     "Öst":"18,063333",
     "Nord":"59,335417",
     "Image": [
-    "Hötorget_1.jpg"    
+    "Hotorget_1.jpg"    
     ]  
   },
   {
@@ -609,10 +612,10 @@ var stationInfo = [
     "Öst":"18,074028",
     "Nord":"59,335",
     "Image": [
-    "Östermalmstorg_1.jpg",
-    "Östermalmstorg_2.jpg",
-    "Östermalmstorg_3.jpg"      
-    ]  
+    "Ostermalmstorg_1.jpg",
+    "Ostermalmstorg_2.jpg",
+    "Ostermalmstorg_3.jpg"      
+    ]O 
   },
   {
     "id":"Islandstorget",
@@ -647,8 +650,8 @@ var stationInfo = [
     "Öst":"18,071667",
     "Nord":"59,345694",
     "Image": [
-    "Tekniskahögskolan_1.jpg",
-    "Tekniskahögskolan_2.jpg"     
+    "Tekniskahogskolan_1.jpg",
+    "Tekniskahogskolan_2.jpg"     
     ]  
   },
   {
@@ -660,7 +663,7 @@ var stationInfo = [
     "Öst":"18,114444",
     "Nord":"59,2845",
     "Image": [
-    "Kärrtorp_1.jpg"    
+    "Karrtorp_1.jpg"    
     ]  
   },
   {
@@ -773,14 +776,14 @@ var stationInfo = [
     "Öst":"18,098611",
     "Nord":"59,347222",
     "Image": [
-    "Gärdet_1.jpg",
-    "Gärdet_2.jpg"
+    "Gardet_1.jpg",
+    "Gardet_2.jpg"
     ] 
   },
   {
     "id":"SundbybergsCentrum",
     "Station":"Sundbybergs Centrum",
-    "Art":"Den konstnärliga utsmyckningen utgörs av skulpturer med husfasader och människans sinnen av Lars Kleen,Michael Söderlundh och Peter Tillberg, 1985.",
+    "Art":"Den konstnärliga utsmyckningen utgörs av skulpturer med husfasader och människans sinnen av Lars Kleen, Michael Söderlundh och Peter Tillberg, 1985.",
     "Påstigande/vardagsdygn 2012":"11 400",
     "Year":"1985-08-19",
     "Öst":"17,970556",
@@ -794,7 +797,7 @@ var stationInfo = [
   {
     "id":"SolnaCentrum",
     "Station":"Solna Centrum",
-    "Art":"Konstnärlig utsmyckning av Karl-Olov Björk (1975) och Anders Åberg (1975, 1992), bland annat olika Sverigemotiv som visar Sveriges problem på 1970-talet samt olika tittskåp. Stationens tak och väggar är målade i grönt och rött.",
+    "Art":"Konstnärlig utsmyckning av Karl-Olov Björk (1975) och Anders Åberg (1975, 1992), bland annat olika Sverigemotiv som visar Sveriges problem på 1970-talet samt olika tittskåp. Stationens tak och väggar r målade i grönt och rött.",
     "Påstigande/vardagsdygn 2012":"10 800",
     "Year":"1975-08-31",
     "Öst":"17,998889",
@@ -806,7 +809,7 @@ var stationInfo = [
   {
     "id":"Stadshagen",
     "Station":"Stadshagen",
-    "Art":"Den konstnärliga utsmyckningen är gjord av Lasse Lindqvist; sex tavlor med idrottsbilder målade på veckadplåt.",
+    "Art":"Den konstnrliga utsmyckningen är gjord av Lasse Lindqvist; sex tavlor med idrottsbilder målade på veckadplåt.",
     "Påstigande/vardagsdygn 2012":"10 700",
     "Year":"1975-08-31",
     "Öst":"18,017778",
@@ -819,13 +822,13 @@ var stationInfo = [
   {
     "id":"Råcksta",
     "Station":"Råcksta",
-    "Art":"Ej info",
+    "Art":"Stationen är belägen utomhus och består av en plattform med entré från Jämtlandsgatan.",
     "Påstigande/vardagsdygn 2012":"3 500",
     "Year":"26 oktober 1952",
     "Öst":"17,881861",
     "Nord":"59,354722",
     "Image": [
-    "Råcksta_1.jpg"
+    "Racksta_1.jpg"
     ] 
   },
   {
@@ -837,8 +840,8 @@ var stationInfo = [
     "Öst":"18,058611",
     "Nord":"59,340278",
     "Image": [
-    "Rådmansgatan_1.jpg",
-    "Rådmansgatan_2.jpg"
+    "Radmansgatan_1.jpg",
+    "Radmansgatan_2.jpg"
     ] 
   },
   {
@@ -875,8 +878,8 @@ var stationInfo = [
     "Öst":"18,031389",
     "Nord":"59,256389",
     "Image": [
-    "Rågsved_1.jpg",
-    "Rågsved_2.jpg"
+    "Ragsved_1.jpg",
+    "Ragsved_2.jpg"
     ]
   },
   {
@@ -908,15 +911,16 @@ var stationInfo = [
   {
     "id":"VästraSkogen",
     "Station":"Västra skogen",
-    "Art":"Konsten på stationen är skapad av konstnären Sivert Lindblom och invigdes samtidigt som stationen. Den kompletterades 1985. Lindblom anknöt till och inspirerades av mystiken i namnet \"Ingentingskogen",
+    "Art":"Konsten på stationen är skapad av konstnären Sivert Lindblom och invigdes samtidigt som stationen. Den kompletterades 1985. Lindblom anknöt till och inspirerades av mystiken i namnet 'Ingentingskogen'.",
     "Påstigande/vardagsdygn 2012":"7 300",
     "Year":"1975-08-31",
     "Öst":"18,003889",
     "Nord":"59,347500",
     "Image": [
-    "VästraSkogen_1.jpg",
-    "VästraSkogen_2.jpg",
-    "VästraSkogen_3.jpg"
+    "VastraSkogen_1.jpg",
+    "VastraSkogen_2.jpg",
+    "VastraSkogen_3.jpg",
+    "VastraSkogen_4.jpg"
     ]
   },
   {
@@ -928,13 +932,13 @@ var stationInfo = [
     "Öst":"18,036667",
     "Nord":"59,398333",
     "Image": [
-    "MörbyCentrum_1.jpg"
+    "MorbyCentrum_1.jpg"
     ]
   },
   {
     "id":"Husby",
     "Station":"Husby",
-    "Art":"Den har gula väggar och med motiv av björkstammar ochVaxholmsbåtar av konstnären Birgit Broms.",
+    "Art":"Den har gula väggar och med motiv av björkstammar och Vaxholmsbåtar av konstnären Birgit Broms.",
     "Påstigande/vardagsdygn 2012":"6 500",
     "Year":"1977-07-05",
     "Öst":"17,926944",
@@ -954,7 +958,9 @@ var stationInfo = [
     "Nord":"59,3815",
     "Image": [
     "Bergshamra_1.jpg",
-    "Bergshamra_2.jpg"
+    "Bergshamra_2.jpg",
+    "Bergshamra_3.jpg"
+
     ]
   },
   {
@@ -979,17 +985,20 @@ var stationInfo = [
     "Öst":"18,073333",
     "Nord":"59,330778",
     "Image": [
-    "Kungsträdgården_1.jpg",
-    "Kungsträdgården_2.jpg",
-    "Kungsträdgården_3.jpg",
-    "Kungsträdgården_4.jpg",
-    "Kungsträdgården_5.jpg"
+    "Kungstradgarden_1.jpg",
+    "Kungstradgarden_2.jpg",
+    "Kungstradgarden_3.jpg",
+    "Kungstradgarden_4.jpg",
+    "Kungstradgarden_5.jpg",
+    "Kungstradgarden_6.jpg",
+    "Kungstradgarden_7.jpg",
+    "Kungstradgarden_8.jpg"
     ]
   },
   {
     "id":"Akalla",
     "Station":"Akalla",
-    "Art":"Väggarna på stationen är målade i gulockra kulör och är prydda med sex keramikmålningar med män och kvinnor gjorda av konstnärenBirgit Ståhl-Nyberg 1975–1977.",
+    "Art":"Väggarna på stationen är målade i gulockra kulör och är prydda med sex keramikmålningar med män och kvinnor gjorda av konstnären Birgit Ståhl-Nyberg.",
     "Påstigande/vardagsdygn 2012":"5 500",
     "Year":"1977-07-05",
     "Öst":"17,917778",
@@ -1057,8 +1066,8 @@ var stationInfo = [
     "Öst":"18,089806",
     "Nord":"59,295639",
     "Image": [
-    "Skärmarbrink_1.jpg",
-    "Skärmarbrink_2.jpg"
+    "Skarmarbrink_1.jpg",
+    "Skarmarbrink_2.jpg"
     ]
   },
   {
@@ -1070,9 +1079,9 @@ var stationInfo = [
     "Öst":"18,133333",
     "Nord":"59,266806",
     "Image": [
-    "Skarpnäck_1.jpg",
-    "Skarpnäck_2.jpg",
-    "Skarpnäck_2.jpg"
+    "Skarpnack_1.jpg",
+    "Skarpnack_2.jpg",
+    "Skarpnack_2.jpg"
     ]
   },
   {
@@ -1084,7 +1093,7 @@ var stationInfo = [
     "Öst":"18,095278",
     "Nord":"59,278056",
     "Image": [
-    "Skogskyrkogården_1.jpg"
+    "Skogskyrkogarden_1.jpg"
     ]
   },
   {
@@ -1122,17 +1131,17 @@ var stationInfo = [
     "Öst":"17,983194",
     "Nord":"59,366667",
     "Image": [
-    "Näckrosen_1.jpg",
-    "Näckrosen_2.jpg",
-    "Näckrosen_3.jpg",
-    "Näckrosen_4.jpg",
-    "Näckrosen_5.jpg"
+    "Nackrosen_1.jpg",
+    "Nackrosen_2.jpg",
+    "Nackrosen_3.jpg",
+    "Nackrosen_4.jpg",
+    "Nackrosen_5.jpg"
     ]
   },
-  {
+  {x
     "id":"Huvudsta",
     "Station":"Huvudsta",
-    "Art":"Konstnärlig utsmyckning:Hängande trädgårdar av Per Holmberg, 1985",
+    "Art":"Hängande trädgårdar av Per Holmberg, 1985",
     "Påstigande/vardagsdygn 2012":"3 500",
     "Year":"1985-08-19",
     "Öst":"17,985556",
@@ -1197,7 +1206,7 @@ var stationInfo = [
   {
     "id":"T-Centralen",
     "Station":"T-Centralen",
-    "Art":"AVVAKTA!!",
+    "Art":"Soffor i stengöt av Egon Möller-Nielsen, 1957. 145 meter lång keramisk väggdekor, 'Klaravagnen', av Anders Österlin och Signe Persson-Melin, 1957. Relief på svart pelare, 'Linje', av Berndt Helleberg, 1957. Ristningar på pelare, 'Kvinnopelaren' av Siri Derkert 1957. Sten och glasmosaik på stenpelare, 'Det Klara som trots allt inte försvinner', Vera Nilsson, 1957. Väggdekor med glasprismor av Erland Melanton och Bengt Edenfalk, 1958. Mönster i högbränt tegel av Oscar Brandtberg, 1957. Små reliefplattor på pelare av Torsten Treutiger, 1957. Dessutom fanns fram till 1997 en grind i konstsmide i gången mot Klara kyrka av Britt-Louise Sundell, född 1964. Grinden flyttades till Hammarbydepån. Blå bladrankor och blommor och silhuetter av byggnadsarbetare av Per Olov Ultvedt. Vid gångtunneln med rullbandet har olika konstnärer gjort målningar som byts ut emellanåt, bland annat av Ola Billgren, Jan Håfström, Olle Kåks, och Ulla Wiggen.Carl Fredrik Reuterswärd, 'Take the A-train', 1984. Sedan hösten 2011 sitter längs väggarna vid rullbandet i blå gången information kring Citybanan samt ett bildcollage med ett stort antal fotografier över T-centralen med dess omgivningar under hela perioden från dåtid (50-tal) till nutid.",
     "Påstigande/vardagsdygn 2012":"168 400",
     "Year":"24 november 1957",
     "Öst":"18,060833",
@@ -1211,7 +1220,7 @@ var stationInfo = [
   {
     "id":"Hjulsta",
     "Station":"Hjulsta",
-    "Art":"Christina Rundqvist Andersson, Olle Magnusson och Ruth Rydfeldt med flera http://sv.wikipedia.org/wiki/Hjulsta_(tunnelbanestation)",
+    "Art":"Christina Rundqvist Andersson, Olle Magnusson och Ruth Rydfeldt med flera",
     "Påstigande/vardagsdygn 2012":"2 600",
     "Year":"1975-08-31",
     "Öst":"17,899722",
@@ -1244,7 +1253,8 @@ var stationInfo = [
     "Nord":"59,367778",
     "Image": [
     "Duvbo_1.jpg",
-    "Duvbo_2.jpg"
+    "Duvbo_2.jpg",
+    "Duvbo_3.jpg"
     ]
   },
   {
@@ -1282,7 +1292,8 @@ var stationInfo = [
     "Öst":"17,872063",
     "Nord":"59,363249",
     "Image": [
-    "Vällingby_1.jpg"
+    "Vallingby_1.jpg",
+    "Vallingby_2.jpg"
     ]
   },
     {

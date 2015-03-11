@@ -482,6 +482,11 @@
 				var li = [];
 				var i = 0;
 				
+				var density = true;
+				var percentages = false;
+				
+				if(density){
+				
 				data.forEach(function(d) {
 					
 					li.push(populationDensity(++data[i].Vastermalm, $("#Vastermalm").attr("hektar")));
@@ -519,6 +524,17 @@
 					
 					i++;
 				});
+				}
+				else if(percentages){
+				
+					//put code for calculating percentages instead of density here. Use populationPercentages function.
+				
+				}
+				else{
+					//just a security measure so we never get stuck in limbo with both as false
+					density = true;
+					percentages = false;
+				}
 				
 				
 				var minValue = Math.min.apply(null, li),
@@ -546,7 +562,6 @@
 					
 					if(n >= 0 && year_entered < 2024 ){
 					
-					console.log(populationDensity(++data[n].Botkyrka_kommun, $("#Botkyrka_kommun").attr("hektar")));
 					
 					$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
 					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vantor, $("#Vantor").attr("hektar")) );});

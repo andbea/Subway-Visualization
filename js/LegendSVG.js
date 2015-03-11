@@ -1,7 +1,6 @@
 function legendSVG(gradientArray){
 	
 	
-	console.log(gradientArray);
 	
 var dataset = [
 	{ label: gradientArray[8] + " personer/ha", color: "#bd0026" },

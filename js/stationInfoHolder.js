@@ -614,8 +614,9 @@ var stationInfo = [
     "Image": [
     "Ostermalmstorg_1.jpg",
     "Ostermalmstorg_2.jpg",
-    "Ostermalmstorg_3.jpg"      
-    ]O 
+    "Ostermalmstorg_3.jpg",      
+    "Ostermalmstorg_4.jpg"      
+    ] 
   },
   {
     "id":"Islandstorget",
@@ -750,7 +751,8 @@ var stationInfo = [
     "Nord":"59,342778",
     "Image": [
     "Odenplan_1.jpg",
-    "Odenplan_2.jpg"
+    "Odenplan_2.jpg",
+    "Odenplan_3.jpg"
     ] 
   },
   {
@@ -791,7 +793,9 @@ var stationInfo = [
     "Image": [
     "SundbybergsCentrum_1.jpg",
     "SundbybergsCentrum_2.jpg",
-    "SundbybergsCentrum_3.jpg"
+    "SundbybergsCentrum_3.jpg",
+    "SundbybergsCentrum_4.jpg"
+
     ] 
   },
   {
@@ -803,7 +807,10 @@ var stationInfo = [
     "Öst":"17,998889",
     "Nord":"59,358750",
     "Image": [
-    "SolnaCentrum_1.jpg"
+    "SolnaCentrum_1.jpg",
+    "SolnaCentrum_2.jpg",
+    "SolnaCentrum_3.jpg",
+    "SolnaCentrum_4.jpg"
     ] 
   },
   {
@@ -816,7 +823,8 @@ var stationInfo = [
     "Nord":"59,337222",
     "Image": [
     "Stadshagen_1.jpg",
-    "Stadshagen_2.jpg"
+    "Stadshagen_2.jpg",
+    "Stadshagen_3.jpg"
     ] 
   },
   {
@@ -828,7 +836,9 @@ var stationInfo = [
     "Öst":"17,881861",
     "Nord":"59,354722",
     "Image": [
-    "Racksta_1.jpg"
+    "Racksta_1.jpg",
+    "Racksta_2.jpg",
+    "Racksta_3.jpg",
     ] 
   },
   {
@@ -866,7 +876,9 @@ var stationInfo = [
     "Öst":"18,041944",
     "Nord":"59,330278",
     "Image": [
-    "Rådhuset_1.jpg"
+    "Rådhuset_1.jpg",
+    "Rådhuset_2.jpg",
+    "Rådhuset_3.jpg"
     ] 
   },
   {
@@ -892,7 +904,8 @@ var stationInfo = [
     "Nord":"59,388056",
     "Image": [
     "Rinkeby_1.jpg",
-    "Rinkeby_2.jpg"
+    "Rinkeby_2.jpg",
+    "Rinkeby_3.jpg"
     ]
   },
   {
@@ -905,7 +918,9 @@ var stationInfo = [
     "Nord":"59,342917",
     "Image": [
     "Stadion_1.jpg",
-    "Stadion_2.jpg"
+    "Stadion_2.jpg",
+    "Stadion_3.jpg"
+
     ]
   },
   {
@@ -1042,7 +1057,9 @@ var stationInfo = [
     "Nord":"59,375833",
     "Image": [
     "Rissne_1.jpg",
-    "Rissne_2.jpg"
+    "Rissne_2.jpg",
+    "Rissne_3.jpg",
+    "Rissne_4.jpg"
     ]
   },
   {
@@ -1081,7 +1098,7 @@ var stationInfo = [
     "Image": [
     "Skarpnack_1.jpg",
     "Skarpnack_2.jpg",
-    "Skarpnack_2.jpg"
+    "Skarpnack_3.jpg"
     ]
   },
   {
@@ -1138,7 +1155,7 @@ var stationInfo = [
     "Nackrosen_5.jpg"
     ]
   },
-  {x
+  {
     "id":"Huvudsta",
     "Station":"Huvudsta",
     "Art":"Hängande trädgårdar av Per Holmberg, 1985",

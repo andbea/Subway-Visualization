@@ -316,6 +316,8 @@
 							</g>
 						</g>
 					</svg>
+
+
 				</div>
 				<!-- <div id="map"></div> -->
 				<div class="row">
@@ -453,6 +455,8 @@
 
 
 			
+	
+			
 
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
 				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
@@ -529,6 +533,8 @@
 				for(var i = 0; i < 9; i++){
 					gradientArray.push(Math.round(((maxValue-minValue)*i/9)+minValue));
 				}
+
+
 					
 				var colorscale = d3.scale.linear()
 					.domain([gradientArray[0]/6, gradientArray[1]/5, gradientArray[2]/4, gradientArray[3], gradientArray[4], gradientArray[5], gradientArray[6], gradientArray[7], gradientArray[8]])
@@ -587,8 +593,11 @@
 			//add label for the parishes on the map and hide them
 			addZoomLayer();
 			$(".parishLabel").hide();
-			
 
+
+
+		
 		</script>
+		<script type="text/javascript" src = "js/legendSVG.js"></script>
     </body>
 </html>

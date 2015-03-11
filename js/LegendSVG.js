@@ -20,6 +20,13 @@ var legendSvg = d3.select("#visual").append("svg")
 	var legendGroup = legendSvg.append("g").attr("class", "legendGroup")
 	.attr("transform", "translate(" + 50 + "," + 60 + ")");
 
+
+svg.append("rect")
+    .attr("width", 130)
+    .attr("height", 210)
+    .attr("fill", "white")
+    .attr( "fill-opacity", 0.8 );
+
 var legend = legendGroup.selectAll(".legendRect")                     
   .data(dataset)                                   
   .enter()                                               

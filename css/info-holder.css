@@ -1,12 +1,17 @@
 h1{
 
 	font-family: 'Cinzel Decorative', sans-serif;
-}
-
-p, a, ,h2,h3,h4,h5,h6{
-	/*font-family: 'Helvetica Neue', sans-serif;*/
 	font-family: 'Muli', sans-serif;
 	font-family: 'Raleway', sans-serif;
+	font-size: 34px;
+}
+
+p,a,h2,h3,h4,h5,h6{
+	/*font-family: 'Helvetica Neue', sans-serif;*/
+	
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Muli', sans-serif;
+	font-family: 'Helvetica Neue', sans-serif;
 }
 #information{
 	padding:0;
@@ -41,4 +46,8 @@ p, a, ,h2,h3,h4,h5,h6{
 
 .item img{
 	width: 100%;
+}
+
+#img-holder >.item.active >img, #img-holder >.item>img {
+	height: 300px;
 }

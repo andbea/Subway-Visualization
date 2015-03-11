@@ -428,8 +428,7 @@ var stationInfo = [
     "Öst":"18,081111",
     "Nord":"59,298889",
     "Image": [
-    "Gullmarsplan_1.jpg",
-    "Gullmarsplan_2.jpg"
+    "Gullmarsplan_1.jpg"
     ]
   },
   {

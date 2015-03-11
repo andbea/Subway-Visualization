@@ -1,21 +1,48 @@
 function populateInfo(id){
-	console.log("hello");
 	var index = getStationInfo(id);
 	//console.log(index);
+
+	//clear carousel indicators
+	$('.carousel-indicators').html('');
+	//reset arrows
+	$('a.left.carousel-control.ui-link, a.right.carousel-control.ui-link').show();
+
     var images = stationInfoHolder[index]['Image'];
-    console.log(images);
+    console.log(images.length);
 	$('#title').html(convertSymbols(stationInfoHolder[index]["Station"]));
 	$('#inaug').html("<strong>Invigdes: </strong>" + stationInfoHolder[index]["Year"]);
 	$('#art').html("<strong>Stationens konstverk: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
 	$('#history').html("<strong>Historiska fakta: </strong>" + convertSymbols(stationInfoHolder[index]["Art"]));
 
-	$('#img-holder').html('<div class="item active"><img src="img/stations/' + images[0] + '" height="440"></div>');
+	// add dots on carousel
+	$('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>');
 
-	if(images.length<1){
+	//adds first active image in carousel
+	$('#img-holder').html('<div class="item active"><img src="img/stations/' + images[0] + '"></div>');
+
+	//add other images if more than one
+	if(images.length>1){
 		for (var i=1; i<images.length; i++){
-		$('#img-holder').html('<div class="item"><img src="img/stations/' + images[i] + '" height="440"></div>');
-		// .html('<li><a href="#"><img src="img/stations/"' + images[i] + ' height="220" alt="" /></a></li>')
+			$('#img-holder >.item.active').after('<div class="item"><img src="img/stations/' + images[i] + '"></div>');
 		}
 	}
+	
+
+	
+	// add other coursel indicators if more than one
+	if(images.length>1){
+		for (var j=1; j<images.length; j++){
+			counter = 1+j;
+			$('.carousel-indicators').append('<li data-target="#carousel-example-generic" data-slide-to="' + counter + '"></li>');
+		}
+	}
+
+	// hide carousel arrows if only one image
+	if(images.length===1){
+		console.log("one image");
+		$('a.left.carousel-control.ui-link, a.right.carousel-control.ui-link').hide();
+	}
+	
+	
 	
 }

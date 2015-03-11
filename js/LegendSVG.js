@@ -25,6 +25,7 @@ var legendSvg = d3.select("#visual").append("svg")
 	var legendGroup = legendSvg.append("g").attr("class", "legendGroup")
 	.attr("transform", "translate(" + 50 + "," + 60 + ")");
 
+	document.getElementById("legendSvg").style.pointerEvents = "none";
 
 svg.append("rect")
     .attr("width", 130)

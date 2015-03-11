@@ -7,19 +7,20 @@
       	.on("mouseover", function() { 
           var id = this.id.replace("-circle", "");
           var stationInfo = stationInfoHolder[getStationInfo(id)];
-          var title = stationInfo["Station"];
+          var title = convertSymbols(stationInfo["Station"]);
           this.setAttribute("r", stationCircleRadius_Highlighted);
+          console.log(title);
       		return tooltip
-          		.text(title)
+          		.html(title)
           		.style("visibility", "visible");
       	})
       	.on("mousemove", function() { 
           var id = this.id.replace("-circle", "");
           var stationInfo = stationInfoHolder[getStationInfo(id)];
-          var title = stationInfo["Station"];
+          var title = convertSymbols(stationInfo["Station"]);
       		var coordinates = d3.mouse(this);
       		return tooltip
-	          	.text(title)
+	          	.html(title)
 	          	.style("top", (event.pageY-20) + "px")
 	          	.style("left", (event.pageX+20) + "px");
       	})
@@ -29,7 +30,6 @@
           		.style("visibility", "hidden");
         })
         .on("click", function() {
-          console.log("Hello, Sir");
           return populateInfo(this.id.replace("-circle", ""));
         });
 

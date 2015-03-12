@@ -55,21 +55,3 @@ body {
 #container {
     padding: 2% 5%;
 }
-
-svg {
-    position:absolute;
-}
-
-#legendSvg{
-    border-radius:6px;
-    border: solid;
-    border-width: 1px;
-    border-color: #a8a8a8;
-
-}
-
-#yearLabel {
-
-	font-size: 35pt;
-	font-weight: 300; 
-}

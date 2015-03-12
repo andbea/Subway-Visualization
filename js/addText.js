@@ -2,7 +2,7 @@
 function addText(p,name,hektar){
 
 		var s = document.getElementById("labelGroup");
-		console.log(s);
+		
 		var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		var b = p.getBBox();
 		t.setAttribute("transform", "translate(" + (b.x + b.width/2.5) + " " + (b.y + b.height/2) + ")");

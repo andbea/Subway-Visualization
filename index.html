@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/info-holder.css" media="screen" type="text/css" />
 
         <link href='http://fonts.googleapis.com/css?family=Raleway|Muli|Cinzel+Decorative' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
         
 
         <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -484,6 +485,7 @@
 			yearLabel.setAttributeNS(null,"x",150);     
 			yearLabel.setAttributeNS(null,"y",50); 
 			yearLabel.setAttributeNS(null,"id","yearLabel");
+			yearLabel.setAttributeNS(null,"font-family","Raleway, sans-serif");
 
 			var textNode = document.createTextNode("1949");
 			yearLabel.appendChild(textNode);
@@ -571,6 +573,12 @@
 					year_entered = $("#slider-1").val();
 					changeStations();
 					changeConnections();
+					if(year_entered >= 2015){
+						document.getElementById('yearLabel').setAttributeNS(null,"font-family","Orbitron, sans-serif");
+					}
+					else{
+						document.getElementById('yearLabel').setAttributeNS(null,"font-family","Raleway, sans-serif");
+					}
 					document.getElementById('yearLabel').textContent = year_entered;
 					
 					var n = (parseInt(year_entered)-1950);

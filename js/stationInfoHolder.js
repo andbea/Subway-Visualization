@@ -1332,7 +1332,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Arenastaden.jpg"
+    "Arenastaden_1.jpg"
     ]
   },    {
     "id":"Arenastaden",
@@ -1343,7 +1343,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Arenastaden.jpg"
+    "Arenastaden_1.jpg"
     ]
   },
       {
@@ -1379,7 +1379,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Nacka.jpg"
+    "Nacka_1.jpg"
     ]
   },
   {
@@ -1391,7 +1391,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Nacka.jpg"
+    "Nacka_1.jpg"
     ]
   },
   {
@@ -1403,7 +1403,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Nacka.jpg"
+    "Nacka_1.jpg"
     ]
   },
   { 
@@ -1415,7 +1415,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Nacka.jpg"
+    "Nacka_1.jpg"
     ]
   },
     { 
@@ -1427,7 +1427,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Nacka.jpg"
+    "Nacka_1.jpg"
     ]
   }
 

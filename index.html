@@ -51,6 +51,9 @@
 		<script type="text/javascript" src = "js/zoom.js"></script>
 		<script type="text/javascript" src = "js/addZoomLayer.js"></script>
 		<script type="text/javascript" src = "js/addText.js"></script>
+		<script type="text/javascript" src = "js/dataPreparation.js"></script>
+		<script type="text/javascript" src="js/populationPeopleChange.js"></script>
+		<script type="text/javascript" src="js/fillMap.js"></script>
 
 	</head>
 	<body align="middle">
@@ -1756,79 +1759,43 @@
 			
 			d3.tsv("data/rawdata.tsv", function(error, data) {
 			
-				var li = [];
-				var i = 0;
+				var densityArray = dataPreparation(data, 0);
+				var peopleChangeArray = dataPreparation(data, 1);		
 				
-				var density = true;
-				var percentages = false;
+				var minDensity = 0;
+				var maxDensity = 0;
+				var minPeopleChange = 0; 
+				var maxPeopleChange = 0;							
 				
-				if(density){
-				
-				data.forEach(function(d) {
+				var minDensity = Math.min.apply(null, densityArray),
+					maxDensity = Math.max.apply(null, densityArray),
+					minPeopleChange = Math.min.apply(null, peopleChangeArray),
+					maxPeopleChange = Math.max.apply(null, peopleChangeArray);					
 					
-					li.push(populationDensity(++data[i].Vastermalm, $("#Vastermalm").attr("hektar")));
-					li.push(populationDensity(++data[i].Vantor, $("#Vantor").attr("hektar")));
-					li.push(populationDensity(++data[i].Farsta, $("#Farsta").attr("hektar")));
-					li.push(populationDensity(++data[i].Bromma, $("#Bromma").attr("hektar")));
-					li.push(populationDensity(++data[i].Hagersten, $("#Hagersten").attr("hektar")));
-					li.push(populationDensity(++data[i].Hasselby, $("#Hasselby").attr("hektar")));
-					li.push(populationDensity(++data[i].Skarpnack, $("#Skarpnack").attr("hektar")));
-					li.push(populationDensity(++data[i].St_Johannes, $("#St_Johannes").attr("hektar")));
-					li.push(populationDensity(++data[i].St_Matteus, $("#St_Matteus").attr("hektar")));
-					li.push(populationDensity(++data[i].Adolf_Fredrik, $("#Adolf_Fredrik").attr("hektar")));
-					li.push(populationDensity(++data[i].Brannkyrka, $("#Brannkyrka").attr("hektar")));
-					li.push(populationDensity(++data[i].Skarholmen, $("#Skarholmen").attr("hektar")));
-					li.push(populationDensity(++data[i].Engelbrekt, $("#Engelbrekt").attr("hektar")));
-					li.push(populationDensity(++data[i].Sofia, $("#Sofia").attr("hektar")));
-					li.push(populationDensity(++data[i].Hogalid, $("#Hogalid").attr("hektar")));
-					li.push(populationDensity(++data[i].Hedvig_Eleonora, $("#Hedvig_Eleonora").attr("hektar")));
-					li.push(populationDensity(++data[i].Katarina, $("#Katarina").attr("hektar")));
-					li.push(populationDensity(++data[i].Vasterled, $("#Vasterled").attr("hektar")));
-					li.push(populationDensity(++data[i].Vallingby, $("#Vallingby").attr("hektar")));
-					li.push(populationDensity(++data[i].Spanga_Kista, $("#Spanga_Kista").attr("hektar")));
-					li.push(populationDensity(++data[i].Oscar, $("#Oscar").attr("hektar")));
-					li.push(populationDensity(++data[i].Maria_Magdalena, $("#Maria_Magdalena").attr("hektar")));
-					li.push(populationDensity(++data[i].Enskede_Arsta, $("#Enskede_Arsta").attr("hektar")));
-					li.push(populationDensity(++data[i].Gustav_Vasa, $("#Gustav_Vasa").attr("hektar")));
-					li.push(populationDensity(++data[i].Domkyrkoforsamlingen, $("#Domkyrkoforsamlingen").attr("hektar")));
-					li.push(populationDensity(++data[i].Solna_kommun, $("#Solna_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Danderyds_kommun, $("#Danderyds_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Botkyrka_kommun, $("#Botkyrka_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Huddinge_kommun, $("#Huddinge_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Sundbyberg_kommun, $("#Sundbyberg_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Jarfalla_kommun, $("#Jarfalla_kommun").attr("hektar")));
-					li.push(populationDensity(++data[i].Nacka_kommun, $("#Nacka_kommun").attr("hektar")));
-					
-					i++;
-				});
-				}
-				else if(percentages){
-				
-					//put code for calculating percentages instead of density here. Use populationPercentages function.
-				
-				}
-				else{
-					//just a security measure so we never get stuck in limbo with both as false
-					density = true;
-					percentages = false;
-				}
-				
-				
-				var minValue = Math.min.apply(null, li),
-					maxValue = Math.max.apply(null, li);			
-				
-					
-				var gradientArray = [];
-					
+				var gradientDensityArray = [];
+				var gradientPeopleChangeArray = [];
+			
+									
 				for(var i = 0; i < 9; i++){
-					gradientArray.push(Math.round(((maxValue-minValue)*i/9)+minValue));
+					gradientDensityArray.push(Math.round(((maxDensity-minDensity)*i/9)+minDensity));
+					
+				}				
+				//people change array
+				for(var i = 0; i < 4; i++){
+					gradientPeopleChangeArray.push(Math.round(((0-minPeopleChange)*i/4)+minPeopleChange));
+				}
+				
+				gradientPeopleChangeArray.push(0);
+				
+				for(var i = 1; i < 5; i++){
+					gradientPeopleChangeArray.push(Math.round(((maxPeopleChange)*i/4)));
 				}
 					
 				var colorscale = d3.scale.linear()
-					.domain([gradientArray[0], gradientArray[1], gradientArray[2], gradientArray[3], gradientArray[4], gradientArray[5], gradientArray[6], gradientArray[7], gradientArray[8]])
+					.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
 					
-				legendSVG(gradientArray);
+				legendSVG(gradientDensityArray);
 				
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();
@@ -1846,38 +1813,24 @@
 					
 					if(n >= 0 && year_entered < 2024 ){
 					
-					$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
-					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vantor, $("#Vantor").attr("hektar")) );});
-					$("#Farsta").children("path").attr("fill", function(d,i){ return colorscale( 					populationDensity(++data[n].Farsta, $("#Farsta").attr("hektar")) );});
-					$("#Bromma").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Bromma, $("#Bromma").attr("hektar")) );});
-					$("#Hagersten").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Hagersten, $("#Hagersten").attr("hektar")) );});
-					$("#Hasselby").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Hasselby, $("#Hasselby").attr("hektar")) );});
-					$("#Skarpnack").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Skarpnack, $("#Skarpnack").attr("hektar")) );});
-					$("#St_Johannes").children("polygon").attr("fill", function(d,i){ return colorscale(	 		populationDensity(++data[n].St_Johannes, $("#St_Johannes").attr("hektar")) );});
-					$("#St_Matteus").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].St_Matteus, $("#St_Matteus").attr("hektar")) );});
-					$("#Adolf_Fredrik").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Adolf_Fredrik, $("#Adolf_Fredrik").attr("hektar")) );});
-					$("#Brannkyrka").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Brannkyrka, $("#Brannkyrka").attr("hektar")) );});
-					$("#Skarholmen").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Skarholmen, $("#Skarholmen").attr("hektar")) );});
-					$("#Engelbrekt").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Engelbrekt, $("#Engelbrekt").attr("hektar")) );});
-					$("#Sofia").children("polygon").attr("fill", function(d,i){ return colorscale( 					populationDensity(++data[n].Sofia, $("#Sofia").attr("hektar")) );});
-					$("#Hogalid").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Hogalid, $("#Hogalid").attr("hektar")) );});
-					$("#Hedvig_Eleonora").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Hedvig_Eleonora, $("#Hedvig_Eleonora").attr("hektar")) );});
-					$("#Katarina").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Katarina, $("#Katarina").attr("hektar")) );});
-					$("#Vasterled").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vasterled, $("#Vasterled").attr("hektar")) );});
-					$("#Vallingby").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vallingby, $("#Vallingby").attr("hektar")) );});
-					$("#Spanga_Kista").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Spanga_Kista, $("#Spanga_Kista").attr("hektar")) );});
-					$("#Oscar").children("polygon").attr("fill", function(d,i){ return colorscale( 					populationDensity(++data[n].Oscar, $("#Oscar").attr("hektar")) );});
-					$("#Maria_Magdalena").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Maria_Magdalena, $("#Maria_Magdalena").attr("hektar")) );});
-					$("#Enskede_Arsta").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Enskede_Arsta, $("#Enskede_Arsta").attr("hektar")) );});
-					$("#Gustav_Vasa").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Gustav_Vasa, $("#Gustav_Vasa").attr("hektar")) );});
-					$("#Domkyrkoforsamlingen").children("polygon").attr("fill", function(d,i){ return colorscale( 	populationDensity(++data[n].Domkyrkoforsamlingen, $("#Domkyrkoforsamlingen").attr("hektar")) );});
-					$("#Solna_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Solna_kommun, $("#Solna_kommun").attr("hektar")) );});
-					$("#Danderyds_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Danderyds_kommun, $("#Danderyds_kommun").attr("hektar")) );});
-					$("#Botkyrka_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Botkyrka_kommun, $("#Botkyrka_kommun").attr("hektar")) );});
-					$("#Huddinge_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Huddinge_kommun, $("#Huddinge_kommun").attr("hektar")) );});
-					$("#Sundbyberg_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 		populationDensity(++data[n].Sundbyberg_kommun, $("#Sundbyberg_kommun").attr("hektar")) );});
-					$("#Jarfalla_kommun").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Jarfalla_kommun, $("#Jarfalla_kommun").attr("hektar")) );});
-					$("#Nacka_kommun").children("path").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Nacka_kommun, $("#Nacka_kommun").attr("hektar")) );});
+						if(1 == 0){
+					
+							colorscale = d3.scale.linear()
+								.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
+								.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
+														
+							fillMap(data, 0, colorscale,n);
+						}
+						else if(1 == 1){
+								//need to change the colorscale
+							
+							colorscale = d3.scale.linear()
+								.domain([gradientPeopleChangeArray[0], gradientPeopleChangeArray[1], gradientPeopleChangeArray[2], gradientPeopleChangeArray[3], 0, gradientPeopleChangeArray[5], gradientPeopleChangeArray[6], gradientPeopleChangeArray[7], gradientPeopleChangeArray[8]])
+								.range(["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);
+								
+							fillMap(data, 1, colorscale,n);
+						
+						}
 				}
 				});
 			});
@@ -1885,9 +1838,6 @@
 			//add label for the parishes on the map and hide them
 			addZoomLayer();
 			$(".parishLabel").hide();
-
-
-
 		
 		</script>
 		<script type="text/javascript" src = "js/legendSVG.js"></script>

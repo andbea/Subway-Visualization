@@ -53,6 +53,34 @@
 
 	</head>
 	<body align="middle">
+<div>
+	
+    <div class="checkbox">
+      <input type="checkbox" id="stockholmMap" value="" checked>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="parishMap" value="" checked>
+    </div>
+    
+</div>
+<div id="txtAge" style="display:none">Age is something</div>
+
+<script>
+$('#stockholmMap').click(function() {
+    $("#geografisk").toggle(this.checked);
+});
+
+$('#parishMap').click(function() {
+    $("#wireframeMap").toggle(this.checked);
+});
+	
+
+</script>
+
+
+
+
+	</div>
 		<div class="row" id="container">
 			<div class="col-sm-12 col-md-9">
 				<div id="visual">

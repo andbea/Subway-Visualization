@@ -15,7 +15,6 @@
       	})
       	.on("mousemove", function() { 
           var id = this.id.replace("-circle", "");
-          console.log(id);
           var stationInfo = stationInfoHolder[getStationInfo(id)];
           var title = convertSymbols(stationInfo["Station"]);
       		var coordinates = d3.mouse(this);

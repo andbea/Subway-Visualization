@@ -8,12 +8,12 @@ function changeConnections() {
     if(year_shown != year_entered && year_shown < year_entered) {
         for(var i = 0; i < connections.length; i++) {
             if(connections[i]["year"] > year_shown && connections[i]["year"] <= year_entered) {
-                callbacks.add(addConnection(i));
+                callbacksAdd.add(addConnection(i));
             }
         }
         for(var i = 0; i < disusedConnections.length; i++) {
             if(disusedConnections[i]["year"] > year_shown && disusedConnections[i]["year"] <= year_entered) {
-                callbacks.add(removeConnection(getDisusedId(i)));
+                callbacksRemove.add(removeConnection(getDisusedId(i)));
             }
         }
         year_shown = year_entered;
@@ -23,15 +23,14 @@ function changeConnections() {
     else if(year_shown != year_entered && year_shown > year_entered) {
         for(var i = 0; i < connections.length; i++) {
             if(connections[i]["year"] <= year_shown && connections[i]["year"] > year_entered) {
-                callbacks.add(removeConnection(i));
+                callbacksRemove.add(removeConnection(i));
             }
         }
         for(var i = 0; i < disusedConnections.length; i++) {
             if(disusedConnections[i]["year"] <= year_shown && disusedConnections[i]["year"] > year_entered) {
-                callbacks.add(addConnection(getDisusedId(i)));
+                callbacksAdd.add(addConnection(getDisusedId(i)));
             }
         }
         year_shown = year_entered;
     }
-    callbacks.fire();
 }

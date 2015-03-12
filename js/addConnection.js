@@ -17,7 +17,7 @@
         .attr("y2", coords[3])
         .attr("stroke", connections[index]["line-color"]);
 
-    addedLine.transition().duration(1000)
+    addedLine.transition().duration(2000)
         .attr("x2", coords[0])
         .attr("y2", coords[1]);
 }

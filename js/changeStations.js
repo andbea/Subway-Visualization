@@ -5,7 +5,7 @@ function changeStations() {
     if(year_shown != year_entered && year_shown < year_entered) {
         for(var i = 0; i < stations.length; i++) {
             if(stations[i]["year"] > year_shown && stations[i]["year"] <= year_entered) {
-                callbacks.add(addStation(i));
+                callbacksAdd.add(addStation(i));
             }
         }
     }
@@ -13,9 +13,8 @@ function changeStations() {
     else if(year_shown != year_entered && year_shown > year_entered) {
         for(var i = 0; i < stations.length; i++) {
             if(stations[i]["year"] <= year_shown && stations[i]["year"] > year_entered) {
-                callbacks.add(removeStation(i));
+                callbacksRemove.add(removeStation(i));
             }
         }
     }
-    callbacks.fire();
 }

@@ -30,8 +30,7 @@ function populateInfo(id){
 	// add other coursel indicators if more than one
 	if(images.length>1){
 		for (var j=1; j<images.length; j++){
-			counter = 1+j;
-			$('.carousel-indicators').append('<li data-target="#img-carousel" data-slide-to="' + counter + '"></li>');
+			$('.carousel-indicators').append('<li data-target="#img-carousel" data-slide-to="' + j + '"></li>');
 		}
 	}
 

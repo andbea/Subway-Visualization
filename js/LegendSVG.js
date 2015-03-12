@@ -1,6 +1,4 @@
-function legendSVG(gradientArray){
-  
-  
+function legendSVG(gradientArray){  
   
 var dataset = [
   { label: gradientArray[8], color: "#800026" },
@@ -19,7 +17,7 @@ var legendSpacing = 4;
 
 var legendSvg = d3.select("#visual").append("svg")
   .attr("id","legendSvg")
-  .attr("width", 110)
+  .attr("width", 120)
   .attr("height", 260)
 
 
@@ -27,7 +25,7 @@ document.getElementById("legendSvg").style.pointerEvents = "none";
 
 
 legendSvg.append("rect")
-    .attr("width", 110)
+    .attr("width", 120)
     .attr("height", 260)
     .attr("fill", "white")
     .attr( "fill-opacity", 0.8 );
@@ -39,12 +37,11 @@ var legendGroup = legendSvg.append("g").attr("class", "legendGroup")
 var legendTitle = legendGroup.append("g").attr("class", "legendTitle");
 
   legendTitle.append('text')  
+  .attr("class", "legendHeader")
   .attr('x', legendRectSize + legendSpacing)              
   .attr('y', legendRectSize - legendSpacing)
   .attr("transform", "translate(" + -59 + "," + -80 + ")")
   .text("personer/ha");
-
-
 
 var legend = legendGroup.selectAll(".legendRect")                     
   .data(dataset)                                   
@@ -59,13 +56,15 @@ var legend = legendGroup.selectAll(".legendRect")
     return 'translate(' + horz + ',' + vert + ')';        
   });                                                    
 
-legend.append('rect')                                    
+legend.append('rect')
+  .attr("class", "legendColorRect")
   .attr('width', legendRectSize)                          
   .attr('height', legendRectSize)                        
   .style('fill', function(d) { return d.color; })                                  
   .style('stroke', 'black');                               
   
-  legend.append('text')                                     
+  legend.append('text')    
+  .attr("class", "legendTextRect")
   .attr('x', legendRectSize + legendSpacing)              
   .attr('y', legendRectSize - legendSpacing)         
   .text(function(d) { return d.label; });    

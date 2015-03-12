@@ -54,6 +54,7 @@
 		<script type="text/javascript" src = "js/dataPreparation.js"></script>
 		<script type="text/javascript" src="js/populationPeopleChange.js"></script>
 		<script type="text/javascript" src="js/fillMap.js"></script>
+		<script type="text/javascript" src="js/changeLegend.js"></script>
 
 	</head>
 	<body align="middle">
@@ -1673,7 +1674,6 @@
 	            stationCircleRadius_Highlighted = 10;
 
 
-	            console.log("width start:" + width);
 			
 			//Putting my variables here *Dan*
 			//var canvasWidth = document.getElementById('visual').clientWidth;
@@ -1709,7 +1709,6 @@
 			
 			d3.select("#geografisk").attr("transform", "translate(" + 650+ "," + 820 + ")scale(" + 0.85+ ")");
 
-			console.log("width load in map map:" + width);
 	        var svg = d3.select("#map")
 				.attr("id", "map")
 	            .attr("width", width)
@@ -1823,7 +1822,7 @@
 							colorscale = d3.scale.linear()
 								.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
 								.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
-														
+							changeLegend(0, gradientDensityArray, ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);						
 							fillMap(data, 0, colorscale,n);
 						}
 						else if(1 == 1){
@@ -1832,7 +1831,7 @@
 							colorscale = d3.scale.linear()
 								.domain([gradientPeopleChangeArray[0], gradientPeopleChangeArray[1], gradientPeopleChangeArray[2], gradientPeopleChangeArray[3], 0, gradientPeopleChangeArray[5], gradientPeopleChangeArray[6], gradientPeopleChangeArray[7], gradientPeopleChangeArray[8]])
 								.range(["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);
-								
+							changeLegend(1, gradientPeopleChangeArray, ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);		
 							fillMap(data, 1, colorscale,n);
 						
 						}

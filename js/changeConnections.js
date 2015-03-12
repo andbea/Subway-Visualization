@@ -10,9 +10,6 @@ function changeConnections() {
             if(connections[i]["year"] > year_shown && connections[i]["year"] <= year_entered) {
                 callbacks.add(addConnection(i));
             }
-            if(disusedConnections[i]["year"] > year_shown && disusedConnections[i]["year"] <= year_entered) {
-                callbacks.add(removeConnection(getDisusedId(i)));
-            }
         }
         year_shown = year_entered;
     }

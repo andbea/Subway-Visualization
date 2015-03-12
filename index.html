@@ -4594,7 +4594,8 @@
 			
 			//End scaling variables
 			
-			var callbacks = $.Callbacks();
+			var callbacksAdd = $.Callbacks();
+			var callbacksRemove = $.Callbacks();
 			var stations = returnStations();
 			var connections = returnConnections();
 			var stationInfoHolder= returnStationInfo();
@@ -4712,10 +4713,12 @@
 				legendSVG(gradientDensityArray);
 
 				
-				$("#slider").change(function() {
+				$("#slider").on("change", function() {
 					year_entered = $("#slider-1").val();
 					changeStations();
 					changeConnections();
+					callbacksAdd.fire();
+					callbacksRemove.fire();
 					if(year_entered >= 2015){
 						document.getElementById('yearLabel').setAttributeNS(null,"font-family","Orbitron, sans-serif");
 					}
@@ -4748,6 +4751,7 @@
 						}
 				}
 				});
+				
 			});
 
 			//add label for the parishes on the map and hide them

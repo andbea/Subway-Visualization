@@ -20,15 +20,15 @@ var legendSpacing = 4;
 var legendSvg = d3.select("#visual").append("svg")
   .attr("id","legendSvg")
   .attr("width", 110)
-  .attr("height", 260)
+  .attr("height", 350)
 
 
-document.getElementById("legendSvg").style.pointerEvents = "none";
+//document.getElementById("legendSvg").style.pointerEvents = "none";
 
 
 legendSvg.append("rect")
     .attr("width", 110)
-    .attr("height", 260)
+    .attr("height", 350)
     .attr("fill", "white")
     .attr( "fill-opacity", 0.8 );
 
@@ -43,6 +43,56 @@ var legendTitle = legendGroup.append("g").attr("class", "legendTitle");
   .attr('y', legendRectSize - legendSpacing)
   .attr("transform", "translate(" + -59 + "," + -80 + ")")
   .text("personer/ha");
+
+
+
+
+
+var legendCheckboxes = legendGroup.append("g").attr("class", "legendCheckboxes");
+
+
+
+
+    var stockholmMap = legendCheckboxes.append("foreignObject")
+      .attr("width", 20)
+      .attr("height", 20)
+      .attr("transform", "translate(" + -36+ "," + 190 + ")")
+      .append("xhtml:body").style("background-color", "rgba(0,0,0,0)")
+      .html("<form><input type=checkbox id=stockholmMap checked/></form>")
+      .on("click", function(d, i){
+           $("#geografisk").toggle(this.checked);
+      });
+
+  legendCheckboxes.append('text')                                     
+  .attr("transform", "translate(" + -10+ "," + 205 + ")")                      
+  .text("Sthlm"); 
+
+
+
+    var parishMap=legendCheckboxes.append("foreignObject")
+        .attr("width", 20)
+        .attr("height", 20)
+        .attr("transform", "translate(" + -36+ "," + 220 + ")")
+        .append("xhtml:body").style("background-color", "rgba(0,0,0,0)")
+        .html("<form><input type=checkbox id=parishMap checked/></form>")
+        .on("click", function(d, i){
+            $("#wireframeMap").toggle(this.checked);
+        });
+
+  legendCheckboxes.append('text')                                     
+  .attr("transform", "translate(" + -10+ "," + 237 + ")")                      
+  .text("Parishes"); 
+
+
+
+
+
+
+
+
+
+
+
 
 
 

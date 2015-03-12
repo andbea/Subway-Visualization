@@ -279,7 +279,7 @@ var stationInfo = [
     ]
   },
   {
-    "id":"VårbyGård",
+    "id":"Vårbygård",
     "Station":"Vårby gård",
     "Art":"Konstnärlig utsmyckning: fotomontage av exotiska växter, Flora, av Rolf Bergström, 1999.",
     "Påstigande/vardagsdygn 2012":"3 900",

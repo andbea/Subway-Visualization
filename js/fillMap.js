@@ -1,6 +1,9 @@
 function fillMap(myData, mode, myColorscale,n){
 	
-	if(!(myData[n] == undefined)){
+	if((n+1950) == 2025 || (n+1950) == 2024){
+		n = 2023-1950;
+	}
+		
 		
 		if(mode == 0){
 		
@@ -73,5 +76,5 @@ function fillMap(myData, mode, myColorscale,n){
 			$("#Jarfalla_kommun").children("polygon").attr("fill", function(d,i){ return myColorscale( 		populationPeopleChange(			++myData[n].Jarfalla_kommun,		++myData[0].Jarfalla_kommun			))});
 		
 		}
-	}
+	
 }

@@ -1332,7 +1332,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Arenastaden.jpg"
     ]
   },    {
     "id":"Arenastaden",
@@ -1343,7 +1343,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Arenastaden.jpg"
     ]
   },
       {
@@ -1355,7 +1355,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Barkarby_1.jpg"
     ]
   },
       {
@@ -1367,7 +1367,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Barkarby_1.jpg"
     ]
   },
   {
@@ -1379,7 +1379,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Nacka.jpg"
     ]
   },
   {
@@ -1391,7 +1391,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Nacka.jpg"
     ]
   },
   {
@@ -1403,7 +1403,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Nacka.jpg"
     ]
   },
   { 
@@ -1415,7 +1415,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Nacka.jpg"
     ]
   },
     { 
@@ -1427,7 +1427,7 @@ var stationInfo = [
     "Öst":"-",
     "Nord":"-",
     "Image": [
-    "Vällingby_1.jpg"
+    "Nacka.jpg"
     ]
   }
 

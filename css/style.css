@@ -67,3 +67,9 @@ svg {
     border-color: #a8a8a8;
 
 }
+
+#yearLabel {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 35pt;
+	font-weight: 300; 
+}

@@ -23,7 +23,7 @@ var legendSvg = d3.select("#visual").append("svg")
 	.attr("height", 210)
 
 
-	document.getElementById("legendSvg").style.pointerEvents = "none";
+document.getElementById("legendSvg").style.pointerEvents = "none";
 
 
 legendSvg.append("rect")

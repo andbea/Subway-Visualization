@@ -72,3 +72,24 @@ svg {
 	font-size: 35pt;
 	font-weight: 300; 
 }
+
+#densityMap
+{
+	margin: 0;
+	width: 20px;
+	height: 20px;
+}
+
+#parishMap
+{
+	margin: 0;
+	width: 20px;
+	height: 20px;
+}
+
+#stockholmMap
+{
+	margin: 0;
+	width: 20px;
+	height: 20px;
+}

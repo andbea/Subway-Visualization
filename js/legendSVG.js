@@ -72,34 +72,41 @@ var legendCheckboxes = legendGroup.append("g").attr("class", "legendCheckboxes")
         .attr("height", 20)
         .attr("transform", "translate(" + -36+ "," + 190 + ")")
         .append("xhtml:body").style("background-color", "rgba(0,0,0,0)")
-        .html("<form><input type=checkbox id=parishMap checked='false'/></form>")
+        .html("<form><input type=checkbox id=parishMap checked toggle='false' /></form>")
         .on("click", function(d, i){
 			
-			if($("#parishMap").attr("checked")){			
+			if($("#parishMap").attr("toggle") == "true"){			
 				
 				$("#wireframeMap").toggle(this.checked);
+				$("#parishMap").attr("toggle", 'false');	
 			}
 			else{
-
+				
 				var colorscale = d3.scale.linear()
 					.domain([gradientPeopleChangeArray[0], gradientPeopleChangeArray[1], gradientPeopleChangeArray[2], gradientPeopleChangeArray[3], 0, gradientPeopleChangeArray[5], gradientPeopleChangeArray[6], gradientPeopleChangeArray[7], gradientPeopleChangeArray[8]])
 					.range(["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);
 							
 				changeLegend(1, gradientPeopleChangeArray, ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);	
-				
 				fillMap(myData, 1, colorscale,parseInt($("#slider-1").val())-1950);
 				
 				if($("#densityMap").is(':checked')){			
 					
-					$("#densityMap").attr("checked", 'false');				
+					$("#densityMap").prop('checked',false);
+					$("#densityMap").attr("toggle","false");					
 										
+				}else{
+					
+					$("#wireframeMap").toggle("checked");
+					
 				}
 				
+				
+				$("#parishMap").attr("toggle", 'true');	
 				
 			}
             
         });
-
+	$("#parishMap").prop('checked', false);
   legendCheckboxes.append('text')                                     
   .attr("transform", "translate(" + -10+ "," + 205 + ")")                      
   .html(convertSymbols("Befolkning")); 
@@ -110,26 +117,34 @@ var legendCheckboxes = legendGroup.append("g").attr("class", "legendCheckboxes")
         .attr("height", 20)
         .attr("transform", "translate(" + -36+ "," + 220 + ")")
         .append("xhtml:body").style("background-color", "rgba(0,0,0,0)")
-        .html("<form><input type=checkbox id=densityMap checked='true'/></form>")
+        .html("<form><input type=checkbox id=densityMap checked toggle='true' /></form>")
         .on("click", function(d, i){
-			if($("#densityMap").attr("checked")){
-								
+					
+			if($("#densityMap").attr("toggle") == "true"){
+				
 				$("#wireframeMap").toggle(this.checked);
+				$("#densityMap").attr("toggle","false");
 			}
 			else{
-
+				
+				
 				var colorscale = d3.scale.linear()
 					.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
 				changeLegend(0, gradientDensityArray, ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);						
-				fillMap(myData, 0, colorscale, parseInt($("#slider-1").val())-1950);
+				fillMap(myData, 0, colorscale, parseInt($("#slider-1").val())-1950);				
 				
 				if($("#parishMap").is(':checked')){							
 										
-					$("#parishMap").attr("checked", 'false');					
+					$("#parishMap").prop('checked', false);
+					$("#parishMap").attr("toggle", "false");
 										
+				}else{
+					
+					$("#wireframeMap").toggle("checked");
+					
 				}
-				
+				$("#densityMap").attr("toggle","true");
 				
 			}
         });

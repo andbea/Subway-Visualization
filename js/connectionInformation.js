@@ -132,14 +132,14 @@ var connections = [
 	{'year':1985, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"},
 
 	// 2020
-	{'year':2020, 'line-color':"yellow",'from':"Odenplan", 			'to':"Hagastaden"},
+	{'year':2020, 'line-color':"yellow",	'from':"Odenplan", 			'to':"Hagastaden"},
 
 	// 2021
 	{'year':2021, 'line-color':"#87CEFA", 	'from':"Akalla", 			'to':"Barkarbystaden"},
 	{'year':2021, 'line-color':"#87CEFA", 	'from':"Barkarbystaden", 	'to':"BarkarbyStation"},
 
 	// 2022
-	{'year':2022, 'line-color':"yellow",'from':"Hagastaden", 		'to':"Arenastaden"},
+	{'year':2022, 'line-color':"yellow",	'from':"Hagastaden", 		'to':"Arenastaden"},
 
 	// 2025
 	{'year':2025, 'line-color':"#87CEFA", 	'from':"Kungsträdgården", 	'to':"Sofia"},
@@ -150,6 +150,19 @@ var connections = [
 	{'year':2025, 'line-color':"#87CEFA", 	'from':"Sofia", 			'to':"Gullmarsplan"}
 
 ];
+
+var disusedConnections = [
+	{'year':1988, 'from':"Näckrosen",	'to':"Hallonbergen"}
+];
+
+function getDisusedId(id) {
+	for(var i = 0; i < connections.length; i++) {
+		if(connections[i]["from"] == disusedConnections[id]["from"] 
+			&& connections[i]["to"] == disusedConnections[id]["to"]) {
+			return i;
+		}
+	}
+}
 			
 function returnConnections(){
 	return connections

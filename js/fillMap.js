@@ -4,7 +4,7 @@ function fillMap(myData, mode, myColorscale,n){
 		n = 2023-1950;
 	}
 		
-		
+		if(!(myData[n] == undefined)){
 		if(mode == 0){
 		
 			$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return myColorscale( 			populationDensity(++myData[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
@@ -76,5 +76,5 @@ function fillMap(myData, mode, myColorscale,n){
 			$("#Jarfalla_kommun").children("polygon").attr("fill", function(d,i){ return myColorscale( 		populationPeopleChange(			++myData[n].Jarfalla_kommun,		++myData[0].Jarfalla_kommun			))});
 		
 		}
-	
+		}
 }

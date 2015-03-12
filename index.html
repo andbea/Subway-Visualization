@@ -1564,12 +1564,7 @@
 
 					</g>
 					</svg>
-<<<<<<< HEAD
-			
-=======
-
-
->>>>>>> origin/Evert
+					
 				</div>
 				<!-- <div id="map"></div> -->
 				<div class="row">
@@ -1717,13 +1712,12 @@
 				.style("fill", "#image;");
 
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
-<<<<<<< HEAD
+			
 				.attr("transform", "translate(" + 530 + "," + 610 + ")");
-=======
-				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
+
+				//.attr("transform", "translate(" + 750 + "," + 1000 + ")");
 
 			var labelGroup = d3.select("#outer").append("g").attr("id", "labelGroup");
->>>>>>> origin/Evert
 			
 		
 			// This initiates the lines that can be added.
@@ -1852,10 +1846,6 @@
 					
 					if(n >= 0 && year_entered < 2024 ){
 					
-<<<<<<< HEAD
-=======
-					
->>>>>>> origin/Evert
 					$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
 					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vantor, $("#Vantor").attr("hektar")) );});
 					$("#Farsta").children("path").attr("fill", function(d,i){ return colorscale( 					populationDensity(++data[n].Farsta, $("#Farsta").attr("hektar")) );});

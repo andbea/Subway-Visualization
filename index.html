@@ -1671,6 +1671,9 @@
 				width = document.getElementById('visual').clientWidth,
 	            stationCircleRadius = 4
 	            stationCircleRadius_Highlighted = 10;
+
+
+	            console.log("width start:" + width);
 			
 			//Putting my variables here *Dan*
 			//var canvasWidth = document.getElementById('visual').clientWidth;
@@ -1706,7 +1709,7 @@
 			
 			d3.select("#geografisk").attr("transform", "translate(" + 650+ "," + 820 + ")scale(" + 0.85+ ")");
 
-			
+			console.log("width load in map map:" + width);
 	        var svg = d3.select("#map")
 				.attr("id", "map")
 	            .attr("width", width)
@@ -1761,7 +1764,7 @@
 			
 				var densityArray = dataPreparation(data, 0);
 				var peopleChangeArray = dataPreparation(data, 1);		
-				
+
 				var minDensity = 0;
 				var maxDensity = 0;
 				var minPeopleChange = 0; 
@@ -1771,6 +1774,7 @@
 					maxDensity = Math.max.apply(null, densityArray),
 					minPeopleChange = Math.min.apply(null, peopleChangeArray),
 					maxPeopleChange = Math.max.apply(null, peopleChangeArray);					
+
 					
 				var gradientDensityArray = [];
 				var gradientPeopleChangeArray = [];
@@ -1796,6 +1800,7 @@
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
 					
 				legendSVG(gradientDensityArray);
+
 				
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();
@@ -1838,6 +1843,7 @@
 			//add label for the parishes on the map and hide them
 			addZoomLayer();
 			$(".parishLabel").hide();
+
 		
 		</script>
 		<script type="text/javascript" src = "js/legendSVG.js"></script>

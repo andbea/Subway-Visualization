@@ -334,7 +334,7 @@ var stationInfo = [
     "Station":"Hallunda",
     "Art":"Konstnärlig utsmyckning; stavar av plexiglas och en neonslinga av Kazuko Tamura, 1993.",
     "Påstigande/vardagsdygn 2012":"3 600",
-    "Year":"12 januari",
+    "Year":"12 januari 1975",
     "Öst":"17,825278",
     "Nord":"59,243333",
     "Image": [

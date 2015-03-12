@@ -42,7 +42,7 @@ function dataPreparation(myData, mode){
 		
 		}
 		else if(mode == 1){
-			console.log("mydata 0 är: " + ++myData[0].Engelbrekt);
+		
 			myArray.push(populationPeopleChange(++myData[i].Vastermalm, 			++myData[0].Vastermalm 				));
 			myArray.push(populationPeopleChange(++myData[i].Vantor, 				++myData[0].Vantor 					));
 			myArray.push(populationPeopleChange(++myData[i].Farsta, 				++myData[0].Farsta 					));

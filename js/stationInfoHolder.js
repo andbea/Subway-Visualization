@@ -14,7 +14,7 @@ var stationInfo = [
   {
     "id":"Åkeshov",
     "Station":"Åkeshov",
-    "Art":"På stationen finns ett exemplar avCarl Fredrik Reuterswärds skulptur ”Den knutna revolvern”, invigd 1998.",
+    "Art":"På stationen finns ett exemplar av Carl Fredrik Reuterswärds skulptur ”Den knutna revolvern”, invigd 1998.",
     "Påstigande/vardagsdygn 2012":"2 300",
     "Year":"26 oktober 1952",
     "Öst":"17,923889",
@@ -28,7 +28,7 @@ var stationInfo = [
     "Station":"Fruängen",
     "Art":"Den ligger 46,8 meter över havet och är den högst belägna i tunnelbanenätet. På invigningsdagen tog kung Gustaf VI Adolf den nya tunnelbanelinjen till ändhållplatsen, där han togs emot av scouternas Vargungar och Blåvingar samt av en kör bestående av elever från Adolf Fredriks musikklasser.",
     "Påstigande/vardagsdygn 2012":"8 100",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"17,965",
     "Nord":"59,286111",
     "Image": [
@@ -41,7 +41,7 @@ var stationInfo = [
     "Station":"Telefonplan",
     "Art":"Namnet Telefonplan kommer från telefontillverkaren LM Ericsson dåvarande huvudkontor och fabrik. Den konstnärliga utsmyckningen består av en keramisk väggdekor av Bo Samuelsson från 1997. Dekoren består bland annat av ordet \"Telefonplan\" i morsekod, något som inspirerats av områdets anknytning till telekommunikation. Längs perrongens sidor finns personer i naturlig storlek avbildade i helfigur.",
     "Påstigande/vardagsdygn 2012":"8 100",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"17,997222",
     "Nord":"59,298333",
     "Image": [
@@ -53,7 +53,7 @@ var stationInfo = [
     "Station":"Zinkensdamm",
     "Art":"På Zinkensdamms tunnelbanestation pågår det sedan 1998 tillfälliga konstutställningar av färgbilder insprängda bland reklamaffischerna. Bilderna byts ut en gång per år.",
     "Påstigande/vardagsdygn 2012":"7 100",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,05",
     "Nord":"59,317778",
     "Image": [
@@ -78,7 +78,7 @@ var stationInfo = [
     "Station":"Vårberg",
     "Art":"Den konstnärliga utsmyckning med mosaiktavlor föreställande mäns, kvinnors och barns händer är skapad av konstnärenMaria Ängquist Klyvare och utfördes 1996.",
     "Påstigande/vardagsdygn 2012":"6 200",
-    "Year":"1967-12-02",
+    "Year":"12 februari 1967",
     "Öst":"17,889583",
     "Nord":"59,275833",
     "Image": [
@@ -103,7 +103,7 @@ var stationInfo = [
     "Station":"Bredäng",
     "Art":"Den konstnärliga utsmyckningen består av Pusselbitar, en skulpturer med reliefer i trä av Lena Kriström tillsammans med boende i Bredäng 1982, med kompletteringar 1999. Den är placerad i biljetthallen.",
     "Påstigande/vardagsdygn 2012":"6 100",
-    "Year":"1965-05-16",
+    "Year":"15 maj 1965",
     "Öst":"17,934028",
     "Nord":"59,294778",
     "Image": [
@@ -143,7 +143,7 @@ var stationInfo = [
     "Station":"Fittja",
     "Art":"På stationen finns ett exemplar av Carl Fredrik Reuterswärds skulptur Den knutna revolvern, invigd 2002.",
     "Påstigande/vardagsdygn 2012":"5 500",
-    "Year":"1972-10-01",
+    "Year":"1 oktober 1972",
     "Öst":"17,860972",
     "Nord":"59,247472",
     "Image": [
@@ -155,7 +155,7 @@ var stationInfo = [
     "Station":"Hägerstensåsen",
     "Art":"En föregångare till stationen togs dock i bruk redan 1946 för spårvagnar.",
     "Påstigande/vardagsdygn 2012":"5 500",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"17,979028",
     "Nord":"59,295417",
     "Image": [
@@ -167,7 +167,7 @@ var stationInfo = [
     "Station":"Midsommarkransen",
     "Art":"Konstnärlig utsmyckning : En midsommarkrans av trä hänger i taket, tillverkad 1979 av boende vid Midsommarkransen under ledning av tre konstfackelelever.",
     "Påstigande/vardagsdygn 2012":"5 400",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,012361",
     "Nord":"59,301667",
     "Image": [
@@ -194,7 +194,7 @@ var stationInfo = [
     "Station":"Alby",
     "Art":"Den konstnärliga utsmyckningen är gjord av Olle Ängkvist och invigdes samtidigt som stationen. Den består av målade blommor i bjärta färger på den mossgrönt färgade betongväggen. Under affischtavlorna finns små figurer som räcker ut tungan och på annat sätt driver med reklamen. Dessa var inte med på skisserna utan gjordes av konstnären under väntetider i arbetet.",
     "Påstigande/vardagsdygn 2012":"4 900",
-    "Year":"1975-01-12",
+    "Year":"12 januari 1975",
     "Öst":"17,844861",
     "Nord":"59,239028",
     "Image": [
@@ -322,7 +322,7 @@ var stationInfo = [
     "Station":"Västertorp",
     "Art":"Västertorps tunnelbanestation är den näst högst belägna tunnelbanestationen på hela tunnelbanenätet beläget 46,5 meter över havet. Den konstnärliga utsmyckningen gjordes 1982 av Jörgen Fogelquist och är inspirerad av Andrees luftballongsfärd mot Nordpolen år 1897.",
     "Påstigande/vardagsdygn 2012":"3 700",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"17,966667",
     "Nord":"59,291111",
     "Image": [
@@ -452,7 +452,7 @@ var stationInfo = [
     "Station":"Axelsberg",
     "Art":"Stationsnamnet är utformat i glas, betong, sand och järn i form av höga bokstäver utformade av Leif Bolter, Veine Johansson, Inga Moden och Gösta Wessel, från 1983. Den konstnärliga utsmyckningen kompletterades 1999 med klinkerklädda väggar, formgivna av Gösta Wessel.",
     "Påstigande/vardagsdygn 2012":"2 300",
-    "Year":"1965-05-16",
+    "Year":"15 maj 1965",
     "Öst":"17,974722",
     "Nord":"59,304333",
     "Image": [
@@ -493,7 +493,7 @@ var stationInfo = [
     "Station":"Mariatorget",
     "Art":"Konstnärlig utsmyckning av Karin Björquist och Kjell Abramsson med väggar pryda med keramikstavar i gulbrun färg. Vid den västra uppgången står statyn \"Människa och pelare\" av Asmund Arle, stulen ett flertal gånger. ",
     "Påstigande/vardagsdygn 2012":"17 300",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,063333",
     "Nord":"59,316944",
     "Image": [
@@ -507,7 +507,7 @@ var stationInfo = [
     "Station":"Hornstull",
     "Art":"Konstnärlig utsmyckning gjord av Berndt Helleberg 1964, temat är Altamiragrottan i Spanien, och stationen är täckts med holländskt rött handslaget och glaserat tegel med infogat svart band och vita figurer. Han har även gjort järngrinden och konsten i taket. I samband med en ombyggnad 1992 tillkom montrar med temat himmel, hav, jord och öken av samma konstnär.[2]",
     "Påstigande/vardagsdygn 2012":"17 100",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,034167",
     "Nord":"59,315833",
     "Image": [
@@ -520,7 +520,7 @@ var stationInfo = [
     "Station":"Skärholmen",
     "Art":"Konstnärlig utsmyckning på perrongen: en plats i New Mexico, USA, avbildad i 23 bilder från soluppgång till solnedgång avkonstnären Ulf Wahlberg, 1990. De 23 målningarna ersattes med reproduktioner år 2005.",
     "Påstigande/vardagsdygn 2012":"13 200",
-    "Year":"1967-03-01",
+    "Year":"1 mars 1967",
     "Öst":"17,906944",
     "Nord":"59,277139",
     "Image": [
@@ -533,7 +533,7 @@ var stationInfo = [
     "Station":"Masmo",
     "Art":"Konstnärlig utsmyckning; målade plåtar, Ta ner solen i tunnelbanan av Staffan Hallström och Lasse Andreasson, 1971.",
     "Påstigande/vardagsdygn 2012":"1 900",
-    "Year":"1972-10-01",
+    "Year":"1 oktober 1972",
     "Öst":"17,880278",
     "Nord":"59,249667",
     "Image": [
@@ -610,7 +610,7 @@ var stationInfo = [
     "Station":"Östermalmstorg",
     "Art":"Flera olika konstnärer har bidragit till utsmyckningen av stationen. Särskilt märks dock Kvinnosaken, freds- och miljörörelsen, Siri Derkerts reliefer som blästrades på spårväggarna av betong.",
     "Påstigande/vardagsdygn 2012":"36 800",
-    "Year":"1965-05-16",
+    "Year":"15 maj 1965",
     "Öst":"18,074028",
     "Nord":"59,335",
     "Image": [
@@ -652,7 +652,7 @@ var stationInfo = [
     "Station":"Tekniska högskolan",
     "Art":"Den konstnärliga utsmyckningen gjordes av Lennart Mörk. Temat är elementen och naturlagarna. Dessutom utsmyckning med vetenskapstema med Christopher Polhem, Leonardo da Vinci, Isaac Newton, Nicolaus Copernicus och Johannes Kepler.",
     "Påstigande/vardagsdygn 2012":"25 800",
-    "Year":"1973-09-30",
+    "Year":"30 september 1973",
     "Öst":"18,071667",
     "Nord":"59,345694",
     "Image": [
@@ -702,7 +702,7 @@ var stationInfo = [
     "Station":"Ropsten",
     "Art":"Roland Kämpe har färgsatt det korrugerade plåttaket i svart och vitt samt målat en slingrande orm med pilformade huvuden samt målat de lekfulla målningarna i den 125 meter långa gången mot Hjorthagen. Den smidda grinden vid utgången mot Hjorthagen är skapad av Matts Jungstedt.",
     "Påstigande/vardagsdygn 2012":"18 900",
-    "Year":"1967-09-02",
+    "Year":"2 september 1967",
     "Öst":"18,102222",
     "Nord":"59,357333",
     "Image": [
@@ -715,7 +715,7 @@ var stationInfo = [
     "Station":"Kista",
     "Art":"Lars Erik Falk, målade aluminiumprofiler",
     "Påstigande/vardagsdygn 2012":"17 800",
-    "Year":"1977-07-05",
+    "Year":"5 june 1977",
     "Öst":"17,941472",
     "Nord":"59,403667",
     "Image": [
@@ -727,7 +727,7 @@ var stationInfo = [
     "Station":"Karlaplan",
     "Art":"Runt sittplatserna på perrongerna har konstnären Tor Hörlin dekorerat en nisch i stengods som invigdes samtidigt med stationen 1967. Fotomontaget längs ena spårväggen skapades av Larseric Vänerlöf 1983. ",
     "Påstigande/vardagsdygn 2012":"16 800",
-    "Year":"1967-09-02",
+    "Year":"2 september 1967",
     "Öst":"18,090833",
     "Nord":"59,338889",
     "Image": [
@@ -765,7 +765,7 @@ var stationInfo = [
     "Station":"Universitetet",
     "Art":"Stationen har sedan 1997 konstnärlig utsmyckning med temat FN:s deklaration om de mänskliga rättigheterna på keramiska plattor, samt Linnes resor, av konstnärenFrançoise Schein.",
     "Påstigande/vardagsdygn 2012":"13 000",
-    "Year":"1975-01-12",
+    "Year":"12 januari 1975",
     "Öst":"18,054722",
     "Nord":"59,365694",
     "Image": [
@@ -779,7 +779,7 @@ var stationInfo = [
     "Station":"Gärdet",
     "Art":"Plattformen är konstnärligt utsmyckad med fantasiskalbaggar av konstnären Karl Axel Pehrson, som också skapat den skalbaggsskulptur som delas ut på Guldbaggegalan.[2] Utsmyckningen skapades 1967.",
     "Påstigande/vardagsdygn 2012":"12 500",
-    "Year":"1967-09-02",
+    "Year":"2 september 1967",
     "Öst":"18,098611",
     "Nord":"59,347222",
     "Image": [
@@ -919,7 +919,7 @@ var stationInfo = [
     "Station":"Stadion",
     "Art":"Konstnärlig utsmyckning av Åke Pallarp och Enno Hallek med tematStockholms Stadion, bland annat med olympiaaffischen från 1912.",
     "Påstigande/vardagsdygn 2012":"7 400",
-    "Year":"1973-09-30",
+    "Year":"30 september 1973",
     "Öst":"18,081667",
     "Nord":"59,342917",
     "Image": [
@@ -961,7 +961,7 @@ var stationInfo = [
     "Station":"Husby",
     "Art":"Den har gula väggar och med motiv av björkstammar och Vaxholmsbåtar av konstnären Birgit Broms.",
     "Påstigande/vardagsdygn 2012":"6 500",
-    "Year":"1977-07-05",
+    "Year":"5 june 1977",
     "Öst":"17,926944",
     "Nord":"59,409444",
     "Image": [
@@ -1021,7 +1021,7 @@ var stationInfo = [
     "Station":"Akalla",
     "Art":"Väggarna på stationen är målade i gulockra kulör och är prydda med sex keramikmålningar med män och kvinnor gjorda av konstnären Birgit Ståhl-Nyberg.",
     "Påstigande/vardagsdygn 2012":"5 500",
-    "Year":"1977-07-05",
+    "Year":"5 june 1977",
     "Öst":"17,917778",
     "Nord":"59,413889",
     "Image": [
@@ -1263,7 +1263,7 @@ var stationInfo = [
     "Station":"Norsborg",
     "Art":"I biljetthallens lanternin hänger konstnärsparet Eva och Peter Moritz skulptur av aluminiumstänger som bultats och svetsats samman. Skulpturen bär namnet Min vän och invigdes 2006.",
     "Påstigande/vardagsdygn 2012":"2 500",
-    "Year":"1975-01-12",
+    "Year":"12 januari 1975",
     "Öst":"17,813056",
     "Nord":"59,243889",
     "Image": [

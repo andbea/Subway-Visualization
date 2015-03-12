@@ -4626,7 +4626,6 @@
 
 			d3.select("#outer").attr("transform", "translate(" + mapPositionX+ "," + mapPositionY + ")scale(" + mapScale+ ")");
 
-			//d3.select("#geografisk").attr("transform", "translate(" + 650+ "," + 820 + ")scale(" + 0.85+ ")");
 
 			var geoMapPositionX = -3020;
 			var geoMapPositionY = -1240;
@@ -4725,7 +4724,7 @@
 					.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
 					
-				legendSVG(gradientDensityArray);
+				legendSVG(data, gradientDensityArray, gradientDensityArray, gradientPeopleChangeArray);
 
 				
 				$("#slider").change(function() {
@@ -4744,21 +4743,21 @@
 					
 					if(n >= 0 && year_entered < 2024 ){
 					
-						if(1 == 0){
+						if($("#densityMap").is(':checked')){
 					
 							colorscale = d3.scale.linear()
 								.domain([gradientDensityArray[0], gradientDensityArray[1], gradientDensityArray[2], gradientDensityArray[3], gradientDensityArray[4], gradientDensityArray[5], gradientDensityArray[6], gradientDensityArray[7], gradientDensityArray[8]])
 								.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
-							changeLegend(0, gradientDensityArray, ["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);						
+												
 							fillMap(data, 0, colorscale,n);
 						}
-						else if(1 == 1){
+						else if($("#parishMap").is(':checked')){
 								//need to change the colorscale
 							
 							colorscale = d3.scale.linear()
 								.domain([gradientPeopleChangeArray[0], gradientPeopleChangeArray[1], gradientPeopleChangeArray[2], gradientPeopleChangeArray[3], 0, gradientPeopleChangeArray[5], gradientPeopleChangeArray[6], gradientPeopleChangeArray[7], gradientPeopleChangeArray[8]])
 								.range(["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);
-							changeLegend(1, gradientPeopleChangeArray, ["#2166ac", "#4393c3", "#92c5de", "#d1e5f0", "#f7f7f7", "#fddbc7", "#f4a582", "#d6604d", "#b2182b"]);		
+									
 							fillMap(data, 1, colorscale,n);
 						
 						}

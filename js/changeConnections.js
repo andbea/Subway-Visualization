@@ -11,6 +11,11 @@ function changeConnections() {
                 callbacks.add(addConnection(i));
             }
         }
+        for(var i = 0; i < disusedConnections.length; i++) {
+            if(disusedConnections[i]["year"] > year_shown && disusedConnections[i]["year"] <= year_entered) {
+                callbacks.add(removeConnection(getDisusedId(i)));
+            }
+        }
         year_shown = year_entered;
     }
 
@@ -19,6 +24,11 @@ function changeConnections() {
         for(var i = 0; i < connections.length; i++) {
             if(connections[i]["year"] <= year_shown && connections[i]["year"] > year_entered) {
                 callbacks.add(removeConnection(i));
+            }
+        }
+        for(var i = 0; i < disusedConnections.length; i++) {
+            if(disusedConnections[i]["year"] <= year_shown && disusedConnections[i]["year"] > year_entered) {
+                callbacks.add(addConnection(getDisusedId(i)));
             }
         }
         year_shown = year_entered;

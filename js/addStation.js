@@ -9,13 +9,13 @@
           var stationInfo = stationInfoHolder[getStationInfo(id)];
           var title = convertSymbols(stationInfo["Station"]);
           this.setAttribute("r", stationCircleRadius_Highlighted);
-          console.log(title);
       		return tooltip
           		.html(title)
           		.style("visibility", "visible");
       	})
       	.on("mousemove", function() { 
           var id = this.id.replace("-circle", "");
+          console.log(id);
           var stationInfo = stationInfoHolder[getStationInfo(id)];
           var title = convertSymbols(stationInfo["Station"]);
       		var coordinates = d3.mouse(this);

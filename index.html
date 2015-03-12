@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/info-holder.css" media="screen" type="text/css" />
 
         <link href='http://fonts.googleapis.com/css?family=Raleway|Muli|Cinzel+Decorative' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
         
 
         <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -1563,7 +1564,12 @@
 
 					</g>
 					</svg>
+<<<<<<< HEAD
 			
+=======
+
+
+>>>>>>> origin/Evert
 				</div>
 				<!-- <div id="map"></div> -->
 				<div class="row">
@@ -1711,7 +1717,13 @@
 				.style("fill", "#image;");
 
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
+<<<<<<< HEAD
 				.attr("transform", "translate(" + 530 + "," + 610 + ")");
+=======
+				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
+
+			var labelGroup = d3.select("#outer").append("g").attr("id", "labelGroup");
+>>>>>>> origin/Evert
 			
 		
 			// This initiates the lines that can be added.
@@ -1732,6 +1744,19 @@
 			    .style("padding", "5px")
 			    .style("border", "1px solid LightGray")
 			    .style("border-radius", "5px");
+				
+			// Code for drawing the year label
+				
+			var yearLabel = document.createElementNS("http://www.w3.org/2000/svg","text");
+			
+			yearLabel.setAttributeNS(null,"x",150);     
+			yearLabel.setAttributeNS(null,"y",50); 
+			yearLabel.setAttributeNS(null,"id","yearLabel");
+			yearLabel.setAttributeNS(null,"font-family","Raleway, sans-serif");
+
+			var textNode = document.createTextNode("1949");
+			yearLabel.appendChild(textNode);
+			document.getElementById("map").appendChild(yearLabel);
 		
 			// Code for loading data, adding slider event handler and adding colors
 			
@@ -1739,6 +1764,11 @@
 			
 				var li = [];
 				var i = 0;
+				
+				var density = true;
+				var percentages = false;
+				
+				if(density){
 				
 				data.forEach(function(d) {
 					
@@ -1777,9 +1807,22 @@
 					
 					i++;
 				});
+				}
+				else if(percentages){
+				
+					//put code for calculating percentages instead of density here. Use populationPercentages function.
+				
+				}
+				else{
+					//just a security measure so we never get stuck in limbo with both as false
+					density = true;
+					percentages = false;
+				}
+				
 				
 				var minValue = Math.min.apply(null, li),
-					maxValue = Math.max.apply(null, li);
+					maxValue = Math.max.apply(null, li);			
+				
 					
 				var gradientArray = [];
 					
@@ -1790,16 +1833,29 @@
 				var colorscale = d3.scale.linear()
 					.domain([gradientArray[0], gradientArray[1], gradientArray[2], gradientArray[3], gradientArray[4], gradientArray[5], gradientArray[6], gradientArray[7], gradientArray[8]])
 					.range(["#ffffcc", "#ffeda0", "#fed976", "#feb24c", "#fd8d3c", "#fc4e2a", "#e31a1c", "#bd0026", "#800026"]);
+					
+				legendSVG(gradientArray);
 				
 				$("#slider").change(function() {
 					year_entered = $("#slider-1").val();
 					changeStations();
 					changeConnections();
+					if(year_entered >= 2015){
+						document.getElementById('yearLabel').setAttributeNS(null,"font-family","Orbitron, sans-serif");
+					}
+					else{
+						document.getElementById('yearLabel').setAttributeNS(null,"font-family","Raleway, sans-serif");
+					}
+					document.getElementById('yearLabel').textContent = year_entered;
 					
 					var n = (parseInt(year_entered)-1950);
 					
 					if(n >= 0 && year_entered < 2024 ){
 					
+<<<<<<< HEAD
+=======
+					
+>>>>>>> origin/Evert
 					$("#Vastermalm").children("polygon").attr("fill", function(d,i){ return colorscale( 			populationDensity(++data[n].Vastermalm, $("#Vastermalm").attr("hektar")) );});
 					$("#Vantor").children("polygon").attr("fill", function(d,i){ return colorscale( 				populationDensity(++data[n].Vantor, $("#Vantor").attr("hektar")) );});
 					$("#Farsta").children("path").attr("fill", function(d,i){ return colorscale( 					populationDensity(++data[n].Farsta, $("#Farsta").attr("hektar")) );});
@@ -1839,8 +1895,11 @@
 			//add label for the parishes on the map and hide them
 			addZoomLayer();
 			$(".parishLabel").hide();
-			
 
+
+
+		
 		</script>
+		<script type="text/javascript" src = "js/legendSVG.js"></script>
     </body>
 </html>

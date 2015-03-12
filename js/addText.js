@@ -1,7 +1,8 @@
 //add text element to each parish on the map. Add parish name label to each. Size of label depends on size of parish
 function addText(p,name,hektar){
 
-		//console.log(hektar);
+		var s = document.getElementById("labelGroup");
+		console.log(s);
 		var t = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		var b = p.getBBox();
 		t.setAttribute("transform", "translate(" + (b.x + b.width/2.5) + " " + (b.y + b.height/2) + ")");
@@ -32,5 +33,6 @@ function addText(p,name,hektar){
 		}
 		
 		t.setAttribute("fill", "black");
-		p.parentNode.insertBefore(t, p.nextSibling);
+		//p.parentNode.insertBefore(t, p.nextSibling);
+		s.appendChild(t);
 };

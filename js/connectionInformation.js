@@ -46,19 +46,23 @@ var connections = [
 	{'year':1957, 'line-color':"green", 'from':"GamlaStan", 		'to':"T-Centralen"},
 
 	// 1958
-	{'year':1958, 'line-color':"green", 'from':"Högdalen", 			'to':"Rågsved"},
-	{'year':1958, 'line-color':"green", 'from':"Rågsved", 			'to':"Hagsätra"},
 	{'year':1958, 'line-color':"green", 'from':"Skärmarbrink", 		'to':"HammarbyHöjden"},
 	{'year':1958, 'line-color':"green", 'from':"HammarbyHöjden", 	'to':"Björkhagen"},
 	{'year':1958, 'line-color':"green", 'from':"Björkhagen", 		'to':"Kärrtorp"},
 	{'year':1958, 'line-color':"green", 'from':"Kärrtorp", 			'to':"Bagarmossen"},
-	{'year':1958, 'line-color':"green", 'from':"Bagarmossen", 		'to':"Skarpnäck"},
-	{'year':1958, 'line-color':"green", 'from':"Hökarängen", 		'to':"Farsta"},
-	{'year':1958, 'line-color':"green", 'from':"Farsta", 			'to':"FarstaStrand"},
 	{'year':1958, 'line-color':"green", 'from':"Vällingby", 		'to':"Johannelund"},
 	{'year':1958, 'line-color':"green", 'from':"Johannelund", 		'to':"HässelbyGård"},
 	{'year':1958, 'line-color':"green", 'from':"HässelbyGård", 		'to':"Hässelbystrand"},
+	
+	// 1959
+	{'year':1959, 'line-color':"green", 'from':"Högdalen", 			'to':"Rågsved"},
+	
+	// 1960
+	{'year':1960, 'line-color':"green", 'from':"Hökarängen", 		'to':"Farsta"},
 
+	{'year':1960, 'line-color':"green", 'from':"Rågsved", 			'to':"Hagsätra"},
+	
+	
 	// 1964
 	{'year':1964, 'line-color':"red", 	'from':"Slussen", 			'to':"Mariatorget"},
 	{'year':1964, 'line-color':"red", 	'from':"Mariatorget", 		'to':"Zinkensdamm"},
@@ -86,6 +90,9 @@ var connections = [
 	{'year':1967, 'line-color':"red", 	'from':"Sätra", 			'to':"Skärholmen"},
 	{'year':1967, 'line-color':"red", 	'from':"Skärholmen", 		'to':"Vårberg"},
 
+	// 1971
+	{'year':1971, 'line-color':"green", 'from':"Farsta", 			'to':"FarstaStrand"},
+	
 	// 1972
 	{'year':1972, 'line-color':"red", 	'from':"Vårberg", 			'to':"Vårbygård"},
 	{'year':1972, 'line-color':"red", 	'from':"Vårbygård", 		'to':"Masmo"},
@@ -130,7 +137,10 @@ var connections = [
 	{'year':1985, 'line-color':"blue", 	'from':"SundbybergsCentrum",'to':"Duvbo"},
 	{'year':1985, 'line-color':"blue", 	'from':"Duvbo",				'to':"Rissne"},
 	{'year':1985, 'line-color':"blue", 	'from':"Rissne", 			'to':"Rinkeby"},
-
+	
+	// 1994
+	{'year':1994, 'line-color':"green", 'from':"Bagarmossen", 		'to':"Skarpnäck"},
+	
 	// 2020
 	{'year':2020, 'line-color':"yellow",	'from':"Odenplan", 			'to':"Hagastaden"},
 

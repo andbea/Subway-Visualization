@@ -455,6 +455,8 @@
 
 			var subwayGroup = d3.select("#outer").append("g").attr("class", "subwayGroup")
 				.attr("transform", "translate(" + 750 + "," + 1000 + ")");
+
+			var labelGroup = d3.select("#outer").append("g").attr("id", "labelGroup");
 			
 			// This initiates the lines that can be added.
 	        var line = subwayGroup.append("g")

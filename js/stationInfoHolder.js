@@ -207,7 +207,7 @@ var stationInfo = [
     "Station":"Aspudden",
     "Art":"Konstnärlig utsmyckning på plattformen: en pingvinskulptur samt emaljerade reliefer på spårväggarna av konstnären P G Thelander, uppsatt 1987.",
     "Påstigande/vardagsdygn 2012":"4 800",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,001389",
     "Nord":"59,306444",
     "Image": [
@@ -246,7 +246,7 @@ var stationInfo = [
     "Station":"Sätra",
     "Art":"Den konstnärliga utsmyckningen invigdes 1994 och är gjord av Päivi Ernkvist. Hon kallar den Tusen och en natt den består av blå keramikplattor i olika nyanser med inslag av röda handgjorda keramikplattor i olika röda nyanser. Keramikplattorna klär in stationens betongytor",
     "Påstigande/vardagsdygn 2012":"4 100",
-    "Year":"1965-05-16",
+    "Year":"16 maj 1965",
     "Öst":"17,921306",
     "Nord":"59,284944",
     "Image": [
@@ -283,7 +283,7 @@ var stationInfo = [
     "Station":"Vårby gård",
     "Art":"Konstnärlig utsmyckning: fotomontage av exotiska växter, Flora, av Rolf Bergström, 1999.",
     "Påstigande/vardagsdygn 2012":"3 900",
-    "Year":"1972-10-01",
+    "Year":"10 januari 1972",
     "Öst":"17,884306",
     "Nord":"59,264583",
     "Image": [
@@ -309,7 +309,7 @@ var stationInfo = [
     "Station":"Örnsberg",
     "Art":"Namnet Örnsberg kommer från en fastighet som på 1740-talet förvärvades av en Nils Öhrn.",
     "Påstigande/vardagsdygn 2012":"3 800",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"17,989028",
     "Nord":"59,3055",
     "Image": [
@@ -320,7 +320,7 @@ var stationInfo = [
   {
     "id":"Västertorp",
     "Station":"Västertorp",
-    "Art":"Västertorps tunnelbanestation är den näst högst belägna tunnelbanestationen på hela tunnelbanenätet beläget 46,5 meter över havet. Den konstnärliga utsmyckningen gjordes 1982 av Jörgen Fogelquist och är inspirerad av Andrées luftballongsfärd mot Nordpolen år 1897.",
+    "Art":"Västertorps tunnelbanestation är den näst högst belägna tunnelbanestationen på hela tunnelbanenätet beläget 46,5 meter över havet. Den konstnärliga utsmyckningen gjordes 1982 av Jörgen Fogelquist och är inspirerad av Andrees luftballongsfärd mot Nordpolen år 1897.",
     "Påstigande/vardagsdygn 2012":"3 700",
     "Year":"1964-04-05",
     "Öst":"17,966667",
@@ -334,7 +334,7 @@ var stationInfo = [
     "Station":"Hallunda",
     "Art":"Konstnärlig utsmyckning; stavar av plexiglas och en neonslinga av Kazuko Tamura, 1993.",
     "Påstigande/vardagsdygn 2012":"3 600",
-    "Year":"1975-01-12",
+    "Year":"12 januari",
     "Öst":"17,825278",
     "Nord":"59,243333",
     "Image": [
@@ -360,7 +360,7 @@ var stationInfo = [
     "Station":"Liljeholmen",
     "Art":"Den konstnärliga utsmyckningen består av betongreliefer av Carl-Axel Lunding och ljuslekar med både naturligt och konstgjort ljus med hjälp av prismor, glasmosaik, ljusdioder och ljussatta pelare.",
     "Påstigande/vardagsdygn 2012":"29 300",
-    "Year":"1964-04-05",
+    "Year":"5 april 1964",
     "Öst":"18,023056",
     "Nord":"59,310806",
     "Image": [
@@ -385,7 +385,7 @@ var stationInfo = [
   {
     "id":"GamlaStan",
     "Station":"Gamla stan",
-    "Art":"Stationen ritades av Gunnar Lené. Konstnärlig utsmyckning utgörs av medeltida vävmönster, Vädersolsmotiv och cementmosaikmönstrade golv av Göran Dahl, 1998, samt stängsel med vävmönster mellan spåren av Britta Carlström, 1998.",
+    "Art":"Stationen ritades av Gunnar Lene. Konstnärlig utsmyckning utgörs av medeltida vävmönster, Vädersolsmotiv och cementmosaikmönstrade golv av Göran Dahl, 1998, samt stängsel med vävmönster mellan spåren av Britta Carlström, 1998.",
     "Påstigande/vardagsdygn 2012":"21 600",
     "Year":"24 november 1957",
     "Öst":"18,0675",
@@ -439,7 +439,7 @@ var stationInfo = [
     "Station":"Mälarhöjden",
     "Art":"Den konstnärliga utsmyckning består av målade emaljplåtar, Ebb och flod av Margareta Carlstedt. Konstverket är 190 meter långt och invigdes i samband med stationens öppnande 1965.",
     "Påstigande/vardagsdygn 2012":"2 500",
-    "Year":"1965-05-16",
+    "Year":"16 maj 1965",
     "Öst":"17,957361",
     "Nord":"59,301056",
     "Image": [
@@ -450,7 +450,7 @@ var stationInfo = [
   {
     "id":"Axelsberg",
     "Station":"Axelsberg",
-    "Art":"Stationsnamnet är utformat i glas, betong, sand och järn i form av höga bokstäver utformade av Leif Bolter, Veine Johansson, Inga Modén och Gösta Wessel, från 1983. Den konstnärliga utsmyckningen kompletterades 1999 med klinkerklädda väggar, formgivna av Gösta Wessel.",
+    "Art":"Stationsnamnet är utformat i glas, betong, sand och järn i form av höga bokstäver utformade av Leif Bolter, Veine Johansson, Inga Moden och Gösta Wessel, från 1983. Den konstnärliga utsmyckningen kompletterades 1999 med klinkerklädda väggar, formgivna av Gösta Wessel.",
     "Påstigande/vardagsdygn 2012":"2 300",
     "Year":"1965-05-16",
     "Öst":"17,974722",
@@ -531,7 +531,7 @@ var stationInfo = [
   {
     "id":"Masmo",
     "Station":"Masmo",
-    "Art":"Konstnärlig utsmyckning; målade plåtar, Ta ner solen i tunnelbanan av Staffan Hallström och Lasse Andréasson, 1971.",
+    "Art":"Konstnärlig utsmyckning; målade plåtar, Ta ner solen i tunnelbanan av Staffan Hallström och Lasse Andreasson, 1971.",
     "Påstigande/vardagsdygn 2012":"1 900",
     "Year":"1972-10-01",
     "Öst":"17,880278",
@@ -663,7 +663,7 @@ var stationInfo = [
   {
     "id":"Kärrtorp",
     "Station":"Kärrtorp",
-    "Art":"Den konstnärliga utsmyckningen utgörs av konstnären Björn Olséns verk \"Ljuslådor med hemliga tecken\". Det avtäcktes 1994.",
+    "Art":"Den konstnärliga utsmyckningen utgörs av konstnären Björn Olsens verk \"Ljuslådor med hemliga tecken\". Det avtäcktes 1994.",
     "Påstigande/vardagsdygn 2012":"5 400",
     "Year":"19 november 1958",
     "Öst":"18,114444",
@@ -763,7 +763,7 @@ var stationInfo = [
   {
     "id":"Universitetet",
     "Station":"Universitetet",
-    "Art":"Stationen har sedan 1997 konstnärlig utsmyckning med temat FN:s deklaration om de mänskliga rättigheterna på keramiska plattor, samt Linnés resor, av konstnärenFrançoise Schein.",
+    "Art":"Stationen har sedan 1997 konstnärlig utsmyckning med temat FN:s deklaration om de mänskliga rättigheterna på keramiska plattor, samt Linnes resor, av konstnärenFrançoise Schein.",
     "Påstigande/vardagsdygn 2012":"13 000",
     "Year":"1975-01-12",
     "Öst":"18,054722",
@@ -836,7 +836,7 @@ var stationInfo = [
   {
     "id":"Råcksta",
     "Station":"Råcksta",
-    "Art":"Stationen är belägen utomhus och består av en plattform med entré från Jämtlandsgatan.",
+    "Art":"Stationen är belägen utomhus och består av en plattform med entre från Jämtlandsgatan.",
     "Påstigande/vardagsdygn 2012":"3 500",
     "Year":"26 oktober 1952",
     "Öst":"17,881861",
@@ -850,7 +850,7 @@ var stationInfo = [
   {
     "id":"Rådmansgatan",
     "Station":"Rådmansgatan",
-    "Art":"Konstnärlig utsmyckning vid den södra entrén med ett antalStrindbergsemaljer av konstnärenSture V Nilsson och är från 1983.",
+    "Art":"Konstnärlig utsmyckning vid den södra entren med ett antalStrindbergsemaljer av konstnärenSture V Nilsson och är från 1983.",
     "Påstigande/vardagsdygn 2012":"26 600",
     "Year":"26 oktober 1952",
     "Öst":"18,058611",
@@ -1273,7 +1273,7 @@ var stationInfo = [
   {
     "id":"Duvbo",
     "Station":"Duvbo",
-    "Art":"Konstnärlig utsmyckning; fossilliknande reliefer av Gösta Sillén, 1985",
+    "Art":"Konstnärlig utsmyckning; fossilliknande reliefer av Gösta Sillen, 1985",
     "Påstigande/vardagsdygn 2012":"2 400",
     "Year":"1985-08-19",
     "Öst":"17,964444",

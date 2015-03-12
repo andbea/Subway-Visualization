@@ -56,7 +56,7 @@
 	<body align="middle">
 		<div class="row" id="container">
 			<div class="col-sm-12 col-md-9">
-				<div id="visual">
+				<div id="visual" class="row">
 					<!-- <image id="img9" x="0" y="0" src='Stockholm.svg'></image> -->
 					<svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
 					<g id="outer">
@@ -1668,6 +1668,9 @@
 				width = document.getElementById('visual').clientWidth,
 	            stationCircleRadius = 4
 	            stationCircleRadius_Highlighted = 10;
+
+
+	            console.log("width start:" + width);
 			
 			//Putting my variables here *Dan*
 			//var canvasWidth = document.getElementById('visual').clientWidth;
@@ -1703,7 +1706,7 @@
 			
 			d3.select("#geografisk").attr("transform", "translate(" + 650+ "," + 820 + ")scale(" + 0.85+ ")");
 
-			
+			console.log("width load in map map:" + width);
 	        var svg = d3.select("#map")
 				.attr("id", "map")
 	            .attr("width", width)
